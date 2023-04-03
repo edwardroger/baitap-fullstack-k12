@@ -41,21 +41,20 @@
 }
 
 .container {
-    display:inline-block;
+    display:flex;
+    justify-content: center;
     text-align: center;
     width: 612px;
     height: 612px;
+    padding: 5%;
     border-color: black;
     background-color: aquamarine;
 }
 
 .container-led {
-    
-    margin-top: 10%;
-    margin-left: 31%;
     width: 240px;
     height: 500px;
-    /* background-color:wheat; */
+    
     
 }
 
