@@ -1,0 +1,75 @@
+body{
+    background-image: url("../image/background.jpg");
+}
+
+form{
+    margin: 12% auto;
+    background-color:  rgba(177, 168, 168, 0.542);
+    width: 50%;
+    max-width: 300px;
+    border-radius: 7%;
+}
+
+.title {
+    width: 35%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    color: rgba(49, 41, 41, 0.734);
+}
+
+.title h1 {
+    text-align: center;
+    margin: -10%;
+}
+
+label {
+    display: flex;
+    width: 85%;
+    margin: 5% auto;
+    aspect-ratio: 28/4;
+    /* height: 10%; */
+    border: 1px solid black;
+    /* border-radius: 10%; */
+    background-color: rgba(240, 248, 255, 0.542);
+}
+
+label img {
+    margin: auto 0;
+    height: 100%;
+}
+
+input {
+    margin: auto;
+    width: 86%;
+    height: 70%;
+    border: none;
+    border-left: 2px solid black;
+    background-color: rgba(255, 255, 255, 0) !important;
+}
+
+.forgot-password , .signin{
+    margin: 1%;
+    text-align: center;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.signin {
+    padding-bottom: 5%;
+}
+
+button {
+    display: block;
+    margin: auto;
+    width: 30%;
+    height: 2vw;
+}
+
+a:hover {
+    color: rgb(187, 163, 163);
+}

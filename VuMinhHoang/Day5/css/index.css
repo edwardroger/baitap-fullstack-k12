@@ -1,0 +1,27 @@
+.container{
+    background-image: url('../images/rain.jpg');
+    background-repeat: no-repeat;
+    height: 1000px;
+}
+
+.text-1{
+    color:red
+}
+.text-2{
+    color:green;
+}
+.text-3{
+    color:blue;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover{
+    color:yellow;
+    font-size: 50px;
+}
+
+ul li{
+    list-style: none;
+}
