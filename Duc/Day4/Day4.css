@@ -45,7 +45,7 @@
     margin: 0 25px 40px;
     box-shadow: 0 5px 5px black;
 }
-.a {
+.a:hover {
     background-color: red;
 }
 .b {
