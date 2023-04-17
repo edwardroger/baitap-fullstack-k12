@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image:url(img/backgroud.jpg);
+            background-size: 100%;
+            }
+
+        .login-form {
+            font-size: 20px;
+            border: 1px solid red;
+            box-shadow: 10px 10px 10px 10px;
+            width: 400px;
+            height: 280px;
+            background-color:white; 
+            color:black;
+            border-radius: 20px;
+            display:inline-block; 
+            direction:columns; 
+            margin: 200px 500px;
+            text-align: center;
+        }
+
+        .dangky{
+            margin: 25px;
+            font-size: 20px;
+            border-radius: 10px;
+            background: green;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="login-form">
+        <h3>ĐĂNG KÝ THÀNH VIÊN</h3>
+        <table>
+            <thead>
+                <th></th>
+                <th></th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: left;padding-left: 10px;">Tên đăng nhập (*) </td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;padding-left: 10px;">Mật khẩu (*)</td>
+                    <td><input type="password" ></td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;padding-left: 10px;">Xác nhận mật khẩu(*)</td>
+                    <td><input type="password"></td>
+                </tr>
+                <td style="text-align: left;padding-left: 10px;">Email(*)</td>
+                <td><input type="text"></td>
+            </tbody>
+        </table>
+        <input type="button" value="Đăng ký" class="dangky">
+    </div>
+    
+</body>
+</html>

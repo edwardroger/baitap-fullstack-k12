@@ -1,0 +1,96 @@
+:root {
+    --primary-color: #f2726a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(45deg, #00853e, #63f292);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    background: #242628;
+    border-radius: 20px;
+    text-align: center;
+    overflow: hidden;
+    margin: 0 30px;
+}
+
+.card__img {
+    width: 120px;
+    height: 120px;
+    border: 4px solid var(--primary-color);
+    overflow: hidden;
+    border-radius: 50%;
+    /* margin-left: 0 auto; */
+    margin: 0 auto;
+    transform: translateY(25px);
+    /* margin: 25px auto; */
+    transition: 0.7s;
+    cursor: pointer;
+}
+
+.card__img:hover {
+    width: 100%;
+    height: 100%;
+    border-radius: unset;
+    transform: unset;
+    border: unset;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+}
+
+.card h2 {
+    margin-top: 35px;
+}
+
+.card p {
+    /* margin-top: 5px; */
+    color: var(--primary-color);
+}
+
+.card__social--icon {
+    margin: 25px auto;
+}
+
+.card__social--icon a {
+    color: white;
+    margin: 25px 12px;
+    font-size: 25px;
+}
+
+.card__social--icon a:hover {
+    color: var(--primary-color);
+}
+
+.card button {
+    width: 100px;
+    height: 50px;
+    border: 1px solid var(--primary-color);
+    background: transparent;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.card button:hover {
+    background: var(--primary-color);
+
+}
