@@ -8,6 +8,9 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
+.conatainer{
+    justify-content: space-between;
+}
 .product{
     margin-top: 7px;
 }
