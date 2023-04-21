@@ -79,25 +79,3 @@ img{
 .card button:hover {
     background: var(--primary-color);
 }
-
-    @media (max-width: 1000px) {
-    .card{
-        margin: 0 auto;
-    }
-    button{
-        margin: 0 auto;
-    }
-  .col-md-4 ,.col-sm-6 {
-    width: 40%;
-    margin: 20px 20px;  
-  }
-  
-}
-
-@media (max-width: 1000px) {
-  .col-md-4 ,.col-sm-6 {
-    width: 45%;
-    margin: 20px 20px;
-  }
-  
-}
