@@ -1,0 +1,37 @@
+.do1{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    background-color: red;
+    margin-right: auto;
+}
+.den{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    background-color: black;
+    margin-left: auto;
+}
+.tron1,.tron2,.tron3{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+#hinhv{
+    background-color: black;
+    height: 320px;
+    width: 120px;
+    border-radius: 30px;
+    margin-left: 300px;
+}
+.tron1{
+    background-color: greenyellow;
+}
+.tron2{
+    background-color: rgb(255, 0, 200);
+}
+.tron3{
+    background-color: purple;
+}
