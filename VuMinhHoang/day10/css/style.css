@@ -1,17 +1,69 @@
-.item {
-    border: 1px solid black;
-    width: 200px;
-    height: 200px;
-    font-weight: bold;
-    font-size: 30px;
-}
-.item-content {
-    width: 50px;
+.head{
     height: 50px;
-    border: 1px solid black;
-    display: inline-block;
+    background-color: aqua;
 }
-.item-border {
-    width: 100px;
+.image{
+    height: 600px;
+    background-image: url("../images/wibu.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.conatainer{
+    justify-content: space-between;
+}
+.product{
+    margin-top: 7px;
+}
+.title{
+    font-size: 30px;
+    color:white;
+    text-align: center;
+    padding-top: 18px;
+}
+.content{
+    margin: 15px 0;
+}
+.size{
     height: 100px;
+    background-color: rgb(168, 172, 172);
+    border-radius: 5px 5px 0 0;
+}
+.rating{
+    background-color: rgb(220, 229, 229);
+    border-radius:0 0 5px 5px;
+    height: 40px;
+}
+.description{
+    border: 1px solid rgb(168, 172, 172);
+    padding: 10px;
+    
+}
+
+h3{
+    color: blue;
+}
+
+.col-8,.col{
+    margin: 10px 0 10px 20px;
+    cursor: pointer;
+}
+.col-8:hover,.col:hover{
+    color:white;
+}
+
+.category{
+    border: 1px solid rgb(206, 217, 217);
+    padding:10px;
+    color: blue;
+}
+
+.footer{
+    height: 100px;
+    background-color: black;
+}
+
+.footer-content{
+    color:azure;
+    text-align: center;
+    padding-top: 15px;
 }
