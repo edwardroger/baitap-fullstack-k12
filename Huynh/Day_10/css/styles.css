@@ -1,0 +1,54 @@
+body {
+    font-size: 1.5vw;
+    box-sizing: border-box;
+}
+header {
+    background-color: rgb(29, 27, 27);
+    height: 50px;
+    color: white;
+    position: relative;
+}
+
+header p {
+    position: absolute;
+    top: 5px;
+}
+
+.select{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header a {
+    color: rgb(89, 79, 79);
+    text-decoration: none;
+    margin: 5px 5px;
+}
+
+.select a:hover {
+    color: rgb(253, 254, 255);
+}
+
+.product-header {
+    height: 10vw;
+}
+
+.product-item{
+    width: 22% !important;
+    height: 25vw;
+}
+
+.product-item--header {
+    height: 35%;
+}
+
+.product-item--info{
+    height: 55%;
+    overflow: hidden;
+    font-size: 1.3vw;
+}
+
+.product-item--bt {
+    height: 10%;
+}
