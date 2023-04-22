@@ -1,0 +1,38 @@
+input {
+    display: block;
+    width: 50%;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: content-box;
+}
+body {
+    padding : 25%;
+}
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.container {
+    width: 100%;
+    padding: 25px;
+    background-color: grey;
+    display: block;
+}
+body {
+    background-image: url('/images/kk.png');
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}

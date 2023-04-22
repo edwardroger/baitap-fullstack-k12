@@ -1,0 +1,40 @@
+#container { background-image:url(../image/background.jpg) ;
+
+}
+body{
+   background-image: url(../image/background.jpg);
+   /*background-repeat: none;*/
+}
+.Text-1 {
+   color: red;
+   cursor: pointer; /*chuyển từ mũi tên chuột thành cái tay*/
+}
+
+.Text-2 {
+   color: green;
+}
+
+.Text-3 {
+   color: blue;
+}
+/*gọi tất các thẻ a*/
+a{
+   text-decoration: none;
+}
+/*Trỏ chuột vào sẽ đổi màu và thay đổi kích cỡ, các thẻ sự kiện của CSS gồm hover, pointer*/
+a :hover{
+   color:yellow; 
+   font-size: 50px;
+}
+
+/*a link {
+   color: green;
+}*/
+
+a :visited {
+   color: red;
+}
+
+ul li {
+   list-style: none;
+}

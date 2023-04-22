@@ -1,0 +1,56 @@
+.Circle {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+}
+
+.one {
+    background-color: red;
+    color: red
+}
+
+.two {
+    background-color: black;
+    /* Thiết lập lề phải cho thẻ div */
+    position: absolute;
+    right: 5px;
+}
+
+.p {
+    margin: 50px;
+}
+.dad {
+    background-color: rgb(43, 43, 43);
+    width: 150px;
+    height: 400px;
+    padding-top: 20px;
+    margin-left: 50px;
+}
+.pillar {
+    background-color: rgb(32, 32, 32);
+    height: 600px;
+    width: 50px;
+    margin-left: 100px;
+    margin-top: 4px;
+}
+.dad , .pillar {
+    box-shadow: 0 5px 5px black;
+}
+.Round {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin: 0 25px 40px;
+    box-shadow: 0 5px 5px black;
+}
+.a:hover {
+    background-color: red;
+}
+.b {
+    background-color: yellow;
+}
+.c {
+    background-color: rgb(19, 114, 0);
+}

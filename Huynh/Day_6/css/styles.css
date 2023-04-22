@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@200&display=swap');
+
+:root {
+    --primary-color:  #304fb3;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Pacifico";
+    height: 100vh;
+    /* background-color: linear-gradient(to right, rgb(117, 202, 117), rgb(55, 158, 55)); */
+    background: linear-gradient(to right, rgb(117, 202, 117), #9198e5);
+}
+
+.card {
+    margin: 120px auto;
+    width: 320px;
+    height: 500px;
+    background-color: #272d40;
+    padding: 20px;
+    border-radius: 20px;
+    color: white;
+    position: relative;
+}
+
+.card__heart--icon, .card__cart--icon {
+    font-size: 25px;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    color: #c4342d;
+}
+
+.card__cart--icon {
+    left: unset;
+    right: 20px;
+    color: #2dbfc4;
+}
+
+.card__img {
+    width: 90%;
+}
+
+.card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.card__title, .card__price {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.card__title {
+    color:  #304fb3;
+}
+
+.card__rom, .card__color {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.card__rom span {
+    padding: 2px 5px;
+    background-color: #dadada;
+    color: black;
+    border-radius: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.card__color span {
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+}
+
+.color-purple {
+    background-color: purple;
+}
+
+.color-black {
+    background-color: black;
+}
+
+.color-gold {
+    background-color: gold;
+}
+
+.color-white {
+    background-color: white;
+}
+
+.card__action {
+    text-align: center;
+}
+
+.card__action button {
+    background-color: var(--primary-color);
+    border: none;
+    outline: none;
+    color: wheat;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.card:hover .card__img img {
+    transform: translateY(-90px) rotate(-20deg);
+    /* transform: rotate(-20deg); */
+}
+
+.card:hover .card__action button {
+    scale: 0.9;
+    cursor: pointer;
+}
+
+.card:hover .card__title {
+    transform: translate(-30px, -60px);
+}
+
+.card:hover .card__price {
+    transform: translate(-60px, -50px);
+}
+
+.card__rom, .card__color, .card__action {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.75s;
+    transition-delay: 0.1s;
+}
+
+.card:hover .card__rom,
+.card:hover .card__color,
+.card:hover .card__action {
+    visibility: visible;
+    opacity: 100;
+}
