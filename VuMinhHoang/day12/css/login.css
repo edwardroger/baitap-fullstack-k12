@@ -1,0 +1,69 @@
+.container {
+    width: 35%;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    background-color: white;
+    margin: 0 auto;
+    height: 400px;
+}
+
+.divider {
+    color: azure
+}
+
+body {
+    background-color: aqua;
+
+}
+
+.head {
+    text-align: center;
+}
+
+.outline-text {
+    margin: 30px;
+    border-bottom: 1px solid rgb(142, 154, 154);
+}
+
+.text {
+    border: none;
+    width: 100%;
+}
+
+.outline-pass {
+    margin: 30px;
+    border-bottom: 1px solid rgb(142, 154, 154);
+}
+
+.password {
+    border: none;
+    width: 100%;
+}
+
+.forget {
+    margin-left: 30px;
+    color:rgb(53, 82, 108); 
+}
+
+.outline-button {
+    border: 1px solid;
+    margin: 50px;
+    border-radius: 30px;
+    background-color: rgb(29, 100, 122);
+    height: 40px;
+    cursor: pointer;
+    
+}
+.outline-button:hover{
+    background-color: aquamarine;
+}
+
+.button {
+    padding-top: 8px;
+    display: block;
+    margin: auto;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: large;
+}
