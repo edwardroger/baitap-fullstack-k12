@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/styles_Dangnhap.css">
+</head>
+<body>
+    <!-- header -->
+    <nav class="navbar navbar-expand-lg sticky-top" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand me-lg-5 m-lg-0 m-md-2">Shop Online</a>
+            <button class="navbar-toggler"
+                    type="button" 
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarShop" 
+                    aria-controls="navbarShop" 
+                    aria-expanded="false" 
+                    aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarShop">
+                <form class="d-flex me-auto" role="search" action="">
+                    <input class="form-control me-2" type="search" placeholder="Nhập sản phẩm" aria-label="search">
+                    <button class="btn btn-outline-success w-50" type="submit">Tìm kiếm</button>
+                </form>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="GioiThieu.html">Giới Thiệu</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Sản phẩm</a>
+                        <ul class="dropdown-menu" style="background-color: #e3f2fd;">
+                            <li><a class="dropdown-item" href="Iphone.html">Iphone</a></li>
+                            <li><a class="dropdown-item" href="Ipad.html">Ipad</a></li>
+                            <li><a class="dropdown-item" href="Android.html">Android</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="GioHang.html">Giỏ hàng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Lienhe.html">Liên hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Dangnhap.html">Đăng nhập</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Dangky.html">Đăng ký</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- login -->
+    <form class="login" action="">
+        <section class="login__title">
+            <i class='bx bxs-log-in-circle login__title--iconsLogin'></i>
+            <h1>Login</h1>
+        </section>
+        <section class="login__input mb-3">
+            <label for="username">Username <input type="text" id="username"></label>
+            <label for="password">Password <input type="password" id="password"></label>    
+            <label for="checkbox"><input type="checkbox" id="checkbox"> Keep me logged in</label>
+        </section>
+        <button class="login__button" type="submit">
+            <i class='bx bx-power-off login__button--power'></i>
+        </button>
+    </form>
+    <p class="notLogin"><i class='bx bx-key'></i> <a href="Dangky.html"> forgot password?</a></p>
+
+</body>
+</html>
