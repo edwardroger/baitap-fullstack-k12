@@ -15,9 +15,6 @@
     <!-- header -->
     <nav class="navbar navbar-expand-lg sticky-top" style="background-color: #e3f2fd;">
         <div class="container-fluid">
-            <!-- <div class="row">
-                .col
-            </div> -->
             <a href="index.html" class="navbar-brand me-lg-5 m-lg-0 m-md-2">Shop Online</a>
             <button class="navbar-toggler"
                     type="button" 
@@ -66,42 +63,52 @@
         </div>
     </nav>
 
-    <!-- dang ky -->
-    <form class="signup w-25 m-auto mt-5 border rounded" action="">
-        <div class="title">
-            <span class="material-symbols-outlined m-auto" style="color: rgb(39, 128, 205); font-size: 50px;">
-                person_add
+    <!-- form đăng ký -->
+    <div class="d-flex justify-content-center align-items-center mt-5 pt-5">
+        <form class="form-control w-25" action="" style="background-color: rgba(255, 255, 255, 0.666); min-width: 300px;">
+            <legend class="d-flex p-4 justify-content-center">
+                <span class="material-symbols-outlined me-3" style="color: rgb(39, 128, 205); font-size: 50px;">
+                    person_add
+                    </span>
+                <h1>Sign up</h1>
+            </legend>
+            <div class="input-group mb-3 ps-4 pe-4">
+                <span class="input-group-text" id="basic-addon1">
+                    <i class='bx bx-user'></i>
                 </span>
-            <h1>Sign up</h1>
-        </div>
-        <div class="s-input">
-            <input type="text" placeholder="User name">
-            <img src="images/person.png" alt="person">
-        </div>
-        <div class="s-input">
-            <input type="email" placeholder="Email">
-            <img src="images/email.png " alt="email">
-        </div>
-        <div class="s-input">
-            <input type="password" placeholder="Password">
-            <img src="images/password.png " alt="password">
-        </div>
-        <div class="s-input">
-            <input type="password" placeholder="Repeat password">
-            <img src="images/password.png " alt="password">
-        </div>
-        <label class="lb-check" for="check"><input id="check" type="checkbox">I agree with <a href="">the terms of the website.</a></label>
-        <a href="index.html">
-            <div class="d-flex justify-content-center">
-                <button class="w-50 btn btn-secondary border rounded" type="button">Sign up</button>
+                <input type="text" class="form-control" placeholder="User name" aria-label="Username" aria-describedby="basic-addon1"  style="background-color: rgba(255, 255, 255, 0.666);">
             </div>
-        </a>
-        <p class="ask-login text-center mt-3">Already have an account? 
-            <a class="text-danger" href="Dangnhap.html">
-                Login now
-            </a>
-        </p>
-    </form>
+            <div class="input-group mb-3 ps-4 pe-4">
+                <span class="input-group-text" id="basic-addon1">
+                    <i class='bx bxl-gmail' ></i>
+                </span>
+                <input type="email" class="form-control" placeholder="Email" aria-label="email" aria-describedby="basic-addon1" style="background-color: rgba(255, 255, 255, 0.666);">
+            </div>
+            <div class="input-group mb-3 ps-4 pe-4">
+                <span class="input-group-text" id="basic-addon1">
+                    <i class='bx bx-lock-open'></i>
+                </span>
+                <input type="password" class="form-control" placeholder="Password" aria-label="password" aria-describedby="basic-addon1" style="background-color: rgba(255, 255, 255, 0.666);">
+            </div>
+            <div class="input-group mb-3 ps-4 pe-4">
+                <span class="input-group-text" id="basic-addon1">
+                    <i class='bx bx-lock-open'></i>
+                </span>
+                <input type="password" class="form-control" placeholder="Repeat password" aria-label="Repeat password" aria-describedby="basic-addon1" style="background-color: rgba(255, 255, 255, 0.666);">
+            </div>
+            <div class="input-group-text text-black border-0 d-flex justify-content-center" style="background-color: unset;">
+                <input class="form-check-input mt-0 me-2" id="terms" type="checkbox" value="" aria-label="Checkbox for following text input">
+                <label for="terms">I agree with the terms of the website.</label>
+            </div>
+            <div class="d-flex justify-content-center mt-4">
+                <button class="btn btn-outline-secondary w-50">Sign up</button>
+            </div>
+            <div class="d-flex justify-content-center pt-4">
+                <p>Already have an account?</p>
+                <a class="link-underline-opacity-0 text-danger ms-2" href="Dangnhap.html">Login now</a>
+            </div>
+        </form>
+    </div>
     
 </body>
 </html>
