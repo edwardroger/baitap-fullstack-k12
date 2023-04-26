@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log in</title>
+    <title>Sign in</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -52,31 +53,48 @@
                         <a class="nav-link" href="Lienhe.html">Liên hệ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="Dangnhap.html">Đăng nhập</a>
+                        <a class="nav-link" href="Dangnhap.html">Đăng nhập</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Dangky.html">Đăng ký</a>
+                        <a class="nav-link active" href="Dangky.html">Đăng ký</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <!-- login -->
-    <form class="login" action="">
-        <section class="login__title">
-            <i class='bx bxs-log-in-circle login__title--iconsLogin'></i>
-            <h1>Login</h1>
-        </section>
-        <section class="login__input mb-3">
-            <label for="username">Username <input type="text" id="username"></label>
-            <label for="password">Password <input type="password" id="password"></label>    
-            <label for="checkbox"><input type="checkbox" id="checkbox"> Keep me logged in</label>
-        </section>
-        <button class="login__button" type="submit">
-            <i class='bx bx-power-off login__button--power'></i>
-        </button>
-    </form>
-    <p class="notLogin"><i class='bx bx-key'></i> <a href="Dangky.html"> forgot password?</a></p>
 
+    <!-- form đăng ký -->
+    <div class="d-flex justify-content-center align-items-center mt-5 pt-5">
+        <form class="form-control w-25" action="" style="background-color: rgba(255, 255, 255, 0.666); min-width: 300px;">
+            <legend class="d-flex p-4 justify-content-center">
+                <i class='bx bxs-user bx-flashing me-2' style='color:#32d7c4; font-size: 50px;'></i>
+                <h1>Login</h1>
+            </legend>
+            <div class="input-group mb-3 ps-4 pe-4">
+                <span class="input-group-text" id="Username">
+                    <i class='bx bx-user'></i>
+                </span>
+                <input type="text" class="form-control" placeholder="Username/Email" aria-label="Username" aria-describedby="Username"  style="background-color: rgba(255, 255, 255, 0.666);">
+            </div>
+            <div class="input-group mb-3 ps-4 pe-4">
+                <span class="input-group-text" id="password">
+                    <i class='bx bx-lock-open'></i>
+                </span>
+                <input type="password" class="form-control" placeholder="Password" aria-label="password" aria-describedby="password" style="background-color: rgba(255, 255, 255, 0.666);">
+            </div>
+            <div class="input-group-text text-black border-0 d-flex justify-content-center" style="background-color: unset;">
+                <input class="form-check-input mt-0 me-2" id="terms" type="checkbox" value="" aria-label="Checkbox for following text input">
+                <label for="terms">Remember login</label>
+            </div>
+            <div class="d-flex justify-content-center mt-4">
+                <button class="btn btn-outline-secondary w-50">Sign up</button>
+            </div>
+            <div class="d-flex justify-content-center pt-4">
+                <p>Don't have an account?</p>
+                <a class="link-underline-opacity-0 text-danger ms-2" href="Dangky.html">Sign up now!</a>
+            </div>
+        </form>
+    </div>
+    
 </body>
 </html>
