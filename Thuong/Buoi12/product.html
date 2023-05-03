@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="data:image/png;base64,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">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Shop-Dream</title>
+</head>
+<body>
+    <header class="sticky-top">
+        <div class="fs-header">
+            <nav class="navbar navbar-expand-lg  bg-danger  sticky-top ">
+                <div class="container" >
+                    <a href="index.html"> <img src="images/logohome.png" alt="" style="width: 100px;height: 50px;"></a>
+                    <button class="navbar-toggler" type="button" 
+                        data-toggle="collapse" data-target="#navbarResponsive"
+                        aria-controls="navbarResponsive" aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
+                            <li class="nav-item"><a class="nav-link" href="">Giới thiệu</a></li>
+                            <li class="nav-item"><a class="nav-link" href="service.html">Dịch vụ</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                    <div class="group-input" style="display: flex;justify-content: center;">
+                        <input type="search" name="" id="" style="height: 37px;padding: 5px;margin-right: 5px;" placeholder="Tìm kiếm gì ?">
+                        <button type="button" class="search-btn btn "><i class='bx bx-search'></i></button>
+                    </div> 
+                    <div class="dropdown">
+                        <button class="btn btn-waring dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Tài khoản
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="login.html">Đăng nhập</a></li>
+                          <li><a class="dropdown-item" href="register.html">Đăng ký</a></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div> 
+                    <div class="btn" style="display: flex;">
+                      <i class='bx bxs-shopping-bag-alt' ></i>
+                      <a href="giohang.html"><button class="btn btn-waring "   >
+                        Giỏ hàng
+                      </button></a>
+                    </div>  
+                </div>     
+            </nav>
+            <div class="menu-bar bg-dark">
+                <ul class="menu">
+                    <li class="menu-item"><a class="nav-links" style="display: flex;" href="listproduct.html"> <i class='bx bx-laptop' style="font-size: 25px;margin-right: 3px;"></i> ĐIỆN THOẠI</a></li>
+                    <li class="menu-item"><a class="nav-links" style="display: flex;" href="listproduct.html"> <i class='bx bx-laptop' style="font-size: 25px;margin-right: 3px;"></i> LAPTOP</a></li>
+                    <li class="menu-item"><a class="nav-links" style="display: flex;" href="listproduct.html"> <i class='bx bx-laptop' style="font-size: 25px;margin-right: 3px;"></i> MÁY TÍNH BẢNG</a></li>
+                    <li class="menu-item"><a class="nav-links" style="display: flex;" href="listproduct.html"> <i class='bx bx-laptop' style="font-size: 25px;margin-right: 3px;"></i> PHỤ KIỆN</a></li>
+                    <li class="menu-item"><a class="nav-links" style="display: flex;" href="listproduct.html"> <i class='bx bx-laptop' style="font-size: 25px;margin-right: 3px;"></i> MÁY CŨ</a></li>
+                    <li class="menu-item"><a class="nav-links"style="display: flex;" href="listproduct.html"><i class='bx bx-laptop' style="font-size: 25px;margin-right: 3px;"></i> SIM & THẺ</a></li>
+                    <li class="menu-item"><a class="nav-links" style="display: flex;" href="listproduct.html"> <i class='bx bx-laptop' style="font-size: 25px;margin-right: 3px;"></i>KHUYỄN MÃI</a></li>
+                </ul>
+            </div>
+        </div>
+  </header>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <label for="">
+                    Samsung Galaxy s22 5G 128GB
+                </label>
+            </div>
+            
+        </div>
+        <div class="row" >
+            <div class="col-6">
+                <div class="card-product">
+                    <div class="img-prs" >
+                        <!-- <img src="images/iphone14.png" alt="" height="600px" width="250px"> -->
+                        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                          <div class="carousel-inner" >
+                            <div class="carousel-item active">
+                              <img src="https://images.fpt.shop/unsafe/fit-in/585x390/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/12/6/638059309890101717_iphone-11-trang-1.jpg" class="d-block w-100" alt="..." style="height: 400px;">
+                            </div>
+                            <div class="carousel-item" >
+                              <img src="https://images.fpt.shop/unsafe/fit-in/585x390/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/12/6/638059309889944934_iphone-11-trang-2.jpg" class="d-block w-100" alt="..." style="height: 400px;">
+                            </div>
+                            <div class="carousel-item" >
+                              <img src="https://images.fpt.shop/unsafe/fit-in/585x390/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/12/6/638059309889626302_iphone-11-trang-3.jpg" class="d-block w-100" alt="..." style="height: 400px;">
+                            </div>
+                          </div>
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                        </div>
+                    </div>  
+                    <div class="select-prs row justify-content-center text-center">
+                        <div class="col-2">
+                            <a href=""><img src="images/iconanh.png" alt="" ></a>
+                        <p>Xem thêm ảnh</p>
+                        </div>
+                        <div class="col-2">
+                            <a href=""><img src="images/iconyt.png" alt=""></a>
+                        <p>Video trực tiếp</p>
+                        </div>
+                        <div class="col-2">
+                            <a href=""><img src="images/iconbox.png" alt=""></a>
+                        <p>Trong hộp có gì</p>
+                        </div>
+                        <div class="col-2">
+                            <a href=""><img src="images/ion360.png" alt=""></a>
+                        <p>Ảnh 360 độ</p>
+                        </div>
+                    </div> 
+                    
+                    <div class="row">
+                        <div class="info-prs bg-light">
+                            <p>6.1 inch, Dynamic AMOLED 2X, FHD+, 1080 x 2340 Pixels</p>
+                            <p>50.0 MP + 12.0 MP + 10.0 MP</p>
+                            <p>10.0 MP</p>
+                            <p>Snapdragon 8 Gen 1</p>
+                            <p>128 GB</p>
+                            <a style="text-decoration: none;" href="">Xem thông số chi tết</a>
+                        </div>
+                    </div>
+
+                    <div class="uytin" style="font-size: 1rem;display: flex;justify-content: space-between;">
+                        <div class="baohanh">              
+                            <i class='bx bx-medal' ></i>
+                            Hàng chính hãng - Bảo hành 12 Tháng</div>
+                        <div class="baoship">
+                            <i class='bx bxs-car' ></i>
+                            Giao hàng toàn quốc</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-6" style="height: 850px;overflow:hidden;" >
+                <div class="container bg-light" style="height: 100%;margin-right:-30px;overflow-y: scroll;" >
+                    <div class="price-prs" style="display: flex;justify-content: space-between;padding: 10px;">
+                        <div class="prices">
+                            <h3>12.999.999 đ</h3>
+                        </div>
+                        <div class="prices-deal" style="text-align: right;">
+                            Trả góp từ <br> 1.528.000đ/tháng
+                        </div>
+                    </div>
+
+                    <div class="score" style="margin: 10px 0;">
+                        +3.372 điểm thưởng dự kiến
+                    </div>
+
+                    <div class="color-prs">
+                        <a href="">
+                            <div>
+                                <img src="https://cdn2.cellphones.com.vn/x358,webp,q100/media/catalog/product/x/_/x_m_24.png" alt="">
+                                <p>Đen</p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <img src="data:image/jpeg;base64,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" alt="">
+                                <p>Vàng</p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <img src="https://chungblackberry.com/wp-content/uploads/2023/04/b_c_1_2.png" alt="" >
+                                <p>Trắng</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="img-deal" style="margin: 10px 0;">
+                        <a href=""> <img src="images/giamgiasoc.PNG" alt=""></a>
+                    </div>
+
+                    <div class="select-endow">
+                        
+                        <div class="select-radio">
+                            <div class="label-endow1">
+                                Chọn 1 trong 2 khuyến mãi sau
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                  Giảm ngay 9.000.000đ áp dụng đến 24/04 + trả góp 0% 
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Giảm ngay 7.000.000đ+Tặng máy ép chậm Kalite trị giá 3.000.000đ Xem chi tiết+Trả góp 0%
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="label-endow2">
+                            <div class="label-conten">
+                                Ưu đãi thêm
+                            </div>
+                            <div class="list-endow">                        
+                                Thu cũ đổi mới trợ giá ngay 15% đến 2 triệu (MintPro) Xem chi tiết
+                                <br>
+                                Đặc quyền trả góp 0% thẻ tín dụng đến 24 tháng qua Quà tặng Galaxy Xem chi tiết
+                                <br>
+                                Tặng phiếu mua hàng 500.000đ mua đơn hàng Robot hút bụi/ máy lọc nước trên 5.000.000đ
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="container text-center ">
+                        <div class="" style="padding: 0 ; margin: 10px 0;">
+                        <button type="button" class="btn btn-danger" style="width: 100%;height: 60px;">Mua ngay</button>
+                        </div>                        
+                        <div class="btn btn-group " style="display: flex;justify-content: space-between;padding: 0;">
+                            <div class="" style="padding: 0 ; margin: 0;">
+                                <button type="button" class="btn btn-primary" style="width: 285px;height: 60px;">Trả góp 0%</button>
+                            </div>
+                            <div class=" style="padding: 0 ; margin: 0;>
+                                <button type="button" class="btn btn-primary" style="width: 285px;height: 60px;">Trả góp qua thẻ</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="hotline-shop" style="display: flex;justify-content: space-between;font-size: 1rem;padding: 10px;">
+                        <div class="call-phone">Gọi 1800-6601 để được tư vấn mua hàng (Miễn phí)</div>
+                        <div class="address-shop"><a href="">Tìm shop có hàng gần nhất</a></div>
+                    </div>
+                    <a href="">
+                        <div class="container sale_old">
+                            <p>Mua hàng cũ:Iphone 14 promax</p>
+                            <p>Giá từ : 8.888.888đ</p>
+                        </div>
+                    </a>
+                    <div class="container" style="border-bottom: 0.5px solid rgb(202, 195, 195);">
+                        <label for="">Gợi ý sản phẩm mua kèm</label>
+                    
+                    <div class="container row" style="margin: unset;">
+                        <div class="col-2">
+                            <img src="https://shopdunk.com/images/thumbs/0001395_sac-20w-usb-c-power-adapter.png" alt="">
+                        </div>
+                        <div class="info_extend col-10">
+                            <span>Củ sạc Apple Power Adapter 20W Type-C</span>
+                            <div  style="display: flex;justify-content: space-between;">
+                                <span><a href="">520.000đ</a></span>
+                                <button>Thêm vào giỏ hàng</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container row" style="margin: unset;">
+                        <div class="col-2">
+                            <img src="https://shopdunk.com/images/thumbs/0001395_sac-20w-usb-c-power-adapter.png" alt="">
+                        </div>
+                        <div class="info_extend col-10">
+                            <span>Củ sạc Apple Power Adapter 20W Type-C</span>
+                            <div  style="display: flex;justify-content: space-between;">
+                                <span><a href="">520.000đ</a></span>
+                                <button>Thêm vào giỏ hàng</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container row" style="margin: unset;">
+                        <div class="col-2">
+                            <img src="https://shopdunk.com/images/thumbs/0001395_sac-20w-usb-c-power-adapter.png" alt="">
+                        </div>
+                        <div class="info_extend col-10">
+                            <span>Củ sạc Apple Power Adapter 20W Type-C</span>
+                            <div  style="display: flex;justify-content: space-between;">
+                                <span><a href="">520.000đ</a></span>
+                                <button>Thêm vào giỏ hàng</button>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <button class="btn btn-danger" style="margin: 15px 0;">Mua thêm </button>
+
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-7">
+                <label for="" style="font-size: 1.5rem;margin-bottom: 60px;"><b>Đặc điểm nổi bật</b></label>
+                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" >
+                    <div class="carousel-inner" >
+                      <div class="carousel-item active" data-bs-interval="2000" >
+                        <img src="https://images.fpt.shop/unsafe/fit-in/665x374/filters:quality(100):fill(white)/fptshop.com.vn/Uploads/Originals/2020/12/11/637432846053372998_Custom%20Size%20%E2%80%93%201.png" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="2000">
+                        <img src="https://images.fpt.shop/unsafe/fit-in/665x374/filters:quality(100):fill(white)/fptshop.com.vn/Uploads/Originals/2020/12/11/637432846056810489_Custom%20Size%20%E2%80%93%202.png" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="2000">
+                        <img src="https://images.fpt.shop/unsafe/fit-in/665x374/filters:quality(100):fill(white)/fptshop.com.vn/Uploads/Originals/2020/12/11/637432846055873033_Custom%20Size%20%E2%80%93%203.png" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div style="text-align: center; margin: 28px 0;" >
+                    <label for="">Đánh giá chi tiết</label>
+                </div>
+                <p>iPhone 11 với 6 phiên bản màu sắc, camera có khả năng chụp ảnh vượt trội, thời lượng pin cực dài và bộ vi xử lý mạnh nhất từ trước đến nay sẽ mang đến trải nghiệm tuyệt vời dành cho bạn.</p>
+                <img src="https://images.fpt.shop/unsafe/filters:quality(90)/fptshop.com.vn/Uploads/images/2015/Tin-Tuc/QuanLNH2/iphone-11-1.jpg" alt="">
+                
+            </div>
+            <div class="col-5">
+                <label for="" style="font-size: 1.5rem;margin-bottom: 60px;"><b>Thông số kỹ thuật</b></label>
+                <table>
+                    <tr>
+                        <th>Màn hình</th>
+                        <th>6.1 inch, IPS LCD, Liquid Retina HD, 828 x 1792 Pixels</th>
+                    </tr>
+                    <tr>
+                        <th>Camera sau</th>
+                        <th>12.0 MP + 12.0 MP</th>
+                    </tr>
+                    <tr>
+                        <th>Camera Selfie</th>
+                        <th>12.0 MP</th>
+                    </tr>
+                    <tr>
+                        <th>RAM</th>
+                        <th>4 GB</th>
+                    </tr>
+                    <tr>
+                        <th>Bộ nhớ trong</th>
+                        <th>64 GB</th>
+                    </tr>
+                    <tr>
+                        <th>CPU</th>
+                        <th>Apple A13 Bionic</th>
+                    </tr>
+                    <tr>
+                        <th>CPU</th>
+                        <th>Apple GPU 4 nhân</th>
+                    </tr>
+                    <tr>
+                        <th>Dung lượng pin	</th>
+                        <th>3110 mAh</th>
+                    </tr>
+                    <tr>
+                        <th>Thẻ sim	</th>
+                        <th>2 - 1 eSIM, 1 Nano SIM</th>
+                    </tr>
+                    <tr>
+                        <th>Hệ điều hành</th>
+                        <th>iOS 14</th>
+                    </tr>
+                    <tr>
+                        <th>Xuất xứ</th>
+                        <th>Trung Quốc</th>
+                    </tr>
+                    <tr>
+                        <th>Thời gian ra mắt</th>
+                        <th>09/2019</th>
+                    </tr>
+                </table>
+                <div class="container">
+                    <div class="row">
+                        <div class="label-box">
+                          <h4>Tin khuyến mãi</h4>
+                          <a href=""><h4>Xem tất cả</h4></a>
+                        </div>
+                        <div class="inf-conten">
+                          <div class="row">
+                            <div class="col col-md-3">
+                              <a href=""><img src="https://images.fpt.shop/unsafe/fit-in/105x70/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/4/19/637859747771164160_iphone-11-fptshop.jpg" alt="" ></a>
+                            </div>
+                            <div class="col col-md-9">
+                              <a href=""><span>Apple sẽ ngừng bán dòng iPhone 11 sau khi iPhone 14 series ra mắt</span></a>
+                              <div>
+                                <button style="border: none;font-size: 1rem;padding: 3px;margin-right: 5px;border-radius: 3px;"> Tin mới</button>
+                                <button style="border: none;font-size: 1rem;padding: 3px;border-radius: 3px;">Iphone14</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col col-md-3">
+                              <a href=""><img src="https://images.fpt.shop/unsafe/fit-in/105x70/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/4/19/637859747771164160_iphone-11-fptshop.jpg" alt="" ></a>
+                            </div>
+                            <div class="col col-md-9">
+                              <a href=""><span>Apple sẽ ngừng bán dòng iPhone 11 sau khi iPhone 14 series ra mắt</span></a>
+                              <div>
+                                <button style="border: none;font-size: 1rem;padding: 3px;margin-right: 5px;border-radius: 3px;"> Tin mới</button>
+                                <button style="border: none;font-size: 1rem;padding: 3px;border-radius: 3px;">Iphone14</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col col-md-3">
+                              <a href=""><img src="https://images.fpt.shop/unsafe/fit-in/105x70/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/4/19/637859747771164160_iphone-11-fptshop.jpg" alt="" ></a>
+                            </div>
+                            <div class="col col-md-9">
+                              <a href=""><span>Apple sẽ ngừng bán dòng iPhone 11 sau khi iPhone 14 series ra mắt</span></a>
+                              <div>
+                                <button style="border: none;font-size: 1rem;padding: 3px;margin-right: 5px;border-radius: 3px;"> Tin mới</button>
+                                <button style="border: none;font-size: 1rem;padding: 3px;border-radius: 3px;">Iphone14</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+          <h3>Hướng dẫn & tư vấn về iphone14</h3>
+          <div class="row">
+            <div class="cards bg-light col-3 col-md-3 col-sx-6">
+              <img class="card-img-top" src="https://images.fpt.shop/unsafe/fit-in/275x183/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/12/27/638077355835914982_iphone-11-11.jpeg" alt="Card image cap" >
+              <div class="card-body">
+                <p class="card-text">5 lý do tại sao iPhone 11 vẫn đáng mua vào năm 2023</p>
+                <a href="#" class="btn ">Đánh giá & tư vấn</a>
+              </div>
+            </div>
+            <div class="cards bg-light col-3 col-md-3 col-sx-6">
+              <img class="card-img-top" src="https://images.fpt.shop/unsafe/fit-in/275x183/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/8/22/637967573523873628_iphone-11-pro-max-18.JPG" alt="Card image cap" >
+              <div class="card-body">
+                <p class="card-text">Cập nhật ngay cách tắt nguồn iPhone 11 siêu gọn, siêu đỉnh này nếu bạn chưa biết</p>
+                <a href="#" class="btn">Thủ thuật - Mẹo vặt</a>
+                <a href="" class="btn">Thủ thuật hay</a>
+              </div>
+            </div>
+            <div class="cards bg-light col-3 col-md-3 col-sx-6">
+              <img class="card-img-top" src="https://images.fpt.shop/unsafe/fit-in/275x183/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/7/29/637946545313482483_tam-12-trieu-nen-mua-dien-thoai-nao-2022-thump.png" alt="Card image cap" >
+              <div class="card-body">
+                <p class="card-text">Tầm 12 triệu nên mua điện thoại nào 2022? Đây là 5 lựa chọn đáng quan tâm nhất </p>
+                <a href="#" class="btn ">Đánh giá & tư vấn</a>
+                <a href="#" class="btn ">toplist</a>
+              </div>
+            </div>
+            <div class="cards bg-light col-3 col-md-3 col-sx-6">
+              <img class="card-img-top" src="https://images.fpt.shop/unsafe/fit-in/275x183/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/7/5/637926584302251059_so-sanh-iphone-14-va-iphone-11-cover.jpeg" alt="Card image cap" >
+              <div class="card-body">
+                <p class="card-text">So sánh iPhone 14 và iPhone 11: Những nâng cấp lớn nhất được mong đợi sau 3 năm</p>
+                <a href="#" class="btn ">Đánh giá & tư vấn</a>
+                <a href="#" class="btn ">So sánh điện thoại </a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="container bg-light">
+          <h3 >Đánh giá sản phẩm</h3>
+          <div class="row" style="margin: 20px 0;border-top: 1px solid rgb(214, 205, 205);padding: 15px 0;">
+            <div class="col-4" style="text-align: center;">
+              <span>Đánh giá trung bình</span>
+              <h1>4.5/5</h1>
+              <div class="stat">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star-half' ></i>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="stat" style="display: flex;">
+                5
+                <i class='bx bxs-star'></i>
+                <div style="width: 100%;height: 5px;;background-color:rgb(117, 111, 111);margin: auto;border-radius: 15px;">
+                <div style="width: 96%;height: 5px;;background-color: green;"></div>
+                </div>
+              </div>
+              <div class="stat" style="display: flex;">
+                4
+                <i class='bx bxs-star'></i>
+                <div style="width: 100%;height: 5px;;background-color:rgb(117, 111, 111);margin: auto;border-radius: 15px;">
+                  <div style="width: 4%;height: 5px;;background-color: green;"></div>
+                </div>
+              </div>
+              <div class="stat" style="display: flex;">
+                3
+                <i class='bx bxs-star'></i>
+                <div style="width: 100%;height: 5px;;background-color:rgb(117, 111, 111);margin: auto;border-radius: 15px;"></div>
+              </div>
+              <div class="stat" style="display: flex;">
+                2
+                <i class='bx bxs-star'></i>
+                <div style="width: 100%;height: 5px;;background-color:rgb(117, 111, 111);margin: auto;border-radius: 15px;"></div>
+              </div>
+              <div class="stat" style="display: flex;">
+                1
+                <i class='bx bxs-star'></i>
+                <div style="width: 100%;height: 5px;;background-color:rgb(117, 111, 111);margin: auto;border-radius: 15px;"></div>
+              </div>
+            </div>
+            <div class="col-4" style="text-align: center;padding-top: 25px;">
+                <p>Bạn đã dùng sản phẩm này?</p>
+                <div class="btn btn-danger">
+                  GỬI ĐÁNH GIÁ
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <footer class="text-center text-lg-start bg-light text-muted ">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+          <!-- Left -->
+          <div class="me-5 d-none d-lg-block">
+            <span>Get connected with us on social networks:</span>
+          </div>
+          <!-- Left -->
+    
+          <!-- Right -->
+          <div>
+            <button type="button" class="btn btn-link btn-floating mx-1">
+              <i class='bx bxl-facebook-circle'></i>
+            </button>
+        
+            <button type="button" class="btn btn-link btn-floating mx-1">
+              <i class='bx bxl-google' ></i>
+            </button>
+        
+            <button type="button" class="btn btn-link btn-floating mx-1">
+              <i class='bx bxl-twitter' ></i>
+            </button>
+        
+            <button type="button" class="btn btn-link btn-floating mx-1">
+              <i class='bx bxl-github' ></i>
+            </button>
+          </div>
+          <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+    
+        <!-- Section: Links  -->
+        <section class="">
+          <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <!-- Content -->
+                <h6 class="text-uppercase fw-bold mb-4">
+                  <i class="fas fa-gem me-3"></i>About Us
+                </h6>
+                <p>
+                  Here you can use rows and columns to organize your footer content. Lorem ipsum
+                  dolor sit amet, consectetur adipisicing elit.
+                </p>
+              </div>
+              <!-- Grid column -->
+    
+              <!-- Grid column -->
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">
+                  Products
+                </h6>
+                <p>
+                  <a href="#!" class="text-reset">Laptop</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Điện thoại</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Phụ kiện</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Sim & Thẻ</a>
+                </p>
+              </div>
+              <!-- Grid column -->
+    
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">
+                  Dịch vụ
+                </h6>
+                <p>
+                  <a href="#!" class="text-reset">hahaa</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Settings</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Orders</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Help</a>
+                </p>
+              </div>
+              <!-- Grid column -->
+    
+              <!-- Grid column -->
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                <p><i class='bx bxs-home'></i> New York, NY 10012, US</p>
+                <p>
+                  <i class='bx bxl-gmail' ></i>
+                  info@example.com
+                </p>
+                <p><i class='bx bxs-phone' ></i> + 01 234 567 88</p>
+                <p><i class='bx bx-printer' ></i> + 01 234 567 89</p>
+              </div>
+              <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+          </div>
+        </section>
+        <!-- Section: Links  -->
+    
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+          © 2021 Copyright:
+          <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script></body>  
+
+</body>
+</html>

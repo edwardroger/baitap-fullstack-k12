@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="data:image/png;base64,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">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Shop-Dream</title>
+</head>
+<body>  
+  <header class="sticky-top">
+        <div class="fs-header">
+            <nav class="navbar navbar-expand-lg  bg-danger  sticky-top ">
+                <div class="container" >
+                    <a href="index.html"> <img src="images/logohome.png" alt="" style="width: 100px;height: 50px;"></a>
+                    <button class="navbar-toggler" type="button" 
+                        data-toggle="collapse" data-target="#navbarResponsive"
+                        aria-controls="navbarResponsive" aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
+                            <li class="nav-item"><a class="nav-link" href="">Giới thiệu</a></li>
+                            <li class="nav-item"><a class="nav-link" href="service.html">Dịch vụ</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                    <div class="group-input" style="display: flex;justify-content: center;">
+                        <input type="search" name="" id="" style="height: 37px;padding: 5px;margin-right: 5px;" placeholder="Tìm kiếm gì ?">
+                        <button type="button" class="search-btn btn "><i class='bx bx-search'></i></button>
+                    </div> 
+                    <div class="dropdown">
+                        <button class="btn btn-waring dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Tài khoản
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="login.html">Đăng nhập</a></li>
+                          <li><a class="dropdown-item" href="register.html">Đăng ký</a></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div> 
+                    <div class="btn" style="display: flex;">
+                      <i class='bx bxs-shopping-bag-alt' ></i>
+                      <a href="giohang.html"><button class="btn btn-waring "   >
+                        Giỏ hàng
+                      </button></a>
+                    </div>  
+                </div>     
+            </nav>
+            <div class="menu-bar bg-dark">
+                <ul class="menu">
+                    <li class="menu-item"><a class="nav-links" style="display: flex;" href="listproduct.html"> <i class='bx bx-laptop' style="font-size: 25px;margin-right: 3px;"></i> ĐIỆN THOẠI</a></li>
+                    <li class="menu-item"><a class="nav-links" style="display: flex;" href="listproduct.html"> <i class='bx bx-laptop' style="font-size: 25px;margin-right: 3px;"></i> LAPTOP</a></li>
+                    <li class="menu-item"><a class="nav-links" style="display: flex;" href="listproduct.html"> <i class='bx bx-laptop' style="font-size: 25px;margin-right: 3px;"></i> MÁY TÍNH BẢNG</a></li>
+                    <li class="menu-item"><a class="nav-links" style="display: flex;" href="listproduct.html"> <i class='bx bx-laptop' style="font-size: 25px;margin-right: 3px;"></i> PHỤ KIỆN</a></li>
+                    <li class="menu-item"><a class="nav-links" style="display: flex;" href="listproduct.html"> <i class='bx bx-laptop' style="font-size: 25px;margin-right: 3px;"></i> MÁY CŨ</a></li>
+                    <li class="menu-item"><a class="nav-links"style="display: flex;" href="listproduct.html"><i class='bx bx-laptop' style="font-size: 25px;margin-right: 3px;"></i> SIM & THẺ</a></li>
+                    <li class="menu-item"><a class="nav-links" style="display: flex;" href="listproduct.html"> <i class='bx bx-laptop' style="font-size: 25px;margin-right: 3px;"></i>KHUYỄN MÃI</a></li>
+                </ul>
+            </div>
+        </div>
+  </header>
+  <div class="container ">
+      <div class="row">
+        <div class="col-6 col">
+          <div class="sale-coutdown" style="text-align: center;object-fit: cover;">
+            <a href=""> <img src="https://images.fpt.shop/unsafe/fit-in/filters:quality(80):fill(transparent)/fptshop.com.vn/Uploads/Originals/2023/4/14/638170703192512387_Frame%20427323198.png" alt="" style="height: auto;width: 203%;"></a>
+          </div>
+        </div>
+      </div>
+    <div class="select-banner row">
+      <div class="col col-md-8 col-sx-6" >
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2000">
+              <img src="images/Gxs22.PNG" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="images/iphone14pr.PNG" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="images/phukienss.PNG" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="col col-md-4 col-sx-6">
+        <div class="row">
+          <a href=""> <img src="images/apot.PNG" alt=""></a>
+          <a href=""><img src="images/sstab8.PNG" alt=""></a>
+        </div>
+        <div class="row">
+            <div class="label-box">
+              <h4>Tin khuyến mãi</h4>
+              <a href=""><h4>Xem tất cả</h4></a>
+            </div>
+            <div class="inf-conten">
+              <div class="row">
+                <div class="col col-md-2">
+                  <a href=""><img src="images/latop16G.jfif" alt="" style="padding: 10px;"></a>
+                </div>
+                <div class="col col-md-10">
+                  <a href=""><span>Laptop Ram 16GB giảm đến 20%</span></a>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="select-box row container" > 
+          <div class="col-md-2 ">
+            <a href="">
+                <div class="items-box">
+                  <img src="images/iphone14.png" alt="">
+              </div>
+              <p>Điện thoại</p>
+            </a>    
+          </div>
+          <div class="col-md-2">
+            <a href="">
+              <div class="items-box">
+                  <img src="https://2momart.vn/upload/medium/102021/laptop.png" alt="">
+                  
+              </div>
+              <p>Laptop</p>
+            </a>    
+          </div>
+          <div class="col-md-2">
+            <a href="">
+              <div class="items-box">
+                  <img src="https://cdn2.cellphones.com.vn/x358,webp,q100/media/catalog/product/t/_/t_i_xu_ng_54__1_13.png" alt="">   
+              </div>
+              <p>PC-Lắp ráp</p>
+            </a>    
+          </div>
+
+          <div class="col-md-2">
+            <a href="">
+              <div class="items-box">
+                  <img src="https://cdn.hoanghamobile.com/i/preview/Uploads/2020/10/27/M%C3%A1y%20t%C3%ADnh%20b%E1%BA%A3ng%20Samsung%20Tab%20A8%20-%20T295.png" alt="">
+                  
+              </div>
+              <p>Máy tính bẳng</p>
+            </a>    
+          </div>
+          <div class="col-md-2">
+            <a href="">
+              <div class="items-box">
+                  <img src="https://www.totolink.vn/public/uploads/img_article/6thietbimangcobanbancanbietrouterlagi.png" alt="">
+                  
+              </div>
+              <p>Thiết bị thông minh</p>
+            </a>    
+          </div>
+          <div class="col-md-2">
+            <a href="">
+              <div class="items-box">
+                  <img src="https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/fptshop.com.vn/Uploads/images/2022/iconcate/icon-houseware.png" alt="">
+                  
+              </div>
+              <p>Gia dụng</p>
+            </a>    
+          </div>
+          <div class="col-md-2">
+            <a href="">
+              <div class="items-box">
+                  <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/delivery-pickup-header-202209_FMT_WHH?wid=400&hei=220&fmt=png-alpha&.v=1660803676180" alt="">
+                  
+              </div>
+              <p>Apple</p>
+            </a>    
+          </div>
+          <div class="col-md-2">
+            <a href="">
+              <div class="items-box">
+                  <img src="https://images.samsung.com/is/image/samsung/p6pim/vn/sm-a235fzkgxxv/gallery/vn-galaxy-a23-sm-a235-sm-a235fzkgxxv-531678304?$650_519_PNG$" alt="">
+                  
+              </div>
+              <p>Samsung</p>
+            </a>    
+          </div>
+          <div class="col-md-2">
+            <a href="">
+              <div class="items-box">
+                  <img src="https://images.samsung.com/is/image/samsung/p6pim/vn/2108/gallery/vn-galaxy-watch4-398969-sm-r865fzkaxxv-thumb-481127864?$344_344_PNG$" alt="">
+                  
+              </div>
+              <p>Đồng hồ thông minh</p>
+            </a>    
+          </div>
+          <div class="col-md-2">
+            <a href="">
+              <div class="items-box">
+                  <img src="https://lzd-img-global.slatic.net/g/p/3b2889f9d53605ac8b9ece6acd5513d7.png_360x360q75.png_.webp" alt="">
+                  
+              </div>
+              <p>Phụ kiện</p>
+            </a>    
+          </div>
+          <div class="col-md-2">
+            <a href="">
+              <div class="items-box">
+                  <img src="https://anphat.com.vn/media/product/24236_m__n_h__nh_m__y_t__nh_hp_elitedisplay_e230t_23inch_c___m____ng__w2z50aa__1.png" alt="">
+                  
+              </div>
+              <p>Màn hình</p>
+            </a>    
+          </div>
+          <div class="col-md-2">
+            <a href="">
+              <div class="items-box">
+                  <img src="https://cdn2.cellphones.com.vn/x358,webp,q100/media/catalog/product/e/0/e061bd2ab13b5e2263236cb206248daa_1_2.png" alt="">
+                  
+              </div>
+              <p>Điện thoại cũ</p>
+            </a>    
+          </div>     
+    </div>
+    <div class="pictur">
+      <a href=""> <img src="images/pitc.PNG" alt=""></a>
+    </div>
+    <div class="banner-sale" style="background-color: aliceblue;padding: 0 15px; margin: 20px 0;">
+        <div class="lite-sale"><h3>KHUYẾN MÃI HOT</h3></div>
+        <div class="row">
+          <div class="col col-md-3 col-sm-6">
+            <div class="card">
+              <img src="images/iphone14.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Samsung galaxy ultra 20</h5>
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" checked>
+                  <label class="btn btn-outline-primary" for="btnradio4">256 GB</label>
+                
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btnradio5">512 GB</label>
+                
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btnradio6">1 TB</label>
+                </div>
+                <div class="price_prs" style="border: 1px solid #ef8573; background-color: #ef8573; border-radius: 15px;text-align: center;flex-basis: 130px;width:fit-content;padding: 0 8px;margin: 10px 0;">
+                  22.990.000 đ
+                </div>
+                <div class="infor_prs" style="font-size: 1rem;">
+                  <div>
+                    <span>
+                      <i class='bx bx-chip' ></i>
+                      <span>Snapdragon 680</span>
+                    </span>
+                    <span>
+                      <i class='bx bx-mobile' ></i>
+                      <span>6.0 inch</span>
+                    </span>
+                  </div>
+                  <div>
+                    <span>
+                      <i class='bx bx-microchip'></i>
+                      <span>8 GB</span>
+                    </span>
+                    <span>
+                      <i class='bx bx-hdd'></i>
+                      <span>512 GB</span>
+                    </span>
+                  </div>
+
+                </div>
+
+                  <div class="active_cus" >
+                    <a href="product.html"><button class="btn btn-danger">Mua ngay</button></a>
+                    <button class="btn btn-secondary">So sánh</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-md-3 col-sm-6">
+            <div class="card">
+              <img src="images/iphone14.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Samsung galaxy ultra 20</h5>
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" checked>
+                  <label class="btn btn-outline-primary" for="btnradio4">256 GB</label>
+                
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btnradio5">512 GB</label>
+                
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btnradio6">1 TB</label>
+                </div>
+                <div class="price_prs" style="border: 1px solid #ef8573; background-color: #ef8573; border-radius: 15px;text-align: center;flex-basis: 130px;width:fit-content;padding: 0 8px;margin: 10px 0;">
+                  22.990.000 đ
+                </div>
+                <div class="infor_prs" style="font-size: 1rem;">
+                  <div>
+                    <span>
+                      <i class='bx bx-chip' ></i>
+                      <span>Snapdragon 680</span>
+                    </span>
+                    <span>
+                      <i class='bx bx-mobile' ></i>
+                      <span>6.0 inch</span>
+                    </span>
+                  </div>
+                  <div>
+                    <span>
+                      <i class='bx bx-microchip'></i>
+                      <span>8 GB</span>
+                    </span>
+                    <span>
+                      <i class='bx bx-hdd'></i>
+                      <span>512 GB</span>
+                    </span>
+                  </div>
+
+                </div>
+
+                  <div class="active_cus" >
+                    <a href="product.html"><button class="btn btn-danger">Mua ngay</button></a>
+                    <button class="btn btn-secondary">So sánh</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-md-3 col-sm-6">
+            <div class="card">
+              <img src="images/iphone14.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Samsung galaxy ultra 20</h5>
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" checked>
+                  <label class="btn btn-outline-primary" for="btnradio4">256 GB</label>
+                
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btnradio5">512 GB</label>
+                
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btnradio6">1 TB</label>
+                </div>
+                <div class="price_prs" style="border: 1px solid #ef8573; background-color: #ef8573; border-radius: 15px;text-align: center;flex-basis: 130px;width:fit-content;padding: 0 8px;margin: 10px 0;">
+                  22.990.000 đ
+                </div>
+                <div class="infor_prs" style="font-size: 1rem;">
+                  <div>
+                    <span>
+                      <i class='bx bx-chip' ></i>
+                      <span>Snapdragon 680</span>
+                    </span>
+                    <span>
+                      <i class='bx bx-mobile' ></i>
+                      <span>6.0 inch</span>
+                    </span>
+                  </div>
+                  <div>
+                    <span>
+                      <i class='bx bx-microchip'></i>
+                      <span>8 GB</span>
+                    </span>
+                    <span>
+                      <i class='bx bx-hdd'></i>
+                      <span>512 GB</span>
+                    </span>
+                  </div>
+
+                </div>
+
+                  <div class="active_cus" >
+                    <a href="product.html"><button class="btn btn-danger">Mua ngay</button></a>
+                    <button class="btn btn-secondary">So sánh</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-md-3 col-sm-6">
+            <div class="card">
+              <img src="images/iphone14.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Samsung galaxy ultra 20</h5>
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" checked>
+                  <label class="btn btn-outline-primary" for="btnradio4">256 GB</label>
+                
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btnradio5">512 GB</label>
+                
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btnradio6">1 TB</label>
+                </div>
+                <div class="price_prs" style="border: 1px solid #ef8573; background-color: #ef8573; border-radius: 15px;text-align: center;flex-basis: 130px;width:fit-content;padding: 0 8px;margin: 10px 0;">
+                  22.990.000 đ
+                </div>
+                <div class="infor_prs" style="font-size: 1rem;">
+                  <div>
+                    <span>
+                      <i class='bx bx-chip' ></i>
+                      <span>Snapdragon 680</span>
+                    </span>
+                    <span>
+                      <i class='bx bx-mobile' ></i>
+                      <span>6.0 inch</span>
+                    </span>
+                  </div>
+                  <div>
+                    <span>
+                      <i class='bx bx-microchip'></i>
+                      <span>8 GB</span>
+                    </span>
+                    <span>
+                      <i class='bx bx-hdd'></i>
+                      <span>512 GB</span>
+                    </span>
+                  </div>
+
+                </div>
+
+                  <div class="active_cus" >
+                    <a href="product.html"><button class="btn btn-danger">Mua ngay</button></a>
+                    <button class="btn btn-secondary">So sánh</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+    </div>
+    <div class="pictur">
+      <a href=""> <img src="images/giamgiasoc.PNG" alt=""></a>
+    </div>
+    <div class="suggestion_box" style="background-color: aliceblue;padding: 0 15px;margin: 20px 0;">
+      
+        <div class="lite-sale"><h3>GỢI Ý HÔM NAY</h3></div>
+        <div class="gruop-btn" >
+          <ul class="nav nav-pills">
+            <li class="nav-items">
+              <a class="nav-link active" aria-current="page" href="#">Độc quyền</a>
+            </li>
+            <li class="nav-items">
+              <a class="nav-link" href="#">Top tìm kiếm</a>
+            </li>
+            <li class="nav-items">
+              <a class="nav-link" href="#">Nhà thông minh</a>
+            </li>
+            <li class="nav-items">
+              <a class="nav-link ">Phụ kiện -50%</a>
+            </li>
+          </ul>
+        </div>
+        <div class="row">
+          <div class="col col-md-3 col-sm-6">
+            <div class="card">
+              <img src="images/iphone14.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Samsung galaxy ultra 20</h5>
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" checked>
+                  <label class="btn btn-outline-primary" for="btnradio4">256 GB</label>
+                
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btnradio5">512 GB</label>
+                
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btnradio6">1 TB</label>
+                </div>
+                <div class="price_prs" style="border: 1px solid #ef8573; background-color: #ef8573; border-radius: 15px;text-align: center;flex-basis: 130px;width:fit-content;padding: 0 8px;margin: 10px 0;">
+                  22.990.000 đ
+                </div>
+                <div class="infor_prs" style="font-size: 1rem;">
+                  <div>
+                    <span>
+                      <i class='bx bx-chip' ></i>
+                      <span>Snapdragon 680</span>
+                    </span>
+                    <span>
+                      <i class='bx bx-mobile' ></i>
+                      <span>6.0 inch</span>
+                    </span>
+                  </div>
+                  <div>
+                    <span>
+                      <i class='bx bx-microchip'></i>
+                      <span>8 GB</span>
+                    </span>
+                    <span>
+                      <i class='bx bx-hdd'></i>
+                      <span>512 GB</span>
+                    </span>
+                  </div>
+
+                </div>
+
+                  <div class="active_cus" >
+                    <a href="product.html"><button class="btn btn-danger">Mua ngay</button></a>
+                    <button class="btn btn-secondary">So sánh</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-md-3 col-sm-6">
+            <div class="card">
+              <img src="images/iphone14.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Samsung galaxy ultra 20</h5>
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" checked>
+                  <label class="btn btn-outline-primary" for="btnradio4">256 GB</label>
+                
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btnradio5">512 GB</label>
+                
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btnradio6">1 TB</label>
+                </div>
+                <div class="price_prs" style="border: 1px solid #ef8573; background-color: #ef8573; border-radius: 15px;text-align: center;flex-basis: 130px;width:fit-content;padding: 0 8px;margin: 10px 0;">
+                  22.990.000 đ
+                </div>
+                <div class="infor_prs" style="font-size: 1rem;">
+                  <div>
+                    <span>
+                      <i class='bx bx-chip' ></i>
+                      <span>Snapdragon 680</span>
+                    </span>
+                    <span>
+                      <i class='bx bx-mobile' ></i>
+                      <span>6.0 inch</span>
+                    </span>
+                  </div>
+                  <div>
+                    <span>
+                      <i class='bx bx-microchip'></i>
+                      <span>8 GB</span>
+                    </span>
+                    <span>
+                      <i class='bx bx-hdd'></i>
+                      <span>512 GB</span>
+                    </span>
+                  </div>
+
+                </div>
+
+                  <div class="active_cus" >
+                    <a href="product.html"><button class="btn btn-danger">Mua ngay</button></a>
+                    <button class="btn btn-secondary">So sánh</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-md-3 col-sm-6">
+            <div class="card">
+              <img src="images/iphone14.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Samsung galaxy ultra 20</h5>
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" checked>
+                  <label class="btn btn-outline-primary" for="btnradio4">256 GB</label>
+                
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btnradio5">512 GB</label>
+                
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btnradio6">1 TB</label>
+                </div>
+                <div class="price_prs" style="border: 1px solid #ef8573; background-color: #ef8573; border-radius: 15px;text-align: center;flex-basis: 130px;width:fit-content;padding: 0 8px;margin: 10px 0;">
+                  22.990.000 đ
+                </div>
+                <div class="infor_prs" style="font-size: 1rem;">
+                  <div>
+                    <span>
+                      <i class='bx bx-chip' ></i>
+                      <span>Snapdragon 680</span>
+                    </span>
+                    <span>
+                      <i class='bx bx-mobile' ></i>
+                      <span>6.0 inch</span>
+                    </span>
+                  </div>
+                  <div>
+                    <span>
+                      <i class='bx bx-microchip'></i>
+                      <span>8 GB</span>
+                    </span>
+                    <span>
+                      <i class='bx bx-hdd'></i>
+                      <span>512 GB</span>
+                    </span>
+                  </div>
+
+                </div>
+
+                  <div class="active_cus" >
+                    <a href="product.html"><button class="btn btn-danger">Mua ngay</button></a>
+                    <button class="btn btn-secondary">So sánh</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-md-3 col-sm-6">
+            <div class="card">
+              <img src="images/iphone14.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Samsung galaxy ultra 20</h5>
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" checked>
+                  <label class="btn btn-outline-primary" for="btnradio4">256 GB</label>
+                
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btnradio5">512 GB</label>
+                
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btnradio6">1 TB</label>
+                </div>
+                <div class="price_prs" style="border: 1px solid #ef8573; background-color: #ef8573; border-radius: 15px;text-align: center;flex-basis: 130px;width:fit-content;padding: 0 8px;margin: 10px 0;">
+                  22.990.000 đ
+                </div>
+                <div class="infor_prs" style="font-size: 1rem;">
+                  <div>
+                    <span>
+                      <i class='bx bx-chip' ></i>
+                      <span>Snapdragon 680</span>
+                    </span>
+                    <span>
+                      <i class='bx bx-mobile' ></i>
+                      <span>6.0 inch</span>
+                    </span>
+                  </div>
+                  <div>
+                    <span>
+                      <i class='bx bx-microchip'></i>
+                      <span>8 GB</span>
+                    </span>
+                    <span>
+                      <i class='bx bx-hdd'></i>
+                      <span>512 GB</span>
+                    </span>
+                  </div>
+
+                </div>
+
+                  <div class="active_cus" >
+                    <a href="product.html"><button class="btn btn-danger">Mua ngay</button></a>
+                    <button class="btn btn-secondary">So sánh</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-md-3 col-sm-6">
+            <div class="card">
+              <img src="images/iphone14.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Samsung galaxy ultra 20</h5>
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" checked>
+                  <label class="btn btn-outline-primary" for="btnradio4">256 GB</label>
+                
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btnradio5">512 GB</label>
+                
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btnradio6">1 TB</label>
+                </div>
+                <div class="price_prs" style="border: 1px solid #ef8573; background-color: #ef8573; border-radius: 15px;text-align: center;flex-basis: 130px;width:fit-content;padding: 0 8px;margin: 10px 0;">
+                  22.990.000 đ
+                </div>
+                <div class="infor_prs" style="font-size: 1rem;">
+                  <div>
+                    <span>
+                      <i class='bx bx-chip' ></i>
+                      <span>Snapdragon 680</span>
+                    </span>
+                    <span>
+                      <i class='bx bx-mobile' ></i>
+                      <span>6.0 inch</span>
+                    </span>
+                  </div>
+                  <div>
+                    <span>
+                      <i class='bx bx-microchip'></i>
+                      <span>8 GB</span>
+                    </span>
+                    <span>
+                      <i class='bx bx-hdd'></i>
+                      <span>512 GB</span>
+                    </span>
+                  </div>
+
+                </div>
+
+                  <div class="active_cus" >
+                    <a href="product.html"><button class="btn btn-danger">Mua ngay</button></a>
+                    <button class="btn btn-secondary">So sánh</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-md-3 col-sm-6">
+            <div class="card">
+              <img src="images/iphone14.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Samsung galaxy ultra 20</h5>
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" checked>
+                  <label class="btn btn-outline-primary" for="btnradio4">256 GB</label>
+                
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btnradio5">512 GB</label>
+                
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btnradio6">1 TB</label>
+                </div>
+                <div class="price_prs" style="border: 1px solid #ef8573; background-color: #ef8573; border-radius: 15px;text-align: center;flex-basis: 130px;width:fit-content;padding: 0 8px;margin: 10px 0;">
+                  22.990.000 đ
+                </div>
+                <div class="infor_prs" style="font-size: 1rem;">
+                  <div>
+                    <span>
+                      <i class='bx bx-chip' ></i>
+                      <span>Snapdragon 680</span>
+                    </span>
+                    <span>
+                      <i class='bx bx-mobile' ></i>
+                      <span>6.0 inch</span>
+                    </span>
+                  </div>
+                  <div>
+                    <span>
+                      <i class='bx bx-microchip'></i>
+                      <span>8 GB</span>
+                    </span>
+                    <span>
+                      <i class='bx bx-hdd'></i>
+                      <span>512 GB</span>
+                    </span>
+                  </div>
+
+                </div>
+
+                  <div class="active_cus" >
+                    <a href="product.html"><button class="btn btn-danger">Mua ngay</button></a>
+                    <button class="btn btn-secondary">So sánh</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-md-3 col-sm-6">
+            <div class="card">
+              <img src="images/iphone14.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Samsung galaxy ultra 20</h5>
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" checked>
+                  <label class="btn btn-outline-primary" for="btnradio4">256 GB</label>
+                
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btnradio5">512 GB</label>
+                
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btnradio6">1 TB</label>
+                </div>
+                <div class="price_prs" style="border: 1px solid #ef8573; background-color: #ef8573; border-radius: 15px;text-align: center;flex-basis: 130px;width:fit-content;padding: 0 8px;margin: 10px 0;">
+                  22.990.000 đ
+                </div>
+                <div class="infor_prs" style="font-size: 1rem;">
+                  <div>
+                    <span>
+                      <i class='bx bx-chip' ></i>
+                      <span>Snapdragon 680</span>
+                    </span>
+                    <span>
+                      <i class='bx bx-mobile' ></i>
+                      <span>6.0 inch</span>
+                    </span>
+                  </div>
+                  <div>
+                    <span>
+                      <i class='bx bx-microchip'></i>
+                      <span>8 GB</span>
+                    </span>
+                    <span>
+                      <i class='bx bx-hdd'></i>
+                      <span>512 GB</span>
+                    </span>
+                  </div>
+
+                </div>
+
+                  <div class="active_cus" >
+                    <a href="product.html"><button class="btn btn-danger">Mua ngay</button></a>
+                    <button class="btn btn-secondary">So sánh</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-md-3 col-sm-6">
+            <div class="card">
+              <img src="images/iphone14.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Samsung galaxy ultra 20</h5>
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" checked>
+                  <label class="btn btn-outline-primary" for="btnradio4">256 GB</label>
+                
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btnradio5">512 GB</label>
+                
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btnradio6">1 TB</label>
+                </div>
+                <div class="price_prs" style="border: 1px solid #ef8573; background-color: #ef8573; border-radius: 15px;text-align: center;flex-basis: 130px;width:fit-content;padding: 0 8px;margin: 10px 0;">
+                  22.990.000 đ
+                </div>
+                <div class="infor_prs" style="font-size: 1rem;">
+                  <div>
+                    <span>
+                      <i class='bx bx-chip' ></i>
+                      <span>Snapdragon 680</span>
+                    </span>
+                    <span>
+                      <i class='bx bx-mobile' ></i>
+                      <span>6.0 inch</span>
+                    </span>
+                  </div>
+                  <div>
+                    <span>
+                      <i class='bx bx-microchip'></i>
+                      <span>8 GB</span>
+                    </span>
+                    <span>
+                      <i class='bx bx-hdd'></i>
+                      <span>512 GB</span>
+                    </span>
+                  </div>
+
+                </div>
+
+                  <div class="active_cus" >
+                    <a href="product.html"><a href="product.html"><button class="btn btn-danger">Mua ngay</button></a></a>
+                    <a href=""><button class="btn btn-secondary">So sánh</button></a>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+    </div>
+
+    <div class="st-service container">
+      <h3>DỊCH VỤ TIỆN ÍCH</h3>
+      <div class="row">
+        <div class="col col-md-3 col-sm-6">
+          <a href="">
+            <div class="card card-sv ">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="row">
+                    <img src="images/iconvoinc.png" class="img-fluid rounded-start" alt="..." style="height: 50%;width: 100%;">
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <div class="cards-body">
+                    <h6 class="card-title">Thanh toán tiền nước</h6>
+                    <p class="card-text">Thanh toán nhanh chóng,tiện lợi</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col col-md-3 col-sm-6">
+          <a href="">
+            <div class="card card-sv ">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="row">
+                    <img src="images/iconbill.png" class="img-fluid rounded-start" alt="..." style="height: 50%;width: 100%;">
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <div class="cards-body">
+                    <h6 class="card-title">Thanh toán tiền nước</h6>
+                    <p class="card-text">Thanh toán nhanh chóng,tiện lợi</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col col-md-3 col-sm-6">
+          <a href="">
+            <div class="card card-sv ">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="row">
+                    <img src="images/iconcardip.jpg" class="img-fluid rounded-start" alt="..." style="height: 50%;width: 100%;">
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <div class="cards-body">
+                    <h6 class="card-title">Thanh toán tiền nước</h6>
+                    <p class="card-text">Thanh toán nhanh chóng,tiện lợi</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col col-md-3 col-sm-6">
+          <a href="">
+            <div class="card card-sv ">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="row">
+                    <img src="images/icongame.png" class="img-fluid rounded-start" alt="..." style="height: 50%;width: 100%;">
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <div class="cards-body">
+                    <h6 class="card-title">Thanh toán tiền nước</h6>
+                    <p class="card-text">Thanh toán nhanh chóng,tiện lợi</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  
+
+    <div class="select">
+      <h3>PHỤ KIỆN HOT</h3>
+      <div class=" row" style="text-align: center;">
+        <div class="col-md-2">
+          <a href="">
+            <div class="items-box">
+                <img src="https://png.pngtree.com/png-vector/20230428/ourmid/pngtree-achievement-line-icon-vector-png-image_6738506.png" alt="">
+            </div>
+            <p>Phụ kiện nổi bật</p>
+          </a>    
+        </div>
+        <div class="col-md-2">
+          <a href="">
+            <div class="items-box">
+                <img src="https://techz1.vn/wp-content/uploads/2020/08/TechZ1_PhoneCase_icon_500px.png" alt="">
+            </div>
+            <p>Bao da ốp lưng</p>
+          </a>    
+        </div>
+        <div class="col-md-2">
+          <a href="">
+            <div class="items-box">
+                <img src="https://choihay.vn/images/menus/powerbank-512_1600051782.png" alt="">
+               
+            </div>
+            <p>Sạc dự phòng</p>
+          </a>    
+        </div>
+
+        <div class="col-md-2">
+          <a href="">
+            <div class="items-box">
+                <img src="https://img.cdn.vncdn.io/cdn-pos/91002e-15402/pc/20170510_DkxmcP7PNIDJFnie4yyt6MaL.png" alt="">
+               
+            </div>
+            <p>Thẻ nhớ</p>
+          </a>    
+        </div>
+        <div class="col-md-2">
+          <a href="">
+            <div class="items-box">
+                <img src="https://static.vecteezy.com/system/resources/previews/017/221/833/non_2x/apple-logo-free-png.png" alt="">
+                
+            </div>
+            <p>Apple</p>
+          </a>    
+        </div>
+        <div class="col-md-2">
+          <a href="">
+            <div class="items-box">
+                <img src="https://techz1.vn/wp-content/uploads/2020/08/TechZ1_Glass_icon_500px.png" alt="">
+                
+            </div>
+            <p>Miếng dán màn hình</p>
+          </a>    
+        </div>
+        <div class="col-md-2">
+          <a href="">
+            <div class="items-box">
+                <img src="https://maytinhhd.com/wp-content/uploads/2022/03/Ma%CC%81y-Ti%CC%81nh-Hu%CC%9Bng-Danh-Headphone-Tai-Nghe.png" alt="">
+                
+            </div>
+            <p>Tai nghe</p>
+          </a>    
+        </div>
+        <div class="col-md-2">
+          <a href="">
+            <div class="items-box">
+                <img src="https://tambao.com.vn/img/6213586.png" alt="">
+                
+            </div>
+            <p>Mực in</p>
+          </a>    
+        </div>
+        <div class="col-md-2">
+          <a href="">
+            <div class="items-box">
+                <img src="https://icons.iconarchive.com/icons/icons8/ios7/512/Computer-Hardware-Keyboard-icon.png" alt="">
+                
+            </div>
+            <p>Bàn phím</p>
+          </a>    
+        </div>
+        <div class="col-md-2">
+          <a href="">
+            <div class="items-box">
+                <img src="https://bizweb.dktcdn.net/100/431/474/collections/balo-mini-balo-icon-logo.png?v=1626060153523" alt="">
+                
+            </div>
+            <p>Balo</p>
+          </a>    
+        </div>
+        <div class="col-md-2">
+          <a href="">
+            <div class="items-box">
+                <img src="https://icons-for-free.com/iconfiles/png/512/television+tv+icon-1320086462225673727.png" alt="">
+                
+            </div>
+            <p>TV-Box</p>
+          </a>    
+        </div>
+        <div class="col-md-2">
+          <a href="">
+            <div class="items-box">
+                <img src="https://img.freepik.com/free-icon/smartwatch_318-153399.jpg?w=2000" alt="">
+                
+            </div>
+            <p>Phụ kiện khác</p>
+          </a>    
+        </div>     
+  
+    </div>
+    </div>
+  
+  </div>  <!-- Footer -->
+  <footer class="text-center text-lg-start bg-light text-muted ">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div>
+        <button type="button" class="btn btn-link btn-floating mx-1">
+          <i class='bx bxl-facebook-circle'></i>
+        </button>
+    
+        <button type="button" class="btn btn-link btn-floating mx-1">
+          <i class='bx bxl-google' ></i>
+        </button>
+    
+        <button type="button" class="btn btn-link btn-floating mx-1">
+          <i class='bx bxl-twitter' ></i>
+        </button>
+    
+        <button type="button" class="btn btn-link btn-floating mx-1">
+          <i class='bx bxl-github' ></i>
+        </button>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>About Us
+            </h6>
+            <p>
+              Here you can use rows and columns to organize your footer content. Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Products
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Laptop</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Điện thoại</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Phụ kiện</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Sim & Thẻ</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Dịch vụ
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">hahaa</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Settings</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Orders</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Help</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class='bx bxs-home'></i> New York, NY 10012, US</p>
+            <p>
+              <i class='bx bxl-gmail' ></i>
+              info@example.com
+            </p>
+            <p><i class='bx bxs-phone' ></i> + 01 234 567 88</p>
+            <p><i class='bx bx-printer' ></i> + 01 234 567 89</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2021 Copyright:
+      <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+<!-- Footer -->
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script></body>  
+</body>
+</html>
