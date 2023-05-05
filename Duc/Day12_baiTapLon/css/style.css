@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #ed4d2d;
+}
+
+.navbar {
+    background: linear-gradient(to bottom, var(--primary-color), #ff7337);
+    font-weight: 500;
+}
+
+.navbar-label {
+    font-size: 30px;
+}
+
+.dangnhap__navbar {
+    display: flexbox;
+    text-align: center;
+}
+
+.logo {
+    font-size: 25px;
+    color: #ed4d2d;
+    text-decoration: none;
+}
+
+.dangnhap__body {
+    background-image: url(../img/Dangnhap.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    height: 590px;
+    width: 1530px;
+    object-fit: scale-down;
+    background-color: #ed4d2d;
+    text-align: center;
+    padding-top: 60px;
+}
+
+.form__dangnhap {
+    display: flex;
+    width: 70%;
+    margin: auto;
+    justify-content: flex-end;
+}
+
+.form__dangnhap--elm {
+    display: inline-block;
+    background-color: white;
+    height: 460px;
+    width: 400px;
+    padding: 20px 0;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.082);
+}
+
+.dangnhap__form--gh {
+    margin: 10px 0;
+    color: rgb(186, 186, 186);
+}
+
+.dangnhap__form--gach {
+    display: inline-block;
+    width: 35%;
+    height: 0.25px;
+    background-color: rgb(186, 186, 186);
+}
+
+.dangnhap__form--hoac {
+    width: 10%;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0 16px;
+    font-size: .75rem;
+}
+
+.form__dangnhap--input, .form__dangnhap--btn {
+    width: 90%;
+    margin: 10px auto;
+    height: 3rem;
+    opacity: 1;
+    padding: 0.75rem;
+}
+
+.form__dangnhap--btn {
+    border: none;
+    background-color: #ed4d2d;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.form__dangnhap--btn:hover {
+    opacity: 0.9;
+}
+
+.dangnhap__form--qmk, .form__link {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.form__qmk--a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #ed4d2d;
+}
+
+.form__link--fb, .form__link--gg {
+    height: 2.5rem;
+    width: 40%;
+    margin-bottom: 20px;
+}
+
+.form__link--fb {
+    background-image: url(../img/fb.jpg);
+    background-size: 100% 100% ;
+}
+
+.form__link--gg {
+    background-image: url(../img/gg.jpg);
+    background-size: 100% 100% ;
+}
+
+.form__link--lbl {
+    color: rgb(186, 186, 186);
+}
+
+.body__text {
+    display: flex;
+    align-items: center;
+}
+
+.body__text--h {
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.body__pics img {
+    margin: 50px;
+}
+
+.card, .card__footer {
+    padding: 0;
+    width: 75%;
+    border-width: 2px;
+    margin: 0 auto;
+}
+
+.card, .card__footer:hover {
+    cursor: pointer;
+}
+
+.card img {
+    height: 230px;
+}
+
+.card p {
+    margin: 0 5px;
+}
+
+.card_name {
+    font-size: 15px;
+}
+
+.card_hashtag {
+    font-size: 10px;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    width: fit-content;
+}
+
+.card__footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    opacity: 0;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    border: 2px solid transparent;
+}
+
+.product:hover .card__footer, .product:hover .card {
+    opacity: 100%;
+    border: 2px solid var(--primary-color);
+    border-radius: 0;
+    transform: translateY(-10px);
+}
+
+.row__footer .text-uppercase {
+    font-weight: bolder;
+    font-size: small;
+}
+
+.row__footer .text-normal {
+    font-size: small;
+    text-decoration: none;
+    color: black;
+}
+
+.row__footer .text-normal:hover {
+    color: var(--primary-color);
+}
+
+.navbar__brand--lbl {
+    font-size: 1.6rem;
+    margin-left: 10px;
+}
+
+.dangky__navbar {
+    display: flexbox;
+    text-align: center;
+    
+}
+
+.dangky__qmk--a {
+    text-decoration: none;
+    color: #ed4d2d;
+    font-size: 13px;
+}
+
+.form__dangky--lbl {
+    margin-bottom: 40px;
+    font-size: 13px;
+}
+
+.gioithieu__img {
+    background-image: url(../img/gioithieu.jpg);
+    background-size: 100% 100%;
+    height: 500px;
+}
+
+.gioithieu__body--lbl {
+    margin-bottom: 50px;
+}
+
+.gioithieu__body--txt {
+    margin: 50px 100px;
+    padding: 0 100px;
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+}
+
+.gioithieu__body--btn {
+    background: #ee4d2d;
+    width: 170px;
+    border: none;
+    border-radius: 50px;
+    margin-top: 28px;
+    height: 48px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 28px;
+    font-family: Open Sans;
+    text-transform: capitalize;
+    color: white;
+}
+
+.gioithieu__body--lst {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.gioithieu__body--div {
+    display: inline-block;
+    width: 530px;
+    height: 200px;
+    border-radius: 10px;
+    text-align: center;
+    vertical-align: center;
+    padding: 25px;
+    margin: 0 20px;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.204);
+}
