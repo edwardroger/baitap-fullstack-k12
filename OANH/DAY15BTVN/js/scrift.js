@@ -24,6 +24,6 @@ if(a===b&&b===c && (a+b)>c && (b+c)>a && (c+a)>b){
     document.write("tam giác đều")
 } else if (a===b||a===c||b===c && (a+b)>c && (b+c)>a && (c+a)>b){
     document.write("tam giác cân")
-} else if((a**2 + b**2)===c**2||(a**2+c**2)===b**2||(b**2+c**2) === a**2 ){document.write("tam giác vuông")}
+} else if((a**a + b**b)===c**c||(a**a+c**c)===b**b||(b**b+c**c) === a**a ){document.write("tam giác vuông")}
 
 
