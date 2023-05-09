@@ -41,7 +41,7 @@ for (let i = 1; i <= 1000; i++) {
 
 // Câu 2:
 
-for (let i = 1000; i >= 0; i--) {
+for (let i = 1000; i > 0; i--) {
     console.log(i);
 }
 
