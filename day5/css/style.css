@@ -1,0 +1,43 @@
+#container {
+    background-image: url('../images/background.avif');
+    height: 100px;
+}
+
+body {
+    background-image: url('../images/background.avif');
+    /* background-repeat: none; */
+}
+
+.text-1 {
+    color: red;
+    cursor: pointer;
+}
+
+.text-2 {
+    color: green;
+}
+
+.text-3 {
+    color: blue;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: yellow;
+    font-size: 50px;
+}
+
+a:link {
+    color: purple;
+}
+
+a:visited {
+    color: red;
+}
+
+ul li {
+    list-style: none;
+}
