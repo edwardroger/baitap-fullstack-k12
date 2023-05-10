@@ -6,7 +6,7 @@
 
 body {
   background: pink;
-  font: 1em sans-serif;
+  font-size: 1em sans-serif;
 }
 
 .login-form {
