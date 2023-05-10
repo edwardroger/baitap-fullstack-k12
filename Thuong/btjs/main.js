@@ -1,3 +1,4 @@
+/*
 var a =2;
 var b =1;
 var c =3;
@@ -21,6 +22,16 @@ if(a > 0 && b > 0 && c > 0){
             else console.log('Day la tam giac thuong')
         }
     }
-}else console.log('Day khong phai 3 canh cua tam giac');
+}else console.log('Day khong phai 3 canh cua tam giac');*/
 
 
+// for(let i = 1;i<=1000;i++){
+//     console.log(i);
+// }
+// for(let i =1000;i>0;i--){
+//     console.log(i);
+// }
+var a =parseInt(prompt("Nhap so a bat ky:"));
+for(let i =1;i<=10;i++){
+    console.log(a +'x' + i +'=' + a*i);
+}
