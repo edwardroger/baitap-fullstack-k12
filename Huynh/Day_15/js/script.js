@@ -90,8 +90,8 @@
 //Cho biết a, b, c có phải là chiều dài của 1 tam giác hay không?
 // Nếu là tam giác thì nó là tam giác gì?
 
-var a = 3,
-    b = 4,
+var a = 5,
+    b = 5,
     c = 5;
 
 if (a == 0 || b == 0 || c == 0 || a + b < c || a + c < b || b + c < a) {
