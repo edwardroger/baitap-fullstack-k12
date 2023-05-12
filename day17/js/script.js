@@ -4,7 +4,7 @@
 // let total = 0;
 // for (let i = 1 ; i <= a ; i++) {
 //     if (i % 2 !== 0) {
-//         total += i
+//         total += i;
 //     }
 // }
 // console.log(`Tong cac so le tu 0 -> a la ${total}`);
@@ -16,8 +16,8 @@
 // let denominator = 0;
 // for (let i = 1 ; i <= a ; i++) {
 //     if (i % 5 == 0) {
-//         total1 += i
-//         denominator++
+//         total1 += i;
+//         denominator++;
 //     }
 // }
 // console.log(`Trung bình cộng các số chia hết cho 5 là ${total1/denominator}`);
@@ -25,24 +25,24 @@
 
 // Cau 3: 
 // var a = parseInt(prompt('Nhap vao so a'));
-// let giaithua = a
+// let giaithua = a;
 // for (let i = 1 ; i < a ; i++) {
-//     giaithua = giaithua * i
+//     giaithua = giaithua * i;
 // }
 // console.log(giaithua);
 
 // Cau 4: 
 // var a = parseInt(prompt('Nhap vao so a'));
-// let value = 0
+// let value = 0;
 // for (let i = 1 ; i <= a ; i++) {
-//     value = value + (i**2)
+//     value = value + (i**2);
 // }
 // console.log(value);
 
 
 // Cau 5: 
 // var a = parseInt(prompt('Nhap vao so a'));
-// let number = 0
+// let number = 0;
 // for (let i = 0 ; i <= a ; i++) {
 //     if (i % 2 !== 0 ) {
 //         number++
@@ -55,15 +55,15 @@
 // var a = parseInt(prompt('Nhap vao so a'));
 // var b = parseInt(prompt('Nhap vao so b'));
 // if (a < b) {
-//     let sum = 0
+//     let sum = 0;
 //     for (let i = a; i <= b; i++) {
-//         sum = sum + i
+//         sum = sum + i;
 //     }
 //     console.log(sum);
 // } else if (b < a) {
-//     let sum = 0
+//     let sum = 0;
 //     for (let i = b; i <= a; i++) {
-//         sum = sum + i
+//         sum = sum + i;
 //     }
 //     console.log(sum);
 // } else {
@@ -109,7 +109,7 @@
 //     console.log('Phương trình có dạng: ax^4 + bx^2 + c = 0');
 //     console.log("Đặt t = x^2");
 //     console.log("Phương trình trở thành: at^2 + bt + c = 0");
-//     var delta = b ** 2 - (4 * a * c)
+//     var delta = b ** 2 - (4 * a * c);
 //     console.log(`delta = ${delta}`);
 //     if (delta > 0) {
 //         console.log("Giá trị của t là:");
@@ -142,7 +142,7 @@
 
 //     } else if (delta == 0) {
 //         console.log("Giá trị của t là:");
-//         var t = -b / (2 * a)
+//         var t = -b / (2 * a);
 //         console.log(`t = ${t}`);
 //         if (t > 0) {
 //             console.log('Phương trình đã cho có nghiệm là:');
@@ -185,11 +185,11 @@
 // Cau 10
 var arr = [2, 4, 5, 7, 12]
 let total = 0;
-let element = 0
+let element = 0;
 for (let i = 0; i < arr.length; i++) {
     total += arr[i];
     element++;
-}
+};
 console.log(`Trung bình cộng = ${total / element}`);
 
 
