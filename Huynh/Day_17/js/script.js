@@ -1,15 +1,13 @@
-var a, b, c;
-
 
 // 1. Tính tổng các số lẻ từ 0 -> a
 
 function SumOfNa() {
-    let sum = 0;
-    a = parseInt(prompt("Nhập vào số a: "))
-    if (a != 0) {
+    let sum = 0; //khởi tạo biến tổng ban đầu
+    let a = parseInt(prompt("Nhập vào số a: ")); //Nhập vào biến a từ prompt
+    if (a > 0) {
         for (let i = 0; i <= a; i++) {
-            if ((i % 2) === 1) {
-                sum += i;
+            if ((i % 2) !== 0) { //condition: i không chia hết cho 2
+                sum += i; //sum = sum + i;
             }
         }
         console.log("Tổng các số lẻ từ 0 đến " + a + " là: " + sum);
@@ -21,19 +19,20 @@ function SumOfNa() {
 // 2. Tính trung bình cộng các số chia hết cho 5 từ 0 -> a
 
 function AverageOfNa() {
-    let sum = 0, count = 0;
-    a = parseInt(prompt("Nhập vào số a: "))
-    if (a != 0) {
-        if (a >= 5 || a <= -5) {
-            for (let i = 0; i <= a; i++) {
-                if ((i % 5) === 0) {
-                    sum += i;
-                    count++;
-                }
+    let sum = 0;
+    let count = 0;
+    let a = parseInt(prompt("Nhập vào số a: "))
+    if (a > 0) {
+        for (let i = 0; i <= a; i++) {
+            if ((i % 5) === 0) {
+                sum += i;
+                count++;
             }
+        }
+        if (count > 0) {
             console.log(`Trung bình cộng các số chia hết cho 5 từ 0 đến ${a} là: ${(sum / count)}`);
         } else {
-            console.log("Không có số nào chia hết cho 5 từ 0 đến " + a);
+            console.log('không có số nào chia hết cho 5');
         }
     } else {
         console.log("Số a bạn nhập vào không hợp lệ!");
@@ -44,8 +43,8 @@ function AverageOfNa() {
 
 function FactorialOfNa() {
     let factoria = 1;
-    a = parseInt(prompt("Nhập vào số a: "))
-    if (a != 0) {
+    let a = parseInt(prompt("Nhập vào số a: "))
+    if (a > 0) {
         for (let i = 1; i <= a; i++) {
             factoria *= i;
         }
@@ -59,10 +58,10 @@ function FactorialOfNa() {
 
 function SumOfSquare() {
     let square = 1;
-    a = parseInt(prompt("Nhập vào số a: "))
-    if (a != 0) {
+    let a = parseInt(prompt("Nhập vào số a: "))
+    if (a > 0) {
         for (let i = 1; i <= a; i++) {
-            square += i ** 2;        
+            square += i ** 2;
         }
         console.log("Tổng từ 1 đến " + a + " bình phương là: " + square);
     } else {
@@ -74,11 +73,11 @@ function SumOfSquare() {
 
 function CountOfna() {
     let count = 0;
-    a = parseInt(prompt("Nhập vào số a: "))
-    if (a != 0) {
+    let a = parseInt(prompt("Nhập vào số a: "))
+    if (a > 0) {
         for (let i = 0; i <= a; i++) {
-            if ((i % 2) === 1) {
-                count ++;
+            if ((i % 2) !== 0) {
+                count ++; //biến đếm
             }
         }
         console.log("Số các số lẻ từ 0 đến " + a + " là: " + count);
@@ -91,23 +90,18 @@ function CountOfna() {
 
 function SumOfaTob() {
     let sum = 0;
-    a = parseInt(prompt("Nhập vào số a: "))
-    b = parseInt(prompt("Nhập vào số b: "))
-    if (a != 0 && b != 0) {
-        if (a < b) {
-            for (let i = a; i <= b; i++) {
-                sum += i;
-            }
-            console.log(`Tổng các số từ ${a} đến ${b} là: ${sum}`);
-        } else if (a > b) {
-            for (let i = a; i >= b; i--) { 
-                sum += i;
-            }
-            console.log(`Tổng các số từ ${a} đến ${b} là: ${sum}`);
+    let a = parseInt(prompt("Nhập vào số a: "))
+    let b = parseInt(prompt("Nhập vào số b: "))
+    if (a <= b) {
+        for (let i = a; i <= b; i++) {
+            sum += i;
         }
     } else {
-        console.log(`Số ${a} bạn nhập vào không hợp lệ!`);
+        for (let i = b; i >= a; i++) { 
+            sum += i;
+        }
     }
+    console.log(`Tổng các số từ ${a} đến ${b} là: ${sum}`); //cách tối ưu
 }
 
 // 7. Viết chương trình nhập vào 3 số a, b, c. Giải phương trình ax^2 + bx + c = 0
@@ -196,31 +190,28 @@ function Findx4() {
 // 9. Nhập vào 1 mảng gôm 5 phần tử. In ra các số chẵn
 
 function FindEvenNumber() {
-    let array = [],array2 = [], count = 0;
+    let array = [];
+    let array2 = [];
     // Nhập mảng
     for (let i = 0; i < 5; i++) {
-        array.push(parseInt(prompt("Nhập vào phần tử thứ " + (i + 1))))
+        array.push(parseInt(prompt("Nhập vào phần tử thứ " + (i + 1)))) //i = 0 +1
     }
     //In mảng
     console.log(array);
 
-    for (let j = 0; j < array.length; j++) {
-        if (array[j] % 2 === 0) {
-            array2[count] = array[j];
-            count++;
+    for (let j = 0; j < array.length; j++) { //array.length = độ dài của mảng (số phần tử của mảng)
+        if (array[j] % 2 === 0) { //array[j]: trỏ đến index của mảng (phần tử thứ j của mảng array)
+            array2.push(array[j]); //đẩy array[j] vào mảng array2
         }
     }
-    if (count === 0) {
-        console.log("Không có số chẵn nào trong mảng đã nhập.");
-    } else {
-        console.log("Các số chẵn trong mảng là: " + array2); 
-    }
+    console.log("Các số chẵn trong mảng là: " + array2); 
 }
 
 // 10. Nhập vào 1 mảng gồm 5 phần tử. Tính trung bình cộng các số trong mảng.
 
 function FindAverageOfArray() {
-    let array = [], sum = 0;
+    let array = [];
+    let sum = 0;
     // Nhập mảng
     for (let i = 0; i < 5; i++) {
         array.push(parseInt(prompt("Nhập vào phần tử thứ " + (i + 1))))
