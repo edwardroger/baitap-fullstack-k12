@@ -52,15 +52,12 @@ let c = parseInt(prompt("Nhập c: "));
 
 //Bai 6
 // let s = 0;
-// if (a < b) {
+// if (a <= b) {
 //     for (let i = a; i <= b; i++) {
 //         s = s + i;
 //     }
 // }
-// else if (a === b) {
-//     s = a + b;
-// }
-// else if (a > b) {
+// else  {
 //     for (let i = b; i <= a; i++) {
 //         s = s + i;
 //     }
