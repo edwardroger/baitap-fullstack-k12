@@ -183,14 +183,17 @@
 // }
 
 // Cau 10
-var arr = [2, 4, 5, 7, 12]
+var arr = [];
+var arr2 = []
+for (let i = 0; i < 5; i++) {
+    arr.push(parseInt(prompt('Nhap vao so a')))
+}
+console.log(arr);
 let total = 0;
-let element = 0;
 for (let i = 0; i < arr.length; i++) {
     total += arr[i];
-    element++;
 };
-console.log(`Trung bình cộng = ${total / element}`);
+console.log(`Trung bình cộng = ${total / arr.length}`);
 
 
 
