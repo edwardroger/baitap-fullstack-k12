@@ -174,26 +174,31 @@
 // }
 
 // Cau 9
-// var arr = [2, 4, 5, 7, 12];
-
-// for (let i = 0 ; i < arr.length ; i++) {
-//     if (arr[i] % 2 === 0) {
-//         console.log(arr[i]);
-//     }
-// }
-
-// Cau 10
 var arr = [];
-var arr2 = []
+var arr2 = [];
 for (let i = 0; i < 5; i++) {
-    arr.push(parseInt(prompt('Nhap vao so a')))
+        arr.push(parseFloat(prompt('Nhap vao so a')));
 }
 console.log(arr);
-let total = 0;
 for (let i = 0; i < arr.length; i++) {
-    total += arr[i];
-};
-console.log(`Trung bình cộng = ${total / arr.length}`);
+    if (arr[i] % 2 === 0) {
+        arr2.push(arr[i]);
+    }
+}
+console.log(arr2);
+
+
+// Cau 10
+// var arr = [];
+// for (let i = 0; i < 5; i++) {
+//     arr.push(parseFloat(prompt('Nhap vao so a')))
+// }
+// console.log(arr);
+// let total = 0;
+// for (let i = 0; i < arr.length; i++) {
+//     total += arr[i];
+// };
+// console.log(`Trung bình cộng = ${total / arr.length}`);
 
 
 
