@@ -84,7 +84,7 @@ function maximumValue() {
 // Câu 2:
 function minimumValue () {
     let minValue = arr[0];
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 0 ; i < arr.length ; i++) {
         if (arr[i] < minValue) {
             minValue = arr[i];
         }
@@ -123,7 +123,7 @@ function reduceValue() {
 
 // Câu 5:
 function average() {
-    console.log(`Trung bình cộng của giá trị lớn nhất và giá trị nhỏ nhất là: ${(maximumValue() + minimumValue())/2}`);
+    console.log(`Trung bình cộng của giá trị lớn nhất và giá trị nhỏ nhất là: ${(maximumValue() + minimumValue()) / 2}`);
 }
 
 
