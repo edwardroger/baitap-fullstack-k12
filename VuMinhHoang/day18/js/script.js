@@ -68,7 +68,7 @@ let d = parseInt(prompt("Fourth index: "));
 let e = parseInt(prompt("Fifth index: "));
 
 const Baitap = (a, b, c, d, e) => {
-    let Arr = [a, b, c, d, e];
+    const Arr = [a, b, c, d, e];
 
     //search min, max
     let Max = Arr[0];
@@ -93,7 +93,16 @@ const Baitap = (a, b, c, d, e) => {
             }
         }
     }
-    let des = Arr;
+
+    const avg = (Min + Max) / 2;
+    console.log("Giá trị lớn nhất của mảng: ", Max)
+    console.log("Giá trị nhỏ nhất của mảng: ", Min)
+    console.log("Sắp xếp mảng theo thứ tự tăng dần: ", asc)
+    console.log("Trung bình cộng của min và max là: ", avg);
+}
+
+const Des = (a, b, c, d, e) => {
+    let des = [a, b, c, d, e];
     for (let i = 0; i < des.length; i++) {
         for (let j = i + 1; j < des.length; j++) {
             if (des[i] < des[j]) {
@@ -103,13 +112,8 @@ const Baitap = (a, b, c, d, e) => {
             }
         }
     }
-
-    const avg = (Min + Max) / 2;
-    console.log("Giá trị lớn nhất của mảng: ", Max)
-    console.log("Giá trị nhỏ nhất của mảng: ", Min)
-    console.log("Sắp xếp mảng theo thứ tự tăng dần: ", asc)
     console.log("Sắp xếp mảng theo thứ tự giảm dần: ", des)
-    console.log("Trung bình cộng của min và max là: ", avg);
 }
 
+Des(a, b, c, d, e)
 Baitap(a, b, c, d, e)
