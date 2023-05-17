@@ -1,4 +1,10 @@
 
+function showHTML(id, text, x) {
+    document.getElementById(id).style.width = `50%`;
+    document.getElementById(id).style.height = `100px`;
+    document.getElementById(id).style.padding = `10px`
+    document.getElementById(id).innerHTML = text + x;
+}
 
 // Nhập vào 1 mảng gồm 5 phần tử.
 
@@ -20,6 +26,7 @@ function findMaximum(array) {
         }
     }
     console.log(`Giá trị lớn nhất của mảng là: ${max}`);
+    showHTML("bai1" , "Giá trị lớn nhất của mảng là: ", max)
 }
 
 // 2. Tìm ra giá trị nhở nhất
@@ -32,8 +39,8 @@ function findMinimum(array) {
         }
     }
     console.log(`Giá trị nhỏ nhất của mảng là: ${min}`);
+    showHTML("bai2" , "Giá trị nhỏ nhất của mảng là: ", min)
 }
-
 // 3. Sắp xếp các giá trị theo thứ tự tăng dần
 
 // cách 1
@@ -47,6 +54,7 @@ function valueIncreased(array) {
             valueIncreased(array);
         }
         if (i === (array.length - 1)) {
+            showHTML("bai3" , "Mảng có các giá trị theo thứ tự tăng dần: ", array)
             return array;
         }
     }
@@ -104,6 +112,7 @@ function valueDecrease(array) {
             valueDecrease(array);
         }
         if (i === (array.length - 1)) {
+            showHTML("bai4" , "Mảng có các giá trị theo thứ tự giảm dần: ", array)
             return array;
         }
     }
@@ -127,7 +136,7 @@ function averageMinMax() {
             max = array[i];
         }
     }
-
+    showHTML("bai5" , "Trung bình cộng của min và max trong mảng là: ", ((min + max) / 2))
     return ((min + max) / 2);
 }
 
