@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="cau-1">
+        <h2>1. Tìm ra giá trị lớn nhất</h2>
+        <button onclick="timMax()">Câu 1</button>
+    </div>
+    <div class="cau-2">
+        <h2>1. Tìm ra giá trị Min</h2>
+        <button onclick="timMin()">Câu 2</button>
+    </div>
+    <div class="cau-3">
+        <h2>1. sắp xếp tăng dần</h2>
+        <button onclick="xapxeptangdan()">Câu 3</button>
+    </div>
+    <div class="cau-4">
+        <h2>1. sắp xếp giảm dần</h2>
+        <button onclick="xapxepgiamdan()">Câu 4</button>
+    </div>
+    <div class="cau-5">
+        <h2>1. Tính trung bình cộng Max Min</h2>
+        <button onclick="trungBinhCong()">Câu 5</button>
+    </div>
+    <button onclick="clickMe()">Câu 1</button>
+    <script src="js/main.js"></script>
+    <script>
+        function clickMe() { 
+            let a = parseInt(prompt('Nhap vao a:'));
+
+            for (let index = 0; index < 5; index++){
+                console.log(index);
+            }
+        }
+
+        function timMax() {
+            let array = [];
+            for ( let i = 0; i < 5; i++){
+                array[i] = parseInt(prompt('Nhap vao phan tu thu:' +i));
+            }
+            
+            let max = array[0];
+            for ( let i = 0; i < array.length; i++){
+                if(array[i] > max){ //true
+                    max = array[i]
+                }
+            }
+            console.log('Ket qua lon nhat la:' +max)
+        }
+
+        function timMin() {
+            let array = [];
+            for ( let i = 0; i < 5; i++){
+                array[i] = parseInt(prompt('Nhap vao phan tu thu:' +i));
+            }
+            
+            let min = array[0];
+            for ( let i = 0; i < array.length; i++){
+                if(array[i] < min){ //true
+                    min = array[i]
+                }
+            }
+            console.log('Ket qua lon nhat la:' +min)
+        }
+
+        function nhapMang(a){
+            let array = [];
+            for ( let i = 0; i < a; i++){
+                array[i] = parseInt(prompt('Nhap vao phan tu thu:' +i));
+            }
+
+            return array;
+        }
+
+        function xapxeptangdan() {
+            let array = nhapMang(6);
+            let tg;
+            
+            for ( let i = 0; i < array.length - 1; i++){ 
+                for ( let j = i + 1; j < array.length; j++){ 
+                    if ( array[i] > array[j]){ 
+                        tg = array[i]; 
+                        array[i] = array[j]; 
+                        array[j] = tg; 
+                    }
+                }
+            }
+            console.log(array)
+        }
+
+
+        function xapxepgiamdan() {
+            let array = nhapMang(6);
+            let tg;
+            
+            for ( let i = 0; i < array.length - 1; i++){ 
+                for ( let j = i + 1; j < array.length; j++){ 
+                    if ( array[i] < array[j]){ 
+                        tg = array[i]; 
+                        array[i] = array[j]; 
+                        array[j] = tg; 
+                    }
+                }
+            }
+            console.log(array)
+        }
+
+        function trungBinhCong(){
+            let array = nhapMang(6);
+            let Max = [0];
+            let Min = [0];
+
+            Max = Math.max(...array);
+            Min = Math.min(...array);
+
+            let average = (Max + Min ) / 2;
+
+            console.log(average)
+
+        }
+    </script>
+</body>
+</html>
