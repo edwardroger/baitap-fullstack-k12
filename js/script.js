@@ -3,6 +3,11 @@ function nhap(aa) {
         aa.push(parseFloat(prompt('nhap vao phan tu thu ' + i)));
     }
 }
+function nhap2(aa) {
+    for (let i = 0; i < 5; i++) {
+        aa[i] = parseFloat(prompt('nhap vao phan tu thu ' + i));
+    }
+}
 function sort(aa) {
     let b;
     for (let i = 0; i < 5; i++) {
@@ -15,7 +20,7 @@ function sort(aa) {
     }
 }
 let a = [];
-nhap(a);
+nhap2(a);
 sort(a);
 for (let i = 0; i < 5; i++) {
     console.log (a[i]);
