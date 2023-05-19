@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div class="debai">
+        Tạo ra 2 ô input nhập vào 2 số a và b. 
+        Tạo các button thực hiện việc +, -, *, /, ^ và in kết quả ra màn hình
+    </div> -->
+
+    <div class="container mt-5">
+        <div class="row justify-content-between">
+            <div class="d-flex justify-content-center">
+                <label for="numberA" class="me-3 ms-3 pt-2">Number A: </label>
+                <input type="text" class="form-control w-25 border-1 border-dark-subtle" placeholder="Number a" onchange="onChangeA()" id="numberA">
+                <label for="numberB" class="me-3 ms-3 pt-2">Number B: </label>
+                <input type="text" class="form-control w-25 border-1 border-dark-subtle" placeholder="Number b" onchange="onChangeB()" id="numberB">
+            </div>
+
+            <div class="position-relative mt-3 mx-2 col-lg-3 col-md-5 col-sm-5 bg-success-subtle rounded-2" style="min-height: 125px;">
+                <div class="d-flex flex-column pt-lg-3 pt-md-2 align-items-center">
+                    <h5 class="w-100 text-center">Tổng 2 số</h5>
+                    <p id="sum"></p>
+                    <button class="btn btn-secondary w-75 mb-2 position-absolute bottom-0" onclick="calculator('sum')">Result</button>
+                </div>
+            </div>
+
+            <div class="position-relative mt-3 mx-2 col-lg-3 col-md-5 col-sm-5 bg-success-subtle rounded-2" style="min-height: 125px;">
+                <div class="d-flex flex-column pt-lg-3 pt-md-2 align-items-center">
+                    <h5 class="w-100 text-center">Hiệu 2 số</h5>
+                    <p id="subtraction"></p>
+                    <button class="btn btn-secondary w-75 mb-2 position-absolute bottom-0" onclick="calculator('subtraction')">Result</button>
+                </div>
+            </div>
+
+            <div class="position-relative mt-3 mx-2 col-lg-3 col-md-5 col-sm-5 bg-success-subtle rounded-2" style="min-height: 125px;">
+                <div class="d-flex flex-column pt-lg-3 pt-md-2 align-items-center">
+                    <h5 class="w-100 text-center">Tích 2 số</h5>
+                    <p id="multiplication"></p>
+                    <button class="btn btn-secondary w-75 mb-2 position-absolute bottom-0" onclick="calculator('multiplication')">Result</button>
+                </div>
+            </div>
+
+            <div class="position-relative mt-3 mx-2 col-lg-3 col-md-5 col-sm-5 bg-success-subtle rounded-2" style="min-height: 125px;">
+                <div class="d-flex flex-column pt-lg-3 pt-md-2 align-items-center">
+                    <h5 class="w-100 text-center">Thương 2 số</h5>
+                    <p id="division"></p>
+                    <button class="btn btn-secondary w-75 mb-2 position-absolute bottom-0" onclick="calculator('division')">Result</button>
+                </div>
+            </div>
+
+            <div class="position-relative mt-3 mx-2 col-lg-3 col-md-5 col-sm-5 bg-success-subtle rounded-2" style="min-height: 125px;">
+                <div class="d-flex flex-column pt-lg-3 pt-md-2 align-items-center">
+                    <h5 class="w-100 text-center">a mũ b</h5>
+                    <p id="exponent"></p>
+                    <button class="btn btn-secondary w-75 mb-2 position-absolute bottom-0" onclick="calculator('exponent')">Result</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
