@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div class="inp" style="display: flex;">
+        <input type="text" onchange="onChangeNum1()" placeholder="a" id="num1">
+        <div class="check" style="height: 20px; width: 20px; margin-left: 5px;color: red;" id="check1"></div>
+    </div>
+    <br>
+    <div class="inp" style="display: flex;">
+        <input type="text" onchange="onChangeNum2()" id="num2" placeholder="b">
+        <div class="check" style="height: 20px; width: 20px;margin-left: 5px;color: red;" id="check2">
+        </div>
+    </div>
+    <br>
+    <input type="text" onchange="onChangeKet" id="ketqua" placeholder="ket qua" disabled>
+    
+    <div class="Select" style="margin-top: 15px;">
+        <button type="submit" onclick="handleCong()">+</button>
+        <button type="submit" onclick="handleTru()">-</button>
+        <button type="submit" onclick="handleNhan()">x</button>
+        <button type="submit" onclick="handleChia()">/</button>
+        <button type="submit" onclick="handleRemove()">remove</button>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
