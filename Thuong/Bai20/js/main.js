@@ -41,10 +41,8 @@ function handleChia(){
 }
 
 function check(){
-    if(onChangeNum1() ) console.log("D")
-    else document.getElementById("check1").innerHTML = "X";
-    if(onChangeNum2()) console.log("D");
-    else document.getElementById('check2').innerHTML = "X"
+    if(!onChangeNum1()) document.getElementById("check1").innerHTML = "X";
+    if(!onChangeNum2()) document.getElementById('check2').innerHTML = "X"
 }
 function handleRemove(){
     document.getElementById("num1").value = '';

@@ -8,25 +8,28 @@
 
 </head>
 <body>
-    <div class="inp" style="display: flex;">
-        <input type="text" onchange="onChangeNum1()" placeholder="a" id="num1">
-        <div class="check" style="height: 20px; width: 20px; margin-left: 5px;color: red;" id="check1"></div>
-    </div>
-    <br>
-    <div class="inp" style="display: flex;">
-        <input type="text" onchange="onChangeNum2()" id="num2" placeholder="b">
-        <div class="check" style="height: 20px; width: 20px;margin-left: 5px;color: red;" id="check2">
+    <div class="container" style="width: 250px;text-align: center;border: 1px solid gray;padding-bottom: 30px;" >
+        <h3>Bài tập</h3>
+        <div class="inp" style="display: flex;margin-left: 36.5px;">
+            <input type="text" onchange="onChangeNum1()" placeholder="a" id="num1">
+            <div class="check" style="height: 20px; width: 20px; margin-left: 5px;color: red;" id="check1"></div>
         </div>
-    </div>
-    <br>
-    <input type="text" onchange="onChangeKet" id="ketqua" placeholder="ket qua" disabled>
-    
-    <div class="Select" style="margin-top: 15px;">
-        <button type="submit" onclick="handleCong()">+</button>
-        <button type="submit" onclick="handleTru()">-</button>
-        <button type="submit" onclick="handleNhan()">x</button>
-        <button type="submit" onclick="handleChia()">/</button>
-        <button type="submit" onclick="handleRemove()">remove</button>
+        <br>
+        <div class="inp" style="display: flex;margin-left: 36.5px;">
+            <input type="text" onchange="onChangeNum2()" id="num2" placeholder="b">
+            <div class="check" style="height: 20px; width: 20px;margin-left: 5px;color: red;" id="check2">
+            </div>
+        </div>
+        <br>
+        <input type="text" onchange="onChangeKet" id="ketqua" placeholder="Kết quả" disabled>
+        
+        <div class="Select" style="margin-top: 15px;">
+            <button type="submit" onclick="handleCong()">+</button>
+            <button type="submit" onclick="handleTru()">-</button>
+            <button type="submit" onclick="handleNhan()">x</button>
+            <button type="submit" onclick="handleChia()">/</button>
+            <button type="submit" onclick="handleRemove()">remove</button>
+        </div>
     </div>
 
     <script src="./js/main.js"></script>
