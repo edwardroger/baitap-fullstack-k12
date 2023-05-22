@@ -1,11 +1,10 @@
-function calculate() {
+function calculate(ope) {
     // Prompt for numbers
     const numberA = parseFloat(prompt('Enter number A:'));
     const numberB = parseFloat(prompt('Enter number B:'));
-    const operator = prompt('Enter operator (+, -, *, /):');
     let result;
 
-    switch (operator) {
+    switch (ope) {
       case '+':
         result = numberA + numberB;
         break;
