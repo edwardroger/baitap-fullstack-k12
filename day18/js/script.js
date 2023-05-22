@@ -63,11 +63,12 @@
 
 
 // BTVN:
-var arr = [];
-for (let i = 0 ; i < 5 ; i++) {
-    arr.push(parseFloat(prompt("Nhap vao gia tri cua mang")))
-}
-console.log(arr);
+    var arr = [];
+    for (let i = 0 ; i < 5 ; i++) {
+        arr.push(parseFloat(prompt("Nhap vao gia tri cua mang")))
+    }
+    console.log(arr);
+
 
 // Câu 1:
 function maximumValue() {

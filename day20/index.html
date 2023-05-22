@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input style="margin-top: 10px;" type="text" onchange="onChangeA()" placeholder="Nhap so a" id="a"> <br>
+    <input style="margin-top: 10px;" type="text" onchange="onChangeB()" placeholder="Nhap so b" id="b">
+    <div>
+        <button style="margin-top: 10px;" onclick="handleSum()">Sum</button>
+        <button style="margin-top: 10px;" onclick="handleSub()">Sub</button>    
+        <button style="margin-top: 10px;" onclick="handleMult()">Mult</button>    
+        <button style="margin-top: 10px;" onclick="handleDiv()">Div</button>    
+        <button style="margin-top: 10px;" onclick="handleExp()">Exp</button>    
+        <button style="margin-top: 10px;" onclick="handleDelete()">Delete</button>    
+    </div>
+    <div id="a-value"></div>
+    <div id="b-value"></div>
+    <div id="c-value"></div>
+    <div id="d-value"></div>
+    <div id="e-value"></div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
