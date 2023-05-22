@@ -1,0 +1,20 @@
+
+
+.body__input {
+    display: flex ;
+    flex-direction: column;
+}
+
+#soA, #soB {
+    margin: 15px;
+    width: 100px;
+    height: 20px;
+}
+
+.body__btn button {
+    margin: 5px;
+}
+
+#ketQua {
+    margin-top: 20px;
+}

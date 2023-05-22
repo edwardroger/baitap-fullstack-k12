@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day20BTVN</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- 1. Tạo ra 2 ô input nhập vào 2 số a và b.
+    Tạo ra các button thực hiện việc + - * / ^ và in kết quả luôn ra màn hình -->
+    <div class="body__input">
+        <input type="text" onchange="display()" id="display"></input>
+        <button onclick="clearContent()">C</button>
+    </div>
+
+    <div class="number">
+        <button onclick="display('1')">1</button>
+        <button onclick="display('2')">2</button>
+        <button onclick="display('3')">3</button>
+        <button onclick="display('4')">4</button>
+        <button onclick="display('5')">5</button>
+        <button onclick="display('6')">6</button>
+        <button onclick="display('7')">7</button>
+        <button onclick="display('8')">8</button>
+        <button onclick="display('9')">9</button>
+    </div>
+
+    <div class="body__btn">
+        <button onclick="display('+')">+</button>
+        <button onclick="display('-')">-</button>
+        <button onclick="display('*')">*</button>
+        <button onclick="display('/')">/</button>
+        <button onclick="result()">=</button>
+    </div>
+    
+    <div id="ketQua"></div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
