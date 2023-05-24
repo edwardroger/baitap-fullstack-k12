@@ -41,3 +41,11 @@ function chia() {
 
     document.getElementById('ketQua').innerHTML = ('The result of division is: ' + chia);   
 }
+
+function mu() {
+    let soC = parseFloat(soA());
+    let soD = parseFloat(soB());
+    let mu = (soC ** soD);
+
+    document.getElementById('ketQua').innerHTML = ('The result of exponent is: ' + mu);   
+}

@@ -1,0 +1,47 @@
+.content {
+    border: 5px solid black;
+    border-radius: 30px;
+    width: 600px;
+    height: 700px;
+    margin: 50px auto;
+}
+
+.display {
+    margin: 20px;
+}
+
+#result {
+    width: 100%;
+    height: 100px;
+}
+
+.on-off {
+    margin: 20px 20px;
+    width: 150px;
+}
+
+.btn-toggle {
+    font-weight: 500;
+    color: rgb(16, 0, 104);
+}
+
+.keyboard {
+    margin: 15px 20px;
+}
+
+.number, .operator {
+    padding: 10px;
+}
+
+.btn {
+    width: 100%;
+    margin: 10px auto;
+    height: 40px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+hr {
+    margin: 40px 0 0;
+}
+
