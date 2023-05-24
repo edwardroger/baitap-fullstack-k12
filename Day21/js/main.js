@@ -152,7 +152,10 @@ function handleNumberClick(event) {
         }
         
     } else {
-        location.replace(location.href)
+        number1 = 0;
+        number2 = null;
+        operator = '';
+        result.value = '0';
     }
 
 }
