@@ -1,29 +1,44 @@
-function nhap(aa) {
-    for (let i = 0; i < 5; i++) {
-        aa.push(parseFloat(prompt('nhap vao phan tu thu ' + i)));
-    }
-}
-function nhap2(aa) {
-    for (let i = 0; i < 5; i++) {
-        aa[i] = parseFloat(prompt('nhap vao phan tu thu ' + i));
-    }
-}
-function sort(aa) {
-    let b;
-    for (let i = 0; i < 5; i++) {
-        if ( aa[i] > aa[i+1])
-        {
-            b = aa[i];
-            aa[i] = aa[i+1];
-            aa[i+1] = b;
-        }
-    }
-}
-let a = [];
-nhap2(a);
-sort(a);
-for (let i = 0; i < 5; i++) {
-    console.log (a[i]);
+function onchangeNumbera() {
+    let a = document.getElementById('a').value;
+    console.log(a);
+    return a;
 }
 
+function onchangeNumberb() {
+    let b = document.getElementById('b').value;
+    console.log(b);
+    return b;
+}
+function nhan() {
+    let a = parseFloat(onchangeNumbera());
+    let b = parseFloat(onchangeNumberb());
+    let nhan = a * b;
+    prompt(nhan);
+    
+}
 
+function chia() {
+    let a = parseFloat(onchangeNumbera());
+    let b = parseFloat(onchangeNumberb());
+    if (b === 0) {
+        prompt ('khong the chia cho so = 0');
+    } else {
+        let chia = a / b;
+        prompt(chia);
+    }
+    
+}
+
+function cong() {
+    let a = parseFloat(onchangeNumbera());
+    let b = parseFloat(onchangeNumberb());
+    let cong = a + b;
+    prompt(cong);
+}
+
+function tru() {
+    let a = parseFloat(onchangeNumbera());
+    let b = parseFloat(onchangeNumberb());
+    let tru = a - b;
+    prompt(tru);
+}
