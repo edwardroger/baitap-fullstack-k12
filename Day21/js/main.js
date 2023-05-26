@@ -179,7 +179,6 @@ function handleOperatorClick(event) {
     operator = event.target.innerText;
     operatorSelected = true;     
     result.value = operator;
-    updateDisplay();
     
 }
 
