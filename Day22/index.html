@@ -9,74 +9,73 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <img src="" alt="default.jpg">
     <div class="container">
         <div class="content">
             <div class="display">
-                <input id="result" type="text"  readonly>
+                <input type="text" id="result" disabled>
             </div>
             <hr>
             <div class="on-off">
-                <button class="btn-toggle btn btn-info" id="button">On/Off</button>
+                <button class="btn-toggle btn btn-info" onclick="toggle()">On/Off</button>
             </div>
             <div class="keyboard">
                 <div class="row">
                     <div class="number col-lg-3  col-md-3">
-                        <button class="btn btn-secondary number-button">1</button>
+                        <button class="btn btn-secondary" onclick="changeInput('1')">1</button>
                     </div>
                     <div class="number col-lg-3  col-md-3">
-                        <button class="btn btn-secondary number-button">2</button>
+                        <button class="btn btn-secondary" onclick="changeInput('2')">2</button>
                     </div>
                     <div class="number col-lg-3  col-md-3">
-                        <button class="btn btn-secondary number-button">3</button>
+                        <button class="btn btn-secondary" onclick="changeInput('3')">3</button>
                     </div>
                     <div class="operator col-lg-3  col-md-3">
-                        <button class="btn btn-warning operator-button">+</button>
+                        <button class="btn btn-warning" onclick="selectOperator('+')">+</button>
                     </div>
                     <div class="number col-lg-3  col-md-3">
-                        <button class="btn btn-secondary number-button">4</button>
+                        <button class="btn btn-secondary" onclick="changeInput('4')">4</button>
                     </div>
                     <div class="number col-lg-3  col-md-3">
-                        <button class="btn btn-secondary number-button">5</button>
+                        <button class="btn btn-secondary" onclick="changeInput('5')">5</button>
                     </div>
                     <div class="number col-lg-3  col-md-3">
-                        <button class="btn btn-secondary number-button">6</button>
+                        <button class="btn btn-secondary" onclick="changeInput('6')">6</button>
                     </div>
                     <div class="operator col-lg-3  col-md-3">
-                        <button class="btn btn-warning operator-button">-</button>
+                        <button class="btn btn-warning" onclick="selectOperator('-')">-</button>
                     </div>
                     <div class="number col-lg-3  col-md-3">
-                        <button class="btn btn-secondary number-button">7</button>
+                        <button class="btn btn-secondary" onclick="changeInput('7')">7</button>
                     </div>
                     <div class="number col-lg-3  col-md-3">
-                        <button class="btn btn-secondary number-button">8</button>
+                        <button class="btn btn-secondary" onclick="changeInput('8')">8</button>
                     </div>
                     <div class="number col-lg-3  col-md-3">
-                        <button class="btn btn-secondary number-button">9</button>
+                        <button class="btn btn-secondary" onclick="changeInput('9')">9</button>
                     </div>
                     <div class="operator col-lg-3  col-md-3">
-                        <button class="btn btn-warning operator-button">*</button>
+                        <button class="btn btn-warning" onclick="selectOperator('*')">*</button>
                     </div>
                     <div class="number col-lg-6 col-md-6">
-                        <button class="btn btn-secondary number-button">0</button>
+                        <button class="btn btn-secondary" onclick="changeInput('0')">0</button>
                     </div>
                     <div class="operator col-lg-3 col-md-3">
-                        <button class="btn btn-warning operator-button">/</button>
+                        <button class="btn btn-warning" onclick="selectOperator('/')">/</button>
                     </div>
                     <div class="operator col-lg-3 col-md-3">
                         <button class="btn btn-warning">.</button>
                     </div>
                     <div class="operator col-lg-6 col-md-6">
-                        <button class="btn btn-primary equal-button">=</button>
+                        <button class="btn btn-primary" onclick="handleResult()">=</button>
                     </div>
                     <div class="number col-lg-6  col-md-6">
-                        <button class="btn btn-danger clear-button">Del</button>
+                        <button class="btn btn-danger">Del</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    
     <script src="./js/main.js"></script>
 </body>
 </html>
