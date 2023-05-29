@@ -14,10 +14,10 @@ function play() {
     isOpen = ! isOpen;
     if (isOpen) {
         document.getElementById('result').value = 'Đã bật máy tính';
-        setTimeout(toggle, 3000);
+        setTimeout(toggle, 500);
     } else {
-        document.getElementById('result').value = 'Tắt sau 3 giây';
-        setTimeout(toggle, 3000);
+        document.getElementById('result').value = 'Đã tắt';
+        setTimeout(toggle, 1000);
     }
 }
 

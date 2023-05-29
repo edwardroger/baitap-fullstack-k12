@@ -1,0 +1,52 @@
+.content {
+    border: 5px solid black;
+    border-radius: 10px;
+    width: 600px;
+    height: 700px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.display {
+    margin: 20px;
+}
+
+#result {
+    width: 100%;
+    height: 100px;
+}
+
+.keyboard {
+    margin: 20px;
+}
+
+.number {
+    padding: 10px;
+}
+
+.operator {
+    padding: 10px;
+}
+
+hr {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.ans {
+    margin-right: 20px;
+}
+
+.btn {
+    width: 100%;
+    height: 50px;
+    border-radius: 15px;
+}
+
+
+.btn-toggle {
+    width: 70px;
+    border-radius: 50px;
+    padding: 10px;
+    margin-left : 20px;
+}
