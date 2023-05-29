@@ -4,7 +4,6 @@ var number2 = '';
 var operator = '';
 var result1 = '';
 function toggle() {
-    
     isOpen = !isOpen
     if (isOpen) {
         document.getElementById('result').value = "Đã bật máy tính";
@@ -78,9 +77,4 @@ function handleDel() {
     }
 }
 
-let arr = [1, 2, 3]
-for (let i = 0; i < arr.length; i++) {
-    arr[i] * 2;
-}
 
-console.log(arr);
