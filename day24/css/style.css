@@ -1,0 +1,43 @@
+body {
+    background: linear-gradient(45deg, #00853e, #63f292);
+    height: 100vh;
+}
+
+.main-content {
+    margin: 0 auto;
+    width: 400px;
+    height: 610px;
+    /* border: 1px solid black; */
+    border-radius: 20px;
+    margin-top: 50px;
+    background-color: white;
+}
+
+.login-form {
+    width: 350px;   
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+#text-email, #text-password, #text-name, #text-conf-password, #text-phone, #text-email-regis, #text-password-regis  {
+    margin: 5px 0 25px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.text-email-error, .text-password-error-regis, .text-email-error-regis, .text-password-error, .text-name-error, .text-phone-error, .text-conf-password-error {
+    color: red;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.confirm{
+    text-align: center;
+}
