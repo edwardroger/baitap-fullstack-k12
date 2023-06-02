@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/adidas-new.jpg">
+    <title>Runstore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="all.css">
+    <link rel="stylesheet" href="./assets/fontawesome-free-6.4.0-web/css/all.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-header-flooter sticky-top ">
+        <div class="container ">
+            <div class="solugan">
+                <a href="index.html" class="navbar-brand ">
+                    R U N S T O R E
+                </a>
+                <a href="" class=" navbar-brand text-child ">Highway</a>
+            </div>
+            
+            <div class="dropdown">
+                <button class="navbar-toggler" type="button" 
+                    data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false"
+                    aria-label="Toggle navigation" 
+                    id="dropdownMenuLink1" data-bs-toggle="dropdown" aria-expanded="false"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-bg" aria-labelledby="dropdownMenuLink1">
+                    <li class="wrap-drop-type"><a class="drop-type" href="danhsachsanpham.html">Sản phẩm</a></li>
+                    <li class="wrap-drop-type"><a class="drop-type" href="gioithieu.html">Giới thiệu</a></li>
+                    <li class="wrap-drop-type" data-bs-toggle="modal" data-bs-target="#exampleModal1"><a class="drop-type">Đăng nhập</a></li>
+                    <li class="wrap-drop-type" data-bs-toggle="modal" data-bs-target="#exampleModal2"><a class="drop-type">Đăng ký</a></li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item choose-header dropdown">
+                        <a class=" nav-link choose-header1 " href="" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">SẢN PHẨM</a>
+                        <ul class="dropdown-menu dropdown-bg" aria-labelledby="dropdownMenuLink">
+                            <li class="wrap-drop-type"><a class="drop-type" href="danhsachsanpham.html">Nam</a></li>
+                            <li class="wrap-drop-type"><a class="drop-type" href="danhsachsanpham.html">Nữ</a></li>
+                            <li class="wrap-drop-type"><a class="drop-type" href="danhsachsanpham.html">Trẻ em</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item choose-header"><a class=" nav-link choose-header1" href="gioithieu.html">GIỚI THIỆU</a></li>
+                    <li class="nav-item choose-header" data-bs-toggle="modal" data-bs-target="#exampleModal1" >
+                        <a class=" nav-link choose-header1">
+                            <i class="fa-solid fa-right-to-bracket"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item choose-header" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                        <a class=" nav-link choose-header1">
+                            <i class="fa-solid fa-user-plus"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item choose-header" >
+                        <a class=" nav-link choose-header1" href="">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8 wrap-parent-cart">
+                <div class="row wrap-cart-text"><h1 class="text-center cart-text">GIỎ HÀNG</h1></div>
+                <div class="row wrap-cart">
+                    <div class="col-lg-12 cart">
+                        <img src="./images/gio hang/CZ0326_100.jpg">
+                        <div class="name-cart">
+                            <p class="product-cart"><strong>Nike Air Force 1 '07</strong></p>
+                            <p class="product-cart">MSP: A3579-S  •  </p>
+                        </div>
+                        <div class="wrap-quantity">
+                            <span><i class="fa-solid fa-minus quantity-cart" onclick="handleQuantity1('-')"></i></span>                         
+                            <input class="quantity quantity1"></input>
+                            <span><i class="fa-solid fa-plus quantity-cart" onclick="handleQuantity1('+')"></i></span>
+                            
+                        </div>
+                        <p class="product-cart"><strong class="product1"></strong></p>
+                        <div>
+                            <p class="product-cart text-center">Thành tiền :</p>
+                            <p class="product-cart text-center"><strong class="price-end"></strong></p>
+                            <p class="product-cart text-center">Xóa</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 cart">
+                        <img src="./images/gio hang/FD6409_002.jpg">
+                        <div class="name-cart">
+                            <p class="product-cart"><strong>Nike Air Max Pulse</strong></p>
+                            <p class="product-cart">MSP: A3559-S  •  </p>
+                        </div>
+                        <div class="wrap-quantity">
+                            <i class="fa-solid fa-minus quantity-cart" onclick="handleQuantity2('-')"></i>                         
+                            <input class="quantity quantity2"></input>
+                            <i class="fa-solid fa-plus quantity-cart" onclick="handleQuantity2('+')"></i>
+                            
+                        </div>
+                        <p class="product-cart"><strong class="product2"></strong></p>
+                        <div>
+                            <p class="product-cart text-center">Thành tiền :</p>
+                            <p class="product-cart text-center"><strong class="price-end"></strong></p>
+                            <p class="product-cart text-center">Xóa</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 cart">
+                        <img src="./images/gio hang/FD0378_121.jpg">
+                        <div class="name-cart">
+                            <p class="product-cart"><strong>Nike Blazer Low '77 Jumbo SE</strong></p>
+                            <p class="product-cart">MSP: A3569-S  •  </p>
+                        </div>
+                        <div class="wrap-quantity">
+                            <i class="fa-solid fa-minus quantity-cart" onclick="handleQuantity3('-')"></i>                         
+                            <input class="quantity quantity3" ></input>
+                            <i class="fa-solid fa-plus quantity-cart" onclick="handleQuantity3('+')"></i>
+                            
+                        </div>
+                        <p class="product-cart"><strong class="product3"></strong></p>
+                        <div>
+                            <p class="product-cart text-center">Thành tiền :</p>
+                            <p class="product-cart text-center"><strong class="price-end"></strong></p>
+                            <p class="product-cart text-center">Xóa</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row  note-cart">
+                    <div class="col-lg-6 order-notes">
+                        <p class="order-notes"><strong>Ghi chú đơn hàng</strong></p>
+                        <textarea class="form-control" id="note" name="note"></textarea>
+                    </div>
+                    <div class="col-lg-6 note-cart-2">
+                        <p>Hỗ trợ khách hàng đổi sản phẩm trong vòng <strong>15 ngày</strong> kể từ ngày nhận hàng online. Xem thêm về Chính sách đổi trả hàng.</p>
+                        <p>Hỗ trợ khách hàng bảo hành sản phẩm trong vòng <strong>30 ngày</strong> kể từ ngày nhận hàng online. Xem thêm về Chính sách bảo hành.</p>
+                        <p>Tạo tài khoản và đăng nhập để theo dõi lịch sử mua hàng, tham gia ưu đãi dành riêng cho khách hàng thân thiết.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 wrap-info-order">
+                <div class="Continue-shopping">
+                    <a class="continue" href="index.html">Tiếp tục mua hàng</a>
+                </div>
+                <div class="info-order">
+                    <h5>Thông tin đơn hàng</h5>
+                    <div class="price-order">
+                        <p>Tạm tính:</p>       
+                        <p><strong class="price-end"></strong></p>  
+                    </div>
+                    <div class="price-order">
+                        <p><strong>Tổng tiền:</strong></p>       
+                        <p><strong class="price-end"></strong></p>  
+                    </div>
+                    <div class="end-order">
+                        <p class="direction-order">Bạn có thể nhập mã giảm giá ở trang thanh toán</p>
+                        <button class="pay">THANH TOÁN</button>
+                    </div>
+                </div>
+  
+               </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="py-5 bg-header-flooter">
+        <div class="container">
+            <div class="mb-4 row">
+                <div class="m-0 text-center">
+                    <!-- Copyright &copy;  -->
+                    <a class=" title-footer text-white" href="#">R U N S T O R E</a>
+                </div>
+                <div class="m-0 text-center ">
+                    <a href="#" class=" text-child-footer">Highway</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="row wrap-desc-footer">
+                        <h4 class="m-0 text-white desc-footer ">
+                            <!-- Copyright &copy;  -->
+                            ĐĂNG KÝ ĐỂ NHẬN ƯU ĐÃI
+                        </h4>
+                    </div>
+                    <div class="row wrap-contact-footer">
+                        <input class="input-email col-lg-9" type="email" placeholder="Điền địa chỉ Email của bạn"></input>
+                        <button class=" button-email col-lg-3">GỬI</button>
+                    </div>
+                    <div class="row wrap-desc-footer">
+                        <p class="text-white license">
+                            BẢN QUYỀN THUỘC VỀ RUNSTORE&copy;
+                        </p>
+                    </div>
+                    <div class="row ">
+                        <img class="license-img px-0" src="./images/dathongbaobocongthuong.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="m-0 text-white wrap-about-us">                       
+                        <strong class="" href="">Về chúng tôi</strong>
+                    </div>
+                    <div class="wrap-about-us">
+                        <a class=" about-us" href="gioithieu.html">Câu chuyện</a>
+                        <a class=" about-us" href="">Tuyển dụng</a>
+                        <a class=" about-us" href="lienhe.html">Liên hệ</a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="m-0 text-white wrap-about-us">                       
+                        <strong class="" href="">Dịch vụ khách hàng</strong>
+                    </div>
+                    <div class="wrap-about-us">
+                        <a class=" about-us" href="">Khách hàng thân thiết</a>
+                        <a class=" about-us" href="">Chính sách đổi trả</a>
+                        <a class=" about-us" href="">Chính sách bảo hành</a>
+                        <a class=" about-us" href="">Hướng dẫn mua hàng</a>
+                        <p class=" about-us1" href="">Hotline: 081 822 6266</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="m-0 text-white wrap-about-us">                       
+                        <strong class="" href="">Hệ thống cửa hàng</strong>
+                    </div>
+                    <div class="wrap-about-us">
+                        <span class=" about-us1" href="">100 Đông Các, quận Đống Đa, Hà Nội.</span>
+                        <span class=" about-us1" href="">109 Lò Đúc, quận Hoàn Kiếm, Hà Nội.</span>
+                        <span class=" about-us1" href="">367 Lê Văn Sỹ, Hồ Chí Minh.</span>
+                        <span class=" about-us1" href="">66 Lê Thị Riêng, quận 1, Hồ Chí Minh.</span>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="m-0 text-white wrap-about-us">                       
+                        <strong class="" href="">Fanpage</strong>
+                    </div>
+                    <div class="wrap-about-us">
+                        <a class=" about-us" href="">Facebook</a>
+                        <a class=" about-us" href="https://www.instagram.com/adidas/">Instagram</a>
+                        <a class=" about-us" href="">Tiktok</a>
+                        <a class=" about-us" href="">Youtube</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<!-- Modal đăng nhập -->
+<div class="modal fade modal-back" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-wrapper">
+      <div class="modal-content modal-content-wrap">
+        <div class="modal-header text-white header-modal" >
+                <div data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa-solid fa-xmark button-modal" ></i>
+                </div>
+        </div>
+        <div class="modal-body text-white modal-parent">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-5">
+                    <div class="row">
+                        <h2 class="modal-title">Đăng nhập</h2>
+                    </div>
+                    <div class="row wrap-input-mail-modal ">
+                        <input type="email" placeholder="Điền địa chỉ email của bạn" class="input-mail-modal">
+                    </div>
+                    <div class="row wrap-input-mail-modal ">
+                        <input type="email" placeholder="Mật khẩu" class="input-mail-modal">
+                    </div>
+                    <div class="row wrap-button-mail-modal ">
+                        <a class="forget-password" href="quenmatkhau.html">Quên mật khẩu ?</a>
+                    </div>
+                    <div class="row wrap-button-login-modal">
+                        <button class="button-mail-modal">ĐĂNG NHẬP</button>
+                    </div>
+                  </div>
+                  <div class="col-lg-2"></div>
+
+                  <div class="col-lg-5 ">
+                    <div class="row title-new-customer">
+                        <h2 class="modal-title">Khách hàng mới</h2>
+                    </div>
+                    <div class="row content-new-customer">
+                        <p class="supplementary-content">Chỉ một vài bước đơn giản đăng ký bạn sẽ nhận được những quyền lợi đặc biệt sau từ Runstore:</p>
+                    </div>
+                    <div class="row content-new-customer">
+                        <p class="supplementary-content">- Đặt hàng thuận tiện và nhanh chóng.</p>
+                    </div>
+                    <div class="row content-new-customer">
+                        <p class="supplementary-content">- Tra cứu lịch sử mua hàng và số điểm tích luỹ.</p>
+                    </div>
+                    <div class="row content-new-customer">
+                        <p class="supplementary-content">- Nhận các thông tin về sản phẩm và khuyến mãi đặc biệt.</p>
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="modal-footer text-white footer-modal">
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- Modal đăng ký -->
+<div class="modal fade modal-back" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-wrapper">
+      <div class="modal-content modal-content-wrap">
+        <div class="modal-header text-white header-modal" >
+                <div data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa-solid fa-xmark button-modal" ></i>
+                </div>
+        </div>
+        <div class="modal-body text-white modal-parent1">
+          <div class="container">
+              <div class="row">                     
+                    <h2 class="logup">Đăng ký</h2>
+                    <p class="logup-require">Vui lòng điền đầy đủ các trường thông tin ở bên dưới để tạo tài khoản mới.</p>
+                    <p class="logup-require2">Những trường thông tin có dấu "*" là bắt buộc!</p>
+              </div>
+            <div class="row two-col">                  
+                <div class="col-lg-6">
+                    <div class="wrap-input-mail-modal">
+                        <input type="email" placeholder="*Họ và tên" class="input-logup-modal">
+                    </div>
+                    <div class="wrap-input-mail-modal">
+                        <input type="email" placeholder="*Điền địa chỉ email của bạn" class="input-logup-modal">
+                    </div>
+                    <div class="wrap-input-mail-modal">
+                        <input type="email" placeholder="*Mật khẩu" class="input-logup-modal">
+                    </div>
+                </div>                                        
+                <div class="col-lg-6">
+                    <div class="wrap-input-mail-modal">
+                        <input type="email" placeholder="*Số điện thoại" class="input-logup-modal">
+                    </div>
+                    <div class="wrap-input-mail-modal">
+                        <input type="email" placeholder="*Ngày sinh" class="input-logup-modal">
+                    </div>
+                    <div class="wrap-input-mail-modal">
+                        <input type="email" placeholder="Địa chỉ" class="input-logup-modal">
+                    </div>
+                </div>
+            </div>
+            <div class="row wrap-button-login-modal" >
+                <button class="button-mail-modal">
+                    <a class="log-up-modal" href="dangky.html">ĐĂNG KÝ</a>
+                </button>
+            </div>
+          </div>
+        </div>
+        
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+<script src="./js/script.js"></script>
+</body>
+</html>

@@ -28,6 +28,7 @@ function changeInput(number) {
     }
 }
 
+
 function selectOperator(op) {
     if (isOpen) {
         operator = op;
@@ -83,4 +84,4 @@ for (let i = 0; i < arr.length; i++) {
     arr[i] * 2;
 }
 
-console.log(arr);
+
