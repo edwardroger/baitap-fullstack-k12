@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="login-form">
+                <h2>Login</h2>
+                <label for="text-name">Name: <span class="text-name-error"><small></small></span></label>
+                <input type="text" id="text-name" class="form-control" placeholder="Nhập vào name">
+                <label for="text-email">Email: <span class="text-email-error"><small></small></span></label>
+                <input type="text" id="text-email" class="form-control" placeholder="Nhập vào email">
+                <label for="text-phone">Phone: <span class="text-phone-error"><small></small></span></label>
+                <input type="number" id="text-phone" class="form-control">
+                <label for="text-pass">Pass: <span class="text-pass-error"><small></small></span></label>
+                <input type="password" id="text-password" class="form-control" placeholder="Nhpaaj vào pass">
+                <label for="text-repass">Repass: <span class="text-repass-error"><small></small></span></label>
+                <input type="password" id="text-repassword" class="form-control" placeholder="Nhpaaj vào repass">
+                <button class="btn btn-primary" onclick="submitRegisterForm()">Login</button>
+                <hr>
+                <h6>chưa có tk? vui lòng <a href="register.html">đăng ký</a></h6>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/main.js"></script>
+</html>

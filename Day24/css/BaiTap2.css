@@ -1,0 +1,57 @@
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card p {
+    margin: 0;
+}
+
+.card button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.card button:hover {
+    background-color: #3e8e41;
+}
+
+.card .quantity {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.card .quantity button {
+    background-color: #f44336;
+    margin-left: 5px;
+}
+
+.card .quantity button:hover {
+    background-color: #d32f2f;
+}
+
+.total {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}

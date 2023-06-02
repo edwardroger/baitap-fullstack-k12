@@ -1,0 +1,35 @@
+body{
+    background: linear-gradient(45deg, #00853e, #63f292);
+    height: 100vh;
+}
+
+.main-content {
+    margin: 0 auto;
+    width: 400px;
+    height: 500px;
+    /* border: 1px solid black; */
+    border-radius: 20px;
+    margin-top: 50px;
+    background-color: white;
+}
+
+.login-form {
+    width: 350px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+#text-email, #text-password, #text-repassword, #text-name, #text-phone{
+    margin: 5px 0 25px 0;
+}
+
+.text-email-error, .text-pass-error, .text-repass-error, .text-name-error, .text-phone-error{
+ color: red;
+ font-size: 13px;
+ font-style: italic;
+}
