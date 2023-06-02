@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+    .js-style {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+    }
+    form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			margin: 0;
+			padding: 0;
+		}
+
+		input[type="text"], input[type="password"] {
+			padding: 10px;
+			margin-bottom: 20px;
+			border-radius: 4px;
+			border: none;
+			box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+			font-size: 16px;
+			width: 100%;
+			max-width: 300px;
+			text-align: center;
+		}
+
+		button {
+			padding: 10px 20px;
+			background-color: #0077CC;
+			color: #ffffff;
+			border-radius: 4px;
+			border: none;
+			font-size: 16px;
+			cursor: pointer;
+			margin-bottom: 20px;
+			box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+		}
+
+		#register {
+			display: none;
+		}
+
+		h2 {
+			margin-bottom: 20px;
+			font-size: 24px;
+		}
+
+		p {
+			font-size: 16px;
+			margin-bottom: 20px;
+		}
+</style>
+<body>
+    <div class="js-style">
+        <p>Hello World!</p>
+    </div>
+    <div class="js-style">
+        <p>Hello World2!</p>
+    </div>
+
+    <form id="login" action="#" method="post">
+		<h2>Login</h2>
+		<input type="text" name="username" placeholder="Username">
+		<input type="password" name="password" placeholder="Password">
+		<button type="submit">Submit</button>
+		<p>Don't have an account? <a href="#" id="show-register">Register</a></p>
+	</form>
+	<form id="register" action="#" method="post">
+		<h2>Register</h2>
+		<input type="text" name="username" placeholder="Username">
+		<input type="password" name="password" placeholder="Password">
+		<button type="submit">Submit</button>
+		<p>Already have an account? <a href="#" id="show-login">Login</a></p>
+	</form>
+    <button onclick="handleOnclick()">Try it</button>
+    <script src="js/main.js"></script>
+    <script>
+        // var element =document.getElementsByClassName('js-style')[0]; // element là một object
+        var element = document.querySelectorAll('.js-style');
+        // var element = document.querySelector('.js-style'); // element là một object
+        function handleOnclick() { // thuộc tính attribute
+            
+         
+            element.forEach(query => {
+                query.style.backgroundColor = "green";
+            });
+            // element.style.color = "red";
+            // element.style.width = "300px";
+            // element.style.height = "300px";
+            // element.style.backgroundColor = "green";    
+        }
+
+        const loginForm = document.getElementById("login");
+		const registerForm = document.getElementById("register");
+		const showRegisterButton = document.getElementById("show-register");
+		const showLoginButton = document.getElementById("show-login");
+
+		showRegisterButton.addEventListener("click", function() {
+			loginForm.style.display = "none";
+			registerForm.style.display = "block";
+		});
+
+		showLoginButton.addEventListener("click", function() {
+			loginForm.style.display = "block";
+			registerForm.style.display = "none";
+		});
+    </script>
+</body>
+</html>
