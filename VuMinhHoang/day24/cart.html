@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+    <div id="cart">
+        <h2>Cart</h2>
+        <ul id="cartItems"></ul>
+        <p>Total: $<span id="cartTotal">0</span></p>
+        <button onclick="clearCart()">Clear Cart</button>
+    </div>
+    <hr>
+    <h2>Products</h2>
+    <div id="products">
+        <div class="item">
+            <h3>Product 1</h3>
+            <p>Price: $10</p>
+            <input type="number" id="quantity1" min="1" value="1">
+            <button onclick="addToCart('Product 1', 10, 'quantity1')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <h3>Product 2</h3>
+            <p>Price: $15</p>
+            <input type="number" id="quantity2" min="1" value="1">
+            <button onclick="addToCart('Product 2', 15, 'quantity2')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <h3>Product 3</h3>
+            <p>Price: $20</p>
+            <input type="number" id="quantity3" min="1" value="1">
+            <button onclick="addToCart('Product 3', 20, 'quantity3')">Add to Cart</button>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
