@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="handleOnclick()">Click me</button>
+    <script src="./js/script.js"></script>
+    <script>
+        const handleOnclick = () => {
+            setTimeout(function () {
+                alert("you clicked the button!")
+            }, 2000)
+            setTimeout(alertClick,3000)
+            setTimeout(()=>{
+                alert("clicked")
+            },3000)
+        }
+        var promise1 = new Promise(function(resolve,reject){
+            setTimeout(()=>{
+                a=20;
+                console.log(a)
+            },2000)
+        }).then(function(){
+            a=16;
+            console.log(a)
+        })
+        const alertClick=()=>{
+            alert("you just clicked it!")
+        }
+    </script>
+</body>
+
+</html>
