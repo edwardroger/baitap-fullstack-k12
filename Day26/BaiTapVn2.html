@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .clock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .time {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+
+  }
+</style>
+
+<body>
+  <div class="clock">
+    <div class="time"></div>
+    <form>
+      <label for="hour">Hour:</label>
+      <input type="number" id="hour" min="0" max="23">
+      <label for="minute">Minute:</label>
+      <input type="number" id="minute" min="0" max="59">
+      <button type="button" onclick="setAlarm()">Đặt giờ</button>
+      <button type="button" onclick="repeatAlarm()">Báo lại sau</button>
+    </form>
+  </div>
+</body>
+<script>
+
+  function updateTime() {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+    const timeString = `${hours}:${minutes}:${seconds}`;
+    document.querySelector('.time').textContent = timeString;
+  }
+
+  setInterval(updateTime, 1000);
+
+  function setAlarm() {
+    const hour = document.querySelector('#hour').value;
+    const minute = document.querySelector('#minute').value;
+    const now = new Date();
+    const alarm = new Date(now.getFullYear(), now.getMonth(), now.getDate(), hour, minute);
+    const timeDiff = alarm.getTime() - now.getTime();
+    if (timeDiff > 0) {
+      setTimeout(() => {
+        alert('Alarm!');
+      }, timeDiff);
+    }
+  }
+
+  function repeatAlarm() {
+    const hour = document.querySelector('#hour').value;
+    const minute = document.querySelector('#minute').value;
+    const now = new Date();
+    const alarm = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, hour, minute);
+    const timeDiff = alarm.getTime() - now.getTime();
+    if (timeDiff > 0) {
+      setTimeout(() => {
+        alert('Alarm!');
+        repeatAlarm();
+      }, timeDiff);
+    }
+
+  }
+
+</script>
+
+</html>

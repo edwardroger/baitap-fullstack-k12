@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <button onclick="handleOnclick()">Click me!</button>
+    <button onclick="clearInterval(interval)">stop interval</button>
+    <div class="baitap">
+        <p>Làm đồng hồ hẹn giờ</p>
+        <p>set giờ</p>
+        <p>alert khi đến giờ hẹn</p>
+        <p>lặp lại khi chọn báo lại sau</p>
+    </div>
+    <script src="./js/script.js"></script>
+    <script>
+        var a = 0;
+        var interval = setInterval(() => {
+                a = a + 1
+                console.log(a);
+            }, 1000);
+        setTimeout(() => {
+            clearInterval(interval)
+        }, 2000);
+        function handleOnclick() {
+            localStorage.setItem("lastname", "Smith");
+            //setTimeout: nhận vào 1 expression và xử lý nó sau 1 khoảng thời gian nhất định
+            var a = 10;
+            console.log(a);
+            // setTimeout(function() {  
+            //     a = 15;
+            //     console.log(a);
+            // } , 2000) //param1: expression (biểu thức), param2: time (thời gian)
+            
+            // setTimeout(() => {
+            //     a = 11;
+            //     console.log(a);
+            // }, 3000)
+            // a = 5;
+            // console.log(a);
+            var promise1 = new Promise(function(resolve, reject) {
+                setTimeout(() => {
+                    a = 20;
+                    console.log(a);
+                }, 2000);
+                resolve();
+            })
+
+            promise1.then(function() {
+                a = 12;
+                console.log(a);
+            })
+            //10 5 15 11
+            // setTimeout(alertClick, 3000);
+
+            // setTimeout(() => {
+            //     alert('clicked');
+            // }, 5000)
+                // console.log(b);
+            var b = 5;
+            try {
+                console.log(b);
+            } catch (error) {
+                console.log('b chưa được defined');
+                a = 10;
+                console.log(a);
+            }
+        }
+    </script>
+</body>
+</html>
