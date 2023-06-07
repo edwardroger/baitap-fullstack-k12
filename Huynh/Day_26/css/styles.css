@@ -1,0 +1,27 @@
+.main-time {
+    background-color: rgba(55, 50, 50, 0.556);
+    margin: 10px auto;
+    padding: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    max-width: 200px;
+    font-size: 30px;
+    border-radius: 7px;
+}
+
+.set-time {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#second {
+    font-size: 25px;
+}
+#startTime {
+    display: block;
+}
+#stopTime {
+    display: none;
+}
