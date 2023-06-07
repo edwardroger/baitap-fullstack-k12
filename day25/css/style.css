@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(45deg, #ccc, #ccc);
+    background: linear-gradient(45deg, #00853e, #63f292);
     height: 100vh;
 }
 
@@ -40,4 +40,8 @@ a {
 
 .confirm{
     text-align: center;
+}
+
+.register{
+    display: none;
 }

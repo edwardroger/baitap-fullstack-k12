@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- <div class="js-style">
+        <p>Hello World!</p>
+    </div> -->
+    <div class="container login">
+        <div class="main-content">
+            <div class="login-form">
+                <h2>Đăng nhập</h2>
+                <label for="text-email">Địa chỉ Email: <span class="text-email-error"><small></small></span></label>
+                <input type="text" id="text-email" class="form-control" placeholder="Điền địa chỉ email của bạn">
+                <label for="text-password">Mật khẩu: <span class="text-password-error"><small></small></span></label>
+                <input type="password" id="text-password" class="form-control" placeholder="Nhập vào mật khẩu">  
+                <div class="confirm"><button class="btn btn-primary confirm" onclick="submitForm()">Đăng nhập</button></div>
+                <hr>
+                <h6 >Chưa có tài khoản? Vui lòng <a onclick="handleLogin()">Đăng ký</a></h6>
+            </div>
+        </div>
+    </div>
+
+    <div class="container register">
+        <div class="main-content">
+            <div class="login-form">
+                <h2>Đăng ký</h2>
+                <label for="text-name">Tên:<span class="text-name-error"><small></small></span></label>
+                <input type="text" id="text-name" class="form-control" placeholder="Họ và tên">
+                <label for="text-email-regis">Email:<span class="text-email-error-regis"><small></small></span></label>
+                <input type="text" id="text-email-regis" class="form-control" placeholder="Điền địa chỉ email của bạn">
+                <label for="text-phone">Số điện thoại:<span class="text-phone-error"><small></small></span></label>
+                <input type="text" id="text-phone" class="form-control" placeholder="Nhập số điện thoại">
+                <label for="text-password-regis">Mật khẩu: <span class="text-password-error-regis"><small></small></span></label>
+                <input type="password" id="text-password-regis" class="form-control" placeholder="Điền mật khẩu"> 
+                <label for="text-conf-password">Xác nhận mật khẩu: <span class="text-conf-password-error"><small></small></span></label>
+                <input type="password" id="text-conf-password" class="form-control" placeholder="Nhập lại mật khẩu"> 
+                <div class="confirm" onclick="handleRegis()"><button class="btn btn-primary" onclick="registerAccount()">Đăng ký</button></div>
+                <hr>
+            </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
