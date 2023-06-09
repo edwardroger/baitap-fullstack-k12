@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .map {
+        width: 600px;
+        height: 600px;
+        margin: 0 auto;
+        border: 2px solid black;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+
+    .square {
+        width: 198px;
+        height: 198px;
+        border: 1px solid grey;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: center;
+
+    }
+
+    .x-clicked {
+        font-size: 50px;
+        color: blue;
+    }
+
+    .o-clicked {
+        font-size: 50px;
+        color: red;
+    }
+</style>
+
+<body>
+    <div class="map">
+        <div class="square" id="index_00" onclick="handleClickSquare(0, 0)"></div>
+        <div class="square" id="index_01" onclick="handleClickSquare(0, 1)"></div>
+        <div class="square" id="index_02" onclick="handleClickSquare(0, 2)"></div>
+        <div class="square" id="index_10" onclick="handleClickSquare(1, 0)"></div>
+        <div class="square" id="index_11" onclick="handleClickSquare(1, 1)"></div>
+        <div class="square" id="index_12" onclick="handleClickSquare(1, 2)"></div>
+        <div class="square" id="index_20" onclick="handleClickSquare(2, 0)"></div>
+        <div class="square" id="index_21" onclick="handleClickSquare(2, 1)"></div>
+        <div class="square" id="index_22" onclick="handleClickSquare(2, 2)"></div>
+    </div>
+
+
+    <script>
+
+        // khia báo mảng X và O để lưu lại các ô đã đánh
+        var arrayX = [];
+        var arrayO = [];
+
+        //tính turn click
+        var turn = 0;
+        //limit số lần click của 1 ô
+
+        function chieuNgang(arr, row) {
+            let count = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i][0] === row) {
+                    count++;
+                }
+            }
+            return count === 3;
+        }
+
+        function chieuDoc(arr, col) {
+            let count = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i][1] === col) {
+                    count++;
+                }
+            }
+            return count === 3;
+        }
+
+        function handleClickSquare(m, n) { //tham số m và n được truyền vào tại ô đã click
+            // console.log(`bạn đã click vào ô a[${m}][${n}]`);
+
+            let arr = [...arrayX, ...arrayO]; // tương đương cới concat gộp mảng
+            let error = false;
+            for (let i = 0; i < arr.length; i++) { //check các ô bị click trùng
+                // if (JSON.stringify(arr[i]) === JSON.stringify([m, n])) {
+                //     console.log([m,n]);
+                // }
+
+                if (arr[i].toString() === [m, n].toString()) {
+                    error = true;
+                }
+            }
+
+            if (!error) {
+                turn += 1; // tăng thêm 1 sau mỗi lần click
+
+                if (turn % 2 === 1) {
+                    arrayX.push([m, n]);
+                    document.getElementById('index_' + m + '' + n).innerHTML = '<div class="x-clicked">X</div>';
+                } else {
+                    arrayO.push([m, n]);
+                    document.getElementById('index_' + m + '' + n).innerHTML = '<div class="o-clicked">O</div>';
+                }
+            } else {
+                console, log("ô đã đc chọn vui lòng chọn ô khác")
+            }
+            if (chieuNgang(arrayX, m) || chieuDoc(arrayX, n)) {
+                console.log("X thắng");
+            } else if (checkHorizontal(arrayO, m) || chieuDoc(arrayO, n)) {
+                console.log("O thắng");
+            }
+
+            // console.log(arrayX);
+            // console.log(arrayO);
+
+        }
+
+    </script>
+</body>
+
+</html>
