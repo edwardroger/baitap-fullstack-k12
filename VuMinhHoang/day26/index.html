@@ -9,40 +9,12 @@
 </head>
 
 <body>
-    <button onclick="handleOnclick()">Click me</button>
-    <div>
-        <p>Làm đồng hồ hẹn giờ</p>
-        <p>set giờ</p>
-        <p>alert khi đến giờ hẹn</p>
-        <p>lặp lại khi chọn báo lại</p>
-    </div>
     <div id="clock"></div>
-    <button id="alertButton">Set Alert</button>
-    <button id="alertAgainButton" disabled>Alert Again in 5 minutes</button>
+  <button id="alertButton">Set Alert</button>
+  <input id="alertTimeInput" type="time">
+  <button id="alertAgainButton" disabled>Alert Again in 5 minutes</button>
     <script src="./js/script.js"></script>
-    <script>
-        const handleOnclick = () => {
-            setTimeout(function () {
-                alert("you clicked the button!")
-            }, 2000)
-            setTimeout(alertClick, 3000)
-            setTimeout(() => {
-                alert("clicked")
-            }, 3000)
-        }
-        var promise1 = new Promise(function (resolve, reject) {
-            setTimeout(() => {
-                a = 20;
-                console.log(a)
-            }, 2000)
-        }).then(function () {
-            a = 16;
-            console.log(a)
-        })
-        const alertClick = () => {
-            alert("you just clicked it!")
-        }
-    </script>
+    
 </body>
 
 </html>
