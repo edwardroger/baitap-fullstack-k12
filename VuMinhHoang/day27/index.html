@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <style>
     .map {
@@ -26,24 +27,19 @@
 </style>
 
 <body>
-    <div class="map">
-        <div class="square" onclick="handleClick(0,0)">a[0][0]</div>
-        <div class="square" onclick="handleClick(0,1)">a[0][1]</div>
-        <div class="square" onclick="handleClick(0,2)">a[0][2]</div>
-        <div class="square" onclick="handleClick(1,0)">a[1][0]</div>
-        <div class="square" onclick="handleClick(1,1)">a[1][1]</div>
-        <div class="square" onclick="handleClick(1,2)">a[1][2]</div>
-        <div class="square" onclick="handleClick(2,0)">a[2][0]</div>
-        <div class="square" onclick="handleClick(2,1)">a[2][1]</div>
-        <div class="square" onclick="handleClick(2,2)">a[2][2]</div>
-    </div>
-    <script>
-        var arrayX=[];
-        var arrayY=[];
-        const handleClick=(m,n)=>{
-
-        }
-    </script>
+    <div id="board" class="board">
+        <div class="cell" onclick="handleCellClick(0, 0)"></div>
+        <div class="cell" onclick="handleCellClick(0, 1)"></div>
+        <div class="cell" onclick="handleCellClick(0, 2)"></div>
+        <div class="cell" onclick="handleCellClick(1, 0)"></div>
+        <div class="cell" onclick="handleCellClick(1, 1)"></div>
+        <div class="cell" onclick="handleCellClick(1, 2)"></div>
+        <div class="cell" onclick="handleCellClick(2, 0)"></div>
+        <div class="cell" onclick="handleCellClick(2, 1)"></div>
+        <div class="cell" onclick="handleCellClick(2, 2)"></div>
+      </div>
+      
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
