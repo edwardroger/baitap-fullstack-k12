@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#question {
+  background-color: lightgray;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#answer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#answer span {
+  display: inline-block;
+  border-bottom: 2px solid black;
+  padding: 10px;
+  margin: 10px;
+  font-size: 20px;
+}
+
+#check-answer {
+  margin-top: 20px;
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: darkorange;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+</style>
+<body>
+    <div id="container">
+  <div id="question">
+
+  </div>
+  <div id="answer">
+    
+  </div>
+  <button id="check-answer">Kiểm tra</button>
+</div>
+</body>
+<script>
+    // Danh sách các câu hỏi và câu trả lời
+var questions = [
+  { question: "Tên quốc gia đầu tiên bắt đầu bằng chữ A", answer: "anh" },
+  { question: "Tên thành phố lớn nhất ở Hàn Quốc", answer: "Seoul" },
+  { question: "Loài bò nào đó có sừng cong", answer: "trau" },
+];
+
+// Chọn một câu hỏi ngẫu nhiên trong danh sách
+var currentQuestion = questions[Math.floor(Math.random() * questions.length)];
+
+// Hiển thị câu hỏi cho người chơi
+document.getElementById("question").innerHTML = currentQuestion.question;
+
+// Tạo các ô chữ cái trong câu trả lời
+for (var i = 0; i < currentQuestion.answer.length; i++) {
+  var span = document.createElement("span");
+  span.classList.add("letter");
+  document.getElementById("answer").appendChild(span);
+}
+
+// Bắt đầu game
+var letters = document.querySelectorAll("#answer span");
+var alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+
+// Đặt mỗi chữ cái vào ô chữ cái bên dưới
+for (var i = 0; i < alphabet.length; i++) {
+  var button = document.createElement("button");
+  button.innerHTML = alphabet[i];
+  button.addEventListener("click", function() {
+    var letter = this.innerHTML;
+    var found = false;
+    for (var i = 0; i < letters.length; i++) {
+      if (letters[i].innerHTML === "") {
+        letters[i].innerHTML = letter;
+        found = true;
+        break;
+      }
+    }
+    if (found) {
+      this.disabled = true;
+    }
+  });
+  document.getElementById("answer").appendChild(button);
+}
+
+// Kiểm tra câu trả lời khi nhấn nút kiểm tra
+document.getElementById("check-answer").addEventListener("click", function() {
+  var answer = "";
+  for (var i = 0; i < letters.length; i++) {
+    answer += letters[i].innerHTML;
+  }
+  if (answer === currentQuestion.answer) {
+    alert("Chính xác!");
+  } else {
+    alert("Sai rồi, hãy thử lại!");
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var questions = [
+//   { question: "Đây là một động vật có vú và sống trên cạn?", answer: "khỉ" },
+//   { question: "Đây là một loại trái cây màu vàng, có hạt lớn bên trong?", answer: "măng cụt" },
+//   { question: "Đây là một món ăn được làm từ bột, được nướng và thường được thưởng thức với sốt cà chua và phô mai?", answer: "pizza" }
+// ];
+
+// var currentQuestion = questions[Math.floor(Math.random() * questions.length)];
+// var questionDiv = document.createElement("div");
+// questionDiv.innerHTML = currentQuestion.question;
+// document.body.appendChild(questionDiv);
+
+
+// var answerInput = document.createElement("input");
+// answerInput.type = "text";
+// document.body.appendChild(answerInput);
+
+// var submitButton = document.createElement("button");
+// submitButton.innerHTML = "Xác nhận";
+// document.body.appendChild(submitButton);
+
+// submitButton.addEventListener("click", function() {
+//   if (answerInput.value.toLowerCase() === currentQuestion.answer.toLowerCase()) {
+//     alert("Chính xác!");
+//     answerInput.value = "";
+//     document.body.removeChild(questionDiv);
+//     document.body.removeChild(answerInput);
+//     document.body.removeChild(submitButton);
+//     playNextRound();
+//   } else {
+//     alert("Sai! Vui lòng thử lại!");
+//   }
+// });
+
+// function playNextRound() {
+//   currentQuestion = questions[Math.floor(Math.random() * questions.length)];
+//   questionDiv.innerHTML = currentQuestion.question;
+//   document.body.appendChild(questionDiv);
+//   document.body.appendChild(answerInput);
+//   document.body.appendChild(submitButton);
+// }
+</script>
+</html>

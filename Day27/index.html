@@ -38,9 +38,38 @@
         font-size: 50px;
         color: red;
     }
+
+    #score-x {
+        display: inline-block;
+        justify-content: space-between;
+        margin-right: 20px;
+        font-weight: bold;
+        color: blue;
+        font-size: 40px;
+    }
+
+    #score-o {
+        display: inline-block;
+        margin-left: 20px;
+        margin-right: 10px;
+        font-weight: bold;
+        color: red;
+        font-size: 40px;
+    }
+
+    #turn {
+        text-align: center;
+        /* margin: 100px 0 0 0; */
+        margin-top: 20px;
+        font-size: 30px;
+        font-weight: bold;
+    }
 </style>
 
 <body>
+    <div id="score-x">Điểm của X: 0</div>
+    <div id="score-o" style="float: right;">Điểm của O: 0</div>
+    <div id="turn">Turn 1</div>
     <div class="map">
         <div class="square" id="index_00" onclick="handleClickSquare(0, 0)"></div>
         <div class="square" id="index_01" onclick="handleClickSquare(0, 1)"></div>
@@ -55,7 +84,8 @@
 
 
     <script>
-
+        var scoreX = 0;
+        var scoreO = 0;
         // khia báo mảng X và O để lưu lại các ô đã đánh
         var arrayX = [];
         var arrayO = [];
@@ -64,6 +94,9 @@
         var turn = 0;
         //limit số lần click của 1 ô
 
+        if (turn === 0) {
+            document.getElementById('turn').innerHTML = 'Lượt của player X';
+        }
         function chieuNgang(arr, row) {
             let count = 0;
             for (let i = 0; i < arr.length; i++) {
@@ -84,9 +117,34 @@
             return count === 3;
         }
 
+        function duongCheoTrai(arr) {
+            let count = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i][0] === arr[i][1]) {
+                    count++;
+                }
+            }
+            return count === 3;
+        }
+
+        function duongCheoPhai(arr) {
+            let count = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i][0] + arr[i][1] === 2) {
+                    count++;
+                }
+            }
+            return count === 3;
+        }
+        scoreX = localStorage.getItem('score-x');
+        document.getElementById("score-x").innerHTML = "Điểm của X: " + scoreX;
+
+        scoreO = localStorage.getItem('score-o');
+        document.getElementById("score-o").innerHTML = "Điểm của O: " + scoreO;
+
         function handleClickSquare(m, n) { //tham số m và n được truyền vào tại ô đã click
             // console.log(`bạn đã click vào ô a[${m}][${n}]`);
-
+            var isVictory = false;
             let arr = [...arrayX, ...arrayO]; // tương đương cới concat gộp mảng
             let error = false;
             for (let i = 0; i < arr.length; i++) { //check các ô bị click trùng
@@ -101,7 +159,21 @@
 
             if (!error) {
                 turn += 1; // tăng thêm 1 sau mỗi lần click
-
+                console.log(turn, isVictory);
+                if (turn === 9) {
+                    if (!isVictory) {
+                        // document.getElementById('turn').innerHTML = 'Hoà rồi đánh làm gì nữa?';
+                        alert("Hòa rồi, Bấm OK để chơi lại");
+                        location.reload();
+                    }
+                    // } else {
+                    //     document.getElementById('turn').innerHTML = 'Win rồi';
+                    // }
+                    //end game, clear board, clear turn
+                } else {
+                    localStorage.setItem('turn', turn);
+                    document.getElementById('turn').innerHTML = (turn % 2 == 1) ? 'Lượt của player O' : 'Lượt của player X';
+                }
                 if (turn % 2 === 1) {
                     arrayX.push([m, n]);
                     document.getElementById('index_' + m + '' + n).innerHTML = '<div class="x-clicked">X</div>';
@@ -109,18 +181,52 @@
                     arrayO.push([m, n]);
                     document.getElementById('index_' + m + '' + n).innerHTML = '<div class="o-clicked">O</div>';
                 }
+
+                //Gợi ý
+                // var ArrayX = [[0,0], [0,1], [0,2]];
+                // var ArrayXm = [0,0,1,0]//push value Array[i][0];
+                // var ArrayXn = [0,1,1,2]//push value Array[i][1];
+                // var arrayXm = [];
+                // for (let i = 0; ArrayXm.length; i++) {
+                //     ArrayXm[i] = 0; // với i = 0;
+                //     // arrayXm[i] = 1;
+                //     for(let j = 0; j < arrayX.length; j++) {
+                //         if(arrayX[j][0] === arrayXm[i]) {
+                //             arrayX[j][1] = 0; //lần đầu lặp j = 0
+                //             arrayX[j + 1][1] = 1 - j; //lần lặp j =1
+                //             arrayX[j + 2][1] = 2 - j; // lần lặp j = 2
+                //             arrayX[j][1]
+                //         }
+                //     }
+                // }
             } else {
                 console, log("ô đã đc chọn vui lòng chọn ô khác")
             }
-            if (chieuNgang(arrayX, m) || chieuDoc(arrayX, n)) {
-                console.log("X thắng");
-            } else if (checkHorizontal(arrayO, m) || chieuDoc(arrayO, n)) {
-                console.log("O thắng");
+            if (chieuNgang(arrayX, m) || chieuDoc(arrayX, n) || duongCheoPhai(arrayX) || duongCheoTrai(arrayX)) {
+                scoreX++;
+                document.getElementById("score-x").innerHTML = "Điểm của X: " + scoreX;
+                localStorage.setItem('score-x', scoreX);
+                // document.getElementById('turn').innerHTML = 'X Win rồi';
+                setTimeout(function () {
+                    alert("X thắng, bấm OK để chơi lại")
+                    location.reload();
+                }, 300);
+                // alert("X thắng, bấm OK để chơi lại");
+                // location.reload();
+            } else if (chieuNgang(arrayO, m) || chieuDoc(arrayO, n) || duongCheoPhai(arrayO) || duongCheoTrai(arrayO)) {
+                scoreO++;
+                document.getElementById("score-o").innerHTML = "Điểm của O: " + scoreO;
+                localStorage.setItem('score-o', scoreO);
+                // document.getElementById('turn').innerHTML = 'O Win rồi';
+                setTimeout(function () {
+                    alert("O thắng, bấm OK để chơi lại")
+                    location.reload();
+                }, 300);
             }
-
             // console.log(arrayX);
             // console.log(arrayO);
-
+            //         scoreX = localStorage.getItem('score-x');
+            // document.getElementById("score-x").innerHTML = "Điểm của X: " + scoreX;
         }
 
     </script>
