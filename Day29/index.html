@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .map {
+        width: 600px;
+        height: 600px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+    .square {
+        width: 198px;
+        height: 198px;
+        border: 1px solid grey;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+    .x-clicked {
+        font-size: 50px;
+        color: blue;
+    }
+    .o-clicked {
+        font-size: 50px;
+        color: red;
+    }
+</style>
+<body>
+    <h1>Game cờ caro 3x3</h1>
+    <p>B1: vẽ ô (ma trận 3x3)</p>
+    <p>B2: bắt sự kiện onclick + tính turn đánh</p>
+    <p>B3: bắt sự kiện click 2 lần vào 1 ô</p>
+    <p></p>
+    <h1 id="turn"></h1>
+    <div class="map">
+        <div class="square" id="index_00" onclick="handleClickSquare(0, 0)"></div>
+        <div class="square" id="index_01" onclick="handleClickSquare(0, 1)"></div>
+        <div class="square" id="index_02" onclick="handleClickSquare(0, 2)"></div>
+        <div class="square" id="index_10" onclick="handleClickSquare(1, 0)"></div>
+        <div class="square" id="index_11" onclick="handleClickSquare(1, 1)"></div>
+        <div class="square" id="index_12" onclick="handleClickSquare(1, 2)"></div>
+        <div class="square" id="index_20" onclick="handleClickSquare(2, 0)"></div>
+        <div class="square" id="index_21" onclick="handleClickSquare(2, 1)"></div>
+        <div class="square" id="index_22" onclick="handleClickSquare(2, 2)"></div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script>
+        //Khai báo mảng X và O dùng để lưu lại các ô đã đánh
+        var arrayX = [];
+        var arrayO = [];
+        //tính turn click
+        var turn = 0;
+        
+        if (turn === 0) {
+            document.getElementById('turn').innerHTML = 'Lượt của player X';
+        }
+
+        //Check điều kiện thắng
+        var isVictory = false;
+
+        //limit số lần click của 1 ô
+        var arr = [];
+
+        function handleClickSquare(m, n) { //tham số m, n được truyền vào để biết được vị trí của ô đã click
+            let error = false;
+            for (let i = 0; i < arr.length; i++) { //check các ô bị click trùng
+                if (arr[i].toString() === [m, n].toString()) error = true;
+            }
+            if (isVictory) { //check xem đã win hay chưa
+                error = true;
+            }
+            if (! error) {
+                turn += 1; //tăng turn thêm 1 sau mỗi lần click
+                if (turn === 9) {
+                    if (! isVictory) {
+                        document.getElementById('turn').innerHTML = 'Hoà rồi đánh làm gì nữa?';
+                    } else {
+                        document.getElementById('turn').innerHTML = 'Win rồi';
+                    }
+                    //end game, clear board, clear turn
+                } else {
+                    localStorage.setItem('turn', turn);
+                    document.getElementById('turn').innerHTML = (turn % 2 == 1) ? 'Lượt của player O' : 'Lượt của player X';
+                }
+
+                if (turn % 2 === 1) {
+                    arrayX.push([m, n]); // arrayX.push(m + '' + n);
+                    document.getElementById('index_' + m + '' + n).innerHTML = '<div class="x-clicked">X</div>';
+                    tinhWin(arrayX, m, n);
+                } else {
+                    arrayO.push([m, n]);
+                    document.getElementById('index_' + m + '' + n).innerHTML = '<div class="o-clicked">O</div>';
+                    tinhWin(arrayO, m, n);
+                }
+                arr = [...arrayX, ...arrayO]; // tuơng đương với: concat (gộp mảng)
+
+
+                //Gợi ý
+                // ArrayX = [[0,0], [0,1], [1,1] [0,2]];
+                // ArrayXm = [0, 0, 1, 0]; //push value Array[i][0]; 
+                // ArrayXn = [0, 1, 1, 2]; //push value Array[i][1]; 
+                // for (let i = 0; i < ArrayXm.length; i++) {
+                //     arrayXm[i] = 0; //với i = 0
+                //     for (let j = 0; j < arrayX.length; j++) {
+                //         if (arrayX[j][0] === arrayXm[i]) {
+
+                //             arrayX[j][1] = 0 //lần đầu lặp j = 0
+                //             arrayX[j + 1][1] = 1 - j //lần lặp 1
+                //             arrayX[j + 2][1] = 2 - j //lần lặp 2
+                //         }
+                //     }
+                // }
+                
+
+                //ArrayX gồm tất cả các vị trí mà X đã chọn
+                //Có vị trí [m, n] mới nhất được cập nhật vào trong ArrayX khi trigger function handleClickSquare
+                //Từ vị trí m mình đi tìm tất cả các vị trí cũng có m trong ArrayX
+                //Xét vị trí của n (push n vào trong 1 array mới)
+                //sort n theo thứ tự tăng dần 
+                //ví dụ arrayN = [0, 1, 2, 6, 8, 9]; 
+                //arrayN[0] + 1 = arrayN[1]
+
+            } else {
+                console.log('Ô đã được chọn. Vui lòng chọn ô khác!');
+            }
+        }
+
+        function tinhWin(array, m, n) {
+            var arrN = [];
+            var arrM = [];
+            var arrLeftDiagonal = [];
+    var arrRightDiagonal = [];
+            for (let i = 0; i < array.length; i++) {  //[[1,2], [0,1], [1,1]]
+                console.log(array[i][0]);
+                if (array[i][0] === parseInt(m)) {
+                    arrN.push(array[i][1]);
+                }
+                if (array[i][1] === parseInt(n)) {
+                    arrM.push(array[i][0]);
+                }
+                if (array[i][0] === array[i][1]) {
+            arrLeftDiagonal.push(array[i][0]);
+        }
+        if (array[i][0] + array[i][1] === 2) {
+            arrRightDiagonal.push(array[i][0]);
+        }
+                
+            }
+            arrN.sort((a, b) => a - b);
+            arrM.sort((a, b) => a - b);
+            arrLeftDiagonal.sort((a, b) => a - b);
+    arrRightDiagonal.sort((a, b) => a - b);
+            //Cách 1 (dành cho bài 3x3): 
+            for (let j = 0; j < arrN.length; j++) {
+                if ((arrN[j] + arrN[j+1] + arrN[j+2]) / 3 === arrN[j+1]) {
+                    isVictory = true;
+                    // clearRound();
+                    if (turn % 2 === 1) document.getElementById('turn').innerHTML = 'X win ngang';
+                    else document.getElementById('turn').innerHTML = 'O win ngang';
+                }                        
+            }
+            for (let k = 0; k < arrM.length; k++) {
+                if ((arrM[k] + arrM[k+1] + arrM[k+2]) / 3 === arrM[k+1]) {
+                    isVictory = true;
+                    // clearRound();
+                    if (turn % 2 === 1) document.getElementById('turn').innerHTML = 'X win dọc';
+                    else document.getElementById('turn').innerHTML = 'O win dọc';
+                } 
+
+                
+            }
+
+            for (let l = 0; l < arrM.length; l++) {
+                if ((arrLeftDiagonal[l] + arrLeftDiagonal[l+1] + arrLeftDiagonal[l+2]) / 3 === arrLeftDiagonal[l+1]) {
+                    isVictory = true;
+                    // clearRound();
+                    if (turn % 2 === 1) document.getElementById('turn').innerHTML = 'X win chéo';
+                    else document.getElementById('turn').innerHTML = 'O win chéo';
+                } 
+
+                
+            }
+
+            for (let e = 0; e < arrM.length; e++) {
+                if ((arrRightDiagonal[e] + arrRightDiagonal[e+1] + arrRightDiagonal[e+2]) / 3 === arrRightDiagonal[e+1]) {
+                    isVictory = true;
+                    // clearRound();
+                    if (turn % 2 === 1) document.getElementById('turn').innerHTML = 'X win chéo';
+                    else document.getElementById('turn').innerHTML = 'O win chéo';
+                } 
+
+                
+            }
+
+    //         if (arrLeftDiagonal.length === 3 && 
+    //     arrLeftDiagonal[0] + arrLeftDiagonal[1] + arrLeftDiagonal[2] === 3) {
+    //     isVictory = true;
+    //     if (turn % 2 === 1) {
+    //         document.getElementById('turn').innerHTML = 'X win diagonally';
+    //     } else {
+    //         document.getElementById('turn').innerHTML = 'O win diagonally';
+    //     }
+    // }
+
+    // // Check diagonal line from top right to bottom left
+    // if (arrRightDiagonal.length === 3 && 
+    //     arrRightDiagonal[0] + arrRightDiagonal[1] + arrRightDiagonal[2] === 3) {
+    //     isVictory = true;
+    //     if (turn % 2 === 1) {
+    //         document.getElementById('turn').innerHTML = 'X win diagonally';
+    //     } else {
+    //         document.getElementById('turn').innerHTML = 'O win diagonally';
+    //     }
+    // }
+
+            //Cách 2 (dành cho các bài toán mở rộng: tìm ra các phần tử liền kề nhau và push vào 1 array)
+            // var arrWin = [];
+            // for (let k = 0; k < arrM.length; k++) { //arrM = [0, 1, 5, 7, 8, 9]
+            //     if (arrM[k+1] - arrM[k] === 1) {
+            //         arrWin.push(arrM[k]); // 7, 8
+            //         if (count(arrWin) === 4) {
+            //             isVictory = true;
+            //         }
+            //     } else {
+            //         arrWin = [];
+            //     }
+            // }
+        }
+
+        function clearRound() {
+            arrayX = [];
+            arrayO = [];
+            turn = 0;
+            arr = [];
+        }
+    </script>
+</body>
+</html>
