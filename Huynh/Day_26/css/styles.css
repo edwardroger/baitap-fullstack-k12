@@ -1,5 +1,11 @@
+body{
+    background-color: #0E1526;
+    color: #B4C6E8;
+}
+
 .main-time {
     background-color: rgba(55, 50, 50, 0.556);
+    color: #38BDF8;
     margin: 10px auto;
     padding: 10px;
     display: flex;
