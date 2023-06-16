@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .test {
+        display: none;
+    }
+</style>
+<body>
+    <div class="body-content test2">
+        <input type="text" name="email" id="email" onchange="handleOnChange()">
+        <input type="text" id="password">
+    </div>
+
+    <button onclick="handleOnCLickBtn()">CLick me!</button>
+    <button class="clear">Clear màn hình</button>
+
+    <div class="bai-tap">
+        <p>tạo form login và register chung 1 file HTML</p>
+    </div>
+
+
+    <div class="login-form">
+			<h2>Đăng nhập</h2>
+			<label for="login-username">Tên đăng nhập:</label>
+			<input type="text" id="login-username" name="login-username"><br>
+			<label for="login-password">Mật khẩu:</label>
+             <input type="password" id="login-password" name="login-password"><br>
+			<button id="login-btn">Đăng nhập</button>
+		</div>
+		<div class="register-form">
+			<h2>Đăng ký</h2>
+			<label for="register-username">Tên đăng nhập:</label>
+             <input type="text" id="register-username" name="register-username"><br>
+             <label for="register-password">Mật khẩu:</label>
+             <input type="password" id="register-password" name="register-password"><br>
+             <label for="register-confirm-password">Xác nhận mật khẩu:</label>
+             <input type="password" id="register-confirm-password" name="register-confirm-password"><br>
+			<button id="register-btn">Đăng ký</button>
+		</div>
+    <script src="js/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script> -->
+    <script>
+        // document.getElementsByClassName('body-content')[0].innerHTML =   '<h1>Hello World</h1>';
+        // $('.body-content').html('<h1>Hello World</h1>');
+        function handleOnChange(){
+            console.log($('#email').val()); //value: document.getElementById('email').value; 
+        }
+        
+        function handleOnCLickBtn(){ 
+            $('.body-content').addClass('test');
+            // $('.body-content').removeClass('test2');
+            // $('.body-content').css('background-color', 'red');
+        }
+
+        $('.clear').on('click', function(){
+            $('.body-content').addClass('test');
+        });
+
+        $('#password').on('change', function(){
+            console.log($('#password').val());
+        });
+
+        $(document).ready(function () { //Component did mount
+
+    });
+
+        $(document).ready(function(){
+			$("#login-btn").click(function(){
+				var username = $("#login-username").val();
+				var password = $("#login-password").val();
+				if(username == "" || password == ""){
+					alert("Vui lòng nhập đầy đủ thông tin đăng nhập!");
+					return false;
+				}
+			});
+
+			$("#register-btn").click(function(){
+				var username = $("#register-username").val();
+				var password = $("#register-password").val();
+				var confirm_password = $("#register-confirm-password").val();
+				if(username == "" || password == "" || confirm_password == ""){
+					alert("Vui lòng nhập đầy đủ thông tin đăng ký!");
+					return false;
+				}
+				if(password != confirm_password){
+					alert("Mật khẩu xác nhận không khớp!");
+					return false;
+				}
+			});
+		});
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
