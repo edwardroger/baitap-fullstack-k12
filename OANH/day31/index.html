@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// BTVN: 
+// - Nhập vào độ dài 3 cạnh của 1 tam giác. 
+// Viết function kiểm tra 3 độ dài có phải là độ dài của 1 tam giác hay không? 
+// Nếu là tam giác thì đó là tam giác gì?
+// (Điều kiện: 
+//     Để nó là 3 độ dài của 3 cạnh tam giác thì a + b > c, b + c > a, a + c > b
+//     Để là 1 tam giác cân: Nó phải là tam giác và phải có 2 cạnh bằng nhau
+//     Để là tam giác đều: 3 cạnh bằng nhau
+//     Là tam giác vuông: a^2 + b^2 = c^2
+//     )
+
+let a = parseInt(prompt('Nhap vao a'));
+let b = parseInt(prompt('Nhap vao b'));
+let c = parseInt(prompt('Nhap vao c'));
+
+if (a > 0 && b > 0 && c > 0) {
+    if ( a + b > c && a + c > b && b + c > a) 
+        if ( a === b || b === c || c === a) {
+            console.log ('a,b,c là tam giác cân')
+        }if (a === b & b === c) {
+            console.log ('a,b,c là 3 cạnh của 1 tam giác đều'); 
+        } if (a*a + b*b === c*c || b*b + c*c === a*a || a*a + c*c === a*a) {
+            console.log ('tam giác vuông');
+        }if (a === b || b === c || c === a) {if (a*a + b*b === c*c || b*b + c*c === a*a || a*a + c*c === a*a) {
+            console.log ('tam giác vuông cân');}
+    }
+} else {console.log ('không phải tam giác')}
+    </script>
+</body>
+</html>
