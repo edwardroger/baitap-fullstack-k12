@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="email" id="email" onchange="handleOnchange()">
+    <div class="box-1"></div>
+    <div class="box-2"></div>
+    <div class="box-3"></div>
+    <div id="box-4"></div>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
+        //Jquery: cú pháp cơ bản
+        // $('selector').action(); // với selector là element được chọn | action là hành động
+        // $('input[name=email]').val();
+        $('input[name=email]').on('change', function(){
+            console.log($('input[name=email]').val());
+        });
+
+        $('.box-1, .box-2, .box-3, #box-4').html('<p> Hello world</p>')
+
+        function handleOnchange(){
+            console.log(document.getElementById('email').value);
+        }
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
