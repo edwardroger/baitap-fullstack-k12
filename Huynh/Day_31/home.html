@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+      h1 {
+        font-size: 50px;
+        text-align: center;
+      }
+</style>
+<body onpageshow="textAnimation()">
+    <h1 class="h1">HOME</h1>
+    <button>remove</button>
+
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        function textAnimation() {
+            let x, y, z;
+            let time;
+            $('h1').attr('onclick', `handleclick(${1}, 'ok')`)
+            clearInterval(time);
+            time = setInterval(() => {
+                x = Math.floor(Math.random() * 256);
+                y = Math.floor(Math.random() * 256);
+                z = Math.floor(Math.random() * 256);
+                $('.h1').css('color', `rgb(${x}, ${y}, ${z})`)
+            }, 500);
+        }
+        $('button').on('click', function () {
+            $('.h1').removeAttr('onclick')
+        })
+        function handleclick(x, y) {
+            console.log(x, y);
+            $(`h1`).removeClass('h1');
+        }
+    </script>
+</body>
+</html>
