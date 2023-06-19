@@ -1,0 +1,44 @@
+
+.product-1, .product-2, .product-3 {
+    display: flex;
+    width: 400px;
+    height: 400px;
+    border: 2px solid orange;
+}
+
+.img {
+    max-width: 100%;
+    height: auto;
+    object-fit: fill;
+}
+
+.bigCart, .bigBill {
+    display: inline-flex;
+    width: 48%;
+    flex-direction: column;
+}
+
+.bigCart {
+    margin-left: 50px;
+    align-items: center;
+}
+
+.bigBill {
+    position: sticky;
+    top: 0;
+}
+
+.product {
+    display: inline;
+    text-align: center;
+}
+
+input {
+    width: 100px;
+    height: 30px;
+    margin: 10px 5px;
+}
+
+label {
+    display: inline-flex;
+}
