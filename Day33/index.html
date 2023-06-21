@@ -70,7 +70,7 @@
             <button onclick="checkAnswer(5, false)">chịu</button>
             <button onclick="checkAnswer(5, true)">14979661712</button>
             <button onclick="checkAnswer(5, false)">24979661713</button>
-            <button onclick="checkAnswer(5, false)">34979661712</button>
+            <button onclick="checkAnswer(5, false)">4979661712</button>
         </div>
     </div>
 
@@ -85,7 +85,7 @@
         if (isCorrect) {
             score++;
             document.getElementById("score").innerHTML = "Số câu đúng: " + score;
-
+        }
             document.getElementById("question" + questionNumber).style.display = "none";
             soCauHoiHienTai++;
             console.log(soCauHoiHienTai);
@@ -94,11 +94,13 @@
             } else {
                 alert('Bạn đã trả lời đúng tất cả câu hỏi!');
             }
-        } else {
-            alert('Bạn đã chọn sai. Chơi lại!');
-            location.reload();
-        }
+        // } else {
+        //     alert('Bạn đã chọn sai. Chơi lại!');
+        //     location.reload();
+        // }
     }
+
+
 
 
 </script>
