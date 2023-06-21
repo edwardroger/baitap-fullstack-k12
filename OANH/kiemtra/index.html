@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+//1. nhập vào số nguyên n. Tính tổng các số từ 1->n
+//2. nhập vào số nguyên n. Tính tổng các số chẵn từ 1->n
+//3. nhập vào 1 mảng gồm n số. Tìm giá trị lớn nhất và nhỏ nhất.
+//4. Nhập vào 1 mảng gồm n số. Lấy ra các số chẵn trong mảng.
+//5. Nhập vào 1 mảng gồm n số. Tính trung bình cộng các số trong mảng.
+
+//câu 1
+/*var n = parseInt(prompt('Nhập số n vào: '));
+var sum = 0;
+for (let i = 0; i <= n; i++) {
+    sum += i;
+}
+console.log ('Tổng các số từ 1 đến ' + n + ' là:' + sum)*/
+
+//câu 2:
+/*var n = parseInt(prompt('Nhập số n vào: '));
+var sum = 0;
+for (let i = 0; i <= n; i++) {
+    if (i % 2 === 0) { sum += i};
+}
+console.log ('tổng các số chẵn từ 0 đến ' + n + ' là:' + sum);*/
+
+//câu 3: 
+/*var arr = [1,2,3,4,5,6];
+var max = arr[0];
+for (let i = 0; i <= arr.length; i++) {
+    
+}*/
+
+// câu 4
+/*var arr = [1,2,3,4,5,6];
+for (let i = 0; i <= arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+        console.log ('các số chẵn trong mảng là: ' + arr[i]);
+    }
+}*/
+
+// câu 5:
+var arr = [1,2,3];
+var sum = 0;
+var count = 0;
+for (let i = 0; i <= arr.length - 1; i++) {
+    count += i;
+    sum += arr[i];   
+}
+console.log ('trung bình cộng các số trong mảng là ' + sum/count);
+</script>
+
+</body>
+</html>
