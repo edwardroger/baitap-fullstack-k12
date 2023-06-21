@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .question {
+        display: none;
+    }
+
+    #question1 {
+        display: block;
+    }
+</style>
+
+<body>
+    <h1 id="score">Số câu đúng: 0</h1>
+
+    <div id="question1" class="question">
+        <h2>1 + 1 =</h2>
+        <p>Đây là câu hỏi số 1?</p>
+        <div class="answers">
+            <button onclick="checkAnswer(1, true)">1</button>
+            <button onclick="checkAnswer(1, false)">2</button>
+            <button onclick="checkAnswer(1, false)">3</button>
+            <button onclick="checkAnswer(1, false)">4</button>
+        </div>
+    </div>
+
+    <div id="question2" class="question">
+        <h2>Câu hỏi 2:</h2>
+        <p>2 + 2 =</p>
+        <div class="answers">
+            <button onclick="checkAnswer(2, false)">1</button>
+            <button onclick="checkAnswer(2, false)">2</button>
+            <button onclick="checkAnswer(2, false)">3</button>
+            <button onclick="checkAnswer(2, true)">4</button>
+        </div>
+    </div>
+
+    <div id="question3" class="question">
+        <h2>Câu hỏi 3:</h2>
+        <p>4 / 0 =</p>
+        <div class="answers">
+            <button onclick="checkAnswer(3, true)">0</button>
+            <button onclick="checkAnswer(3, false)">1</button>
+            <button onclick="checkAnswer(3, false)">2</button>
+            <button onclick="checkAnswer(3, false)">ko có đáp án đúng</button>
+        </div>
+    </div>
+
+    <div id="question4" class="question">
+        <h2>Câu hỏi 4:</h2>
+        <p>0 * 6 =</p>
+        <div class="answers">
+            <button onclick="checkAnswer(4, false)">1</button>
+            <button onclick="checkAnswer(4, true)">0</button>
+            <button onclick="checkAnswer(4, false)">5</button>
+            <button onclick="checkAnswer(4, false)">4</button>
+        </div>
+    </div>
+
+    <div id="question5" class="question">
+        <h2>Câu hỏi 5:</h2>
+        <p>12454235356 + 2525426356 =</p>
+        <div class="answers">
+            <button onclick="checkAnswer(5, false)">chịu</button>
+            <button onclick="checkAnswer(5, true)">14979661712</button>
+            <button onclick="checkAnswer(5, false)">24979661713</button>
+            <button onclick="checkAnswer(5, false)">34979661712</button>
+        </div>
+    </div>
+
+
+
+</body>
+<script>
+    let soCauHoiHienTai = 1;
+    let score = 0;
+
+    function checkAnswer(questionNumber, isCorrect) {
+        if (isCorrect) {
+            score++;
+            document.getElementById("score").textContent = "Số câu đúng: " + score;
+
+            document.getElementById("question" + questionNumber).style.display = "none";
+            soCauHoiHienTai++;
+            console.log(soCauHoiHienTai);
+            if (soCauHoiHienTai <= 5) {
+                document.getElementById("question" + soCauHoiHienTai).style.display = "block";
+            } else {
+                alert('Bạn đã trả lời đúng tất cả câu hỏi!');
+            }
+        } else {
+            alert('Bạn đã chọn sai. Chơi lại!');
+            location.reload();
+        }
+    }
+
+
+</script>
+
+</html>
