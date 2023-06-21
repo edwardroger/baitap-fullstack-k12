@@ -1,0 +1,16 @@
+.main-to-do {
+    max-width: 550px;
+}
+.to-do-list{
+    padding: 5px;
+}
+.to-do {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    background-color: white;
+    margin: 10px 0;
+}
+.to-do input {
+    margin: auto 10px;
+}

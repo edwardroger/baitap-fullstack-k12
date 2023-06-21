@@ -32,9 +32,34 @@
         $('button').on('click', function () {
             $('.h1').removeAttr('onclick')
         })
+        
+        function miniMaxSum(arr) {
+            // Write your code here
+            let arrsum = [];
+            let error = false;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] >= 1 && arr[i] <= Math.pow(10, 9)) {
+                    arrsum[i] = 0;
+                    for (let j = 0; j < arr.length; j++) {
+                        if (i !== j) {
+                            arrsum[i] = arrsum[i] + arr[j];
+                        }
+                    }
+                } else {
+                    error = true;
+                    break;
+                }
+            }
+            if (!error) {
+                console.log(Math.min.apply(null, arrsum) + ' ' + Math.max.apply(null, arrsum));
+            }
+        }
         function handleclick(x, y) {
             console.log(x, y);
             $(`h1`).removeClass('h1');
+            let space = ' ';
+            let arr = [1, 2, 3, 4, 5];
+            miniMaxSum(arr);
         }
     </script>
 </body>
