@@ -84,7 +84,7 @@
     function checkAnswer(questionNumber, isCorrect) {
         if (isCorrect) {
             score++;
-            document.getElementById("score").textContent = "Số câu đúng: " + score;
+            document.getElementById("score").innerHTML = "Số câu đúng: " + score;
 
             document.getElementById("question" + questionNumber).style.display = "none";
             soCauHoiHienTai++;
