@@ -7,12 +7,59 @@
     <title>Document</title>
 </head>
 <style>
-    .question {
+    /* .question {
         display: none;
-    }
+    } */
 
     #question1 {
         display: block;
+    }
+
+    body {
+        background-color: #d1c4e9;
+    }
+
+    h1 {
+        color: #fff;
+        background-color: #673ab7;
+        padding: 10px;
+    }
+
+    .question {
+        margin: 50px auto;
+        max-width: 500px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        display: none;
+    }
+
+    .question h2 {
+        color: #673ab7;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .question p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .answers button {
+        display: block;
+        width: 100%;
+        background-color: #673ab7;
+        color: #fff;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    .answers button:hover {
+        background-color: #512da8;
     }
 </style>
 
@@ -20,11 +67,11 @@
     <h1 id="score">Số câu đúng: 0</h1>
 
     <div id="question1" class="question">
-        <h2>1 + 1 =</h2>
-        <p>Đây là câu hỏi số 1?</p>
+        <h2>Câu hỏi 1:</h2>
+        <p>1 + 1 =</p>
         <div class="answers">
-            <button onclick="checkAnswer(1, true)">1</button>
-            <button onclick="checkAnswer(1, false)">2</button>
+            <button onclick="checkAnswer(1, false)">1</button>
+            <button onclick="checkAnswer(1, true)">2</button>
             <button onclick="checkAnswer(1, false)">3</button>
             <button onclick="checkAnswer(1, false)">4</button>
         </div>
@@ -45,10 +92,10 @@
         <h2>Câu hỏi 3:</h2>
         <p>4 / 0 =</p>
         <div class="answers">
-            <button onclick="checkAnswer(3, true)">0</button>
+            <button onclick="checkAnswer(3, false)">0</button>
             <button onclick="checkAnswer(3, false)">1</button>
             <button onclick="checkAnswer(3, false)">2</button>
-            <button onclick="checkAnswer(3, false)">ko có đáp án đúng</button>
+            <button onclick="checkAnswer(3, true)">ko có đáp án đúng</button>
         </div>
     </div>
 
@@ -86,14 +133,14 @@
             score++;
             document.getElementById("score").innerHTML = "Số câu đúng: " + score;
         }
-            document.getElementById("question" + questionNumber).style.display = "none";
-            soCauHoiHienTai++;
-            console.log(soCauHoiHienTai);
-            if (soCauHoiHienTai <= 5) {
-                document.getElementById("question" + soCauHoiHienTai).style.display = "block";
-            } else {
-                alert('Bạn đã trả lời đúng tất cả câu hỏi!');
-            }
+        document.getElementById("question" + questionNumber).style.display = "none";
+        soCauHoiHienTai++;
+        console.log(soCauHoiHienTai);
+        if (soCauHoiHienTai <= 5) {
+            document.getElementById("question" + soCauHoiHienTai).style.display = "block";
+        } else {
+            alert('Bạn đã trả lời đúng tất cả câu hỏi!');
+        }
         // } else {
         //     alert('Bạn đã chọn sai. Chơi lại!');
         //     location.reload();
