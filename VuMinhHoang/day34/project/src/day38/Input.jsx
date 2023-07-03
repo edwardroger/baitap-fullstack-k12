@@ -6,7 +6,7 @@ const Input = ({ onChange }) => {
     const [result, setResult] = useState(0)
     const handleInputChange = (event) => {
         const { name, value } = event.target;
-        setInput((prevInput) => ({ ...prevInput, [name]: parseInt(value) }));
+        setInput((prevInput) => ({ ...prevInput, [name]: parseFloat(value) }));
     };
     const handleCal = (cal) => {
         switch (cal) {
@@ -28,7 +28,7 @@ const Input = ({ onChange }) => {
     };
 
     if (onChange) {
-        onChange(parseInt(result));
+        onChange(parseFloat(result));
     }
     return (<>
         <input type="text" name="inputA" onChange={handleInputChange} /><br />
