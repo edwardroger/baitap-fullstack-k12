@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="test"></div>
+    <button>cut</button>
+
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        var x = 'try test'
+        function timeConversion(s) {
+    // Write your code here
+            let timeUnit = s.slice(s.length - 2);
+            let hour = s.slice(0, 2);
+            if (timeUnit === 'PM') {
+                if (+hour === 12) {
+                    return `12${s.slice(2)}`;
+                } else {
+                    return `${12 + +hour}${s.slice(2, (s.length - 2))}`;
+                }
+            }
+            if (timeUnit === 'AM') {
+                if (+hour === 12) {
+                    return `00${s.slice(2, (s.length - 2))}`;
+                } else {
+                    return `${s.slice(0, (s.length - 2))}`;
+                }
+            }
+        }
+        $('button').on('click', function () {
+            console.log(timeConversion('12:45:54PM'));
+        })
+    </script>
+</body>
+</html>
