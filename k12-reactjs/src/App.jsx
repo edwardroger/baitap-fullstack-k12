@@ -1,18 +1,25 @@
 import React, { useState } from 'react'
-// import Input from './components/Day38/Input'
-import Calculate from './components/Day38/Calculate'
+import InputNumber from './components/Day39/InputNumber'
+import Button from './components/Day39/Button';
+import Result from './components/Day39/Result';
 
 const App = () => {
-    const [result, setresult] = useState(0)
+    const [number, setNumber] = useState();
+    const [sum, setSum] = useState();
 
-    const handleValiable = (data) => {
-        setresult(data)
+    const handleSetNumber = (value) => {
+        setNumber(value)
     }
-  return (
+
+    const handleSetSum = (sumValue) => {
+        setSum(sumValue)
+    }
+    return (
     <>
-        {/* <Input resultCalculate={handleValiable} /> */}
-        <Calculate resultCalculate={handleValiable}/>
-        { result }
+        <InputNumber handleSetNumber={ handleSetNumber }/>
+        <Button number={ number }
+            handleSetSum={ handleSetSum } />
+        <Result resultSum={ sum } />
     </>
   )
 }
