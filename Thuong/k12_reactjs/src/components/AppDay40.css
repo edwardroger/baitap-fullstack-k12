@@ -1,0 +1,27 @@
+body {
+    height: 100vh;
+    background: linear-gradient(45deg, #ffff66, #66ffcc);
+    /* background: linear-gradient(45deg, #FFFFCC, #CCFFFF); */
+    background-repeat: no-repeat;
+}
+
+.content {
+    width: 500px;
+    height: 500px;
+    border-radius: 20px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+h2 {
+    margin: 0 0 0 50px;
+}
+
+.content-body, .content-footer {
+    margin-left: 50px;
+}
+
+button {
+    height: 35px;
+}
