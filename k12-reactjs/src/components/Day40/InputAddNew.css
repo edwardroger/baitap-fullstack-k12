@@ -1,0 +1,18 @@
+.input-add-new {
+    display: flex;
+    margin-top: 30px;
+}
+
+#input-add {
+    width: 350px;
+    height: 30px;
+}
+
+.input-add-new button {
+    border-radius: 0 5px 5px 0;
+    font-size: 20px;
+}
+
+.input-add-new button:hover {
+    background-color: rgb(81, 134, 181);
+}
