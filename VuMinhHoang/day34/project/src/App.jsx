@@ -1,11 +1,11 @@
 import React, { useCallback, useState } from "react";
-import Calculator from "./day38/Calculator";
+import InputNumber from "./day39/InputNumber";
+import Button from "./day39/Button";
 
 
 const App = () => {
-    const [result, setResult] = useState(0)
     return (<>
-        <Calculator/>
+
     </>)
 }
 export default App
