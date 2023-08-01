@@ -7,19 +7,33 @@ const AppDay40 = () =>{
     const [listToDo, setListToDo] = useState([]);
 
     const handleSaveListTodo = (item) => {
+
         setListToDo([...listToDo, item]);
+        SaveData([...listToDo, item]);
+        
+        console.log(localStorage.getItem('data'));
+
     }
     const handleClearAll = () => {
         setListToDo([]);
+        SaveData([]);
     }
     const handleClearItem = (keySelect) =>{
         // delete listToDo[keySelect];
         // setListToDo(listToDo);
         
+
+        SaveData([
+            ...listToDo.slice(0, keySelect),
+            ...listToDo.slice(keySelect + 1)
+          ]);
         setListToDo([
             ...listToDo.slice(0, keySelect),
             ...listToDo.slice(keySelect + 1)
           ]);
+    }
+    function SaveData(l) {
+        localStorage.setItem("data" , l);
     }
     return (
           <>
