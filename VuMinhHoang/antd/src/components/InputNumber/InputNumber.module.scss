@@ -1,0 +1,27 @@
+.InputNumber {
+    width: 100%;
+}
+
+.shapeRound {
+    border-radius: 30px;
+
+    :global {
+        .ant-input-number-group-addon {
+            &:first-child {
+                border-radius: 30px 0px 0px 30px;
+            }
+
+            &:last-child {
+                border-radius: 0px 30px 30px 0px;
+            }
+        }
+    }
+}
+
+.shapeRoundPrefix {
+    :global {
+        .ant-input {
+            border-radius: 30px;
+        }
+    }
+}

@@ -1,2 +1,3 @@
 import Input from "./Input";
-export { Input }
+import InputNumber from "./InputNumber";
+export { Input, InputNumber }
