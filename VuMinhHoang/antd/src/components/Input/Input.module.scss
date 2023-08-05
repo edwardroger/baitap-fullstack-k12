@@ -1,0 +1,21 @@
+.shapeRound {
+    border-radius: 30px;
+
+    :global {
+        .ant-input-affix-wrapper {
+            border-radius: 30px;
+        }
+
+        .ant-input-group-addon {
+            min-width: 50px;
+
+            &:first-child {
+                border-radius: 30px 0px 0px 30px;
+            }
+
+            &:last-child {
+                border-radius: 0px 30px 30px 0px;
+            }
+        }
+    }
+}
