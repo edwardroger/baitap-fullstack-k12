@@ -20,17 +20,17 @@ const TodoList = () => {
   const handleAddTodo = () => {
     if (newTodo.trim() === '') return;
     const newTodoItem = { id: Date.now(), text: newTodo, completed: false };
-    setTodos([...todos, newTodoItem]);
+    setTodos((prevTodos) => [...prevTodos, newTodoItem]);
     setNewTodo('');
   };
 
   const handleDeleteTodo = (id) => {
-    setTodos(todos.filter((todo) => todo.id !== id));
+    setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
   };
 
   const handleToggleComplete = (id) => {
-    setTodos(
-      todos.map((todo) =>
+    setTodos((prevTodos) =>
+      prevTodos.map((todo) =>
         todo.id === id ? { ...todo, completed: !todo.completed } : todo
       )
     );
