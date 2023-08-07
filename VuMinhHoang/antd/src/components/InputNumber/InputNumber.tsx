@@ -117,7 +117,7 @@ const InputNumber = (InputNumberProps: InputNumberProps) => {
         ) : (
             prop.option
         );
-    };
+    }; 
 
     //main render
     return (
