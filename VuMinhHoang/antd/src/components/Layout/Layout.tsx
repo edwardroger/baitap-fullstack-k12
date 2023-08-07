@@ -9,8 +9,29 @@ const { Content } = AntLayout;
 
 const Layout = (LayoutProps: LayoutProps) => {
     //define constants
+    const [prop, setProp] = useState(LayoutProps);
+    const [activeScreen, setActiveScreen] = useState();
+    const [topMenu, setTopMenu] = useState({
+        mainMenu: [
+            {
+                label: "My Site",
+                key: "mysite",
+            },
+            {
+                label: "Explode",
+                key: "explode",
+            },
+            {
+                label: "Help",
+                key: "help",
+            },
+        ],
+
+    });
     return (
-        <div>Layout</div>
+        <AntLayout className={styles.Layout}>
+            <Header menu={topMenu} />
+        </AntLayout>
     )
 }
 

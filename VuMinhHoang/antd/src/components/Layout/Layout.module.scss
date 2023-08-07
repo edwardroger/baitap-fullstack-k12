@@ -1,0 +1,10 @@
+.Layout {
+    min-height: 100vh;
+    :global {
+      .ant-menu-submenu-title,
+      .ant-menu-item {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
