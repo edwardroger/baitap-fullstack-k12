@@ -1,10 +1,18 @@
-import React from 'react'
-
+import React, { ReactNode } from "react";
 
 const login = () => {
-  return (
-    <div>login</div>
-  )
-}
+  //define constants
 
-export default login
+  //function to create
+
+  //function to handle actions
+
+  //function to hook
+
+  //function to render
+
+  //main render
+  return <div>login</div>;
+};
+
+export default login;
