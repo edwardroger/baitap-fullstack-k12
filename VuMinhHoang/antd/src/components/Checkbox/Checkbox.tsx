@@ -31,6 +31,7 @@ const initValueCheckBox = (checkbox: any, defaultValue?: any) => {
 };
 
 const Checkbox = (CheckboxProps: CheckboxProps) => {
+  const cx = classNames.bind(styles);
   //define constants
   const [props, setProps] = useState(CheckboxProps);
   const [checkbox, setCheckbox] = useState<any>(props.options);
@@ -70,9 +71,51 @@ const Checkbox = (CheckboxProps: CheckboxProps) => {
     setCheckList(initValueCheckBox(checkbox, props.value));
   }, [props.value]);
   //function to render
+  const renderCheckbox = (option?: any) => {
+    return (
+      <Row
+        className={cx([
+          props.type && styles[props.type],
+          props.className && props.className,
+        ])}
+      >
+        {option &&
+          option.length > 0 &&
+          option.map((item: any, key: Key) => {
+            return (
+              <Row
+                key={key}
+                justify="space-between"
+                className={styles.WarpCheckbox}
+              >
+                <Col className={cx(styles.CheckboxCol)}>
+                  <CheckboxAntd
+                    onChange={(value: any) => {
+                      onChange(value.target.checked, item);
+                    }}
+                    checked={
+                      checkList &&
+                      checkList.length > 0 &&
+                      checkList.find((el: any) => el == item)
+                        ? true
+                        : false
+                    }
+                    disabled={item.disabled}
+                  >
+                    <span className={cx(styles.Check)}>
+                      {item.label ? item.label : item.value ? item.value : item}
+                    </span>
+                  </CheckboxAntd>
+                </Col>
+              </Row>
+            );
+          })}
+      </Row>
+    );
+  };
 
   //main render
-  return <div>Checkbox</div>;
+  return <Col className={cx(styles.Checkbox)}>{renderCheckbox(checkbox)}</Col>;
 };
 
 export default Checkbox;
